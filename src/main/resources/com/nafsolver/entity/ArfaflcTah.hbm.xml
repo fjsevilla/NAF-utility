@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArfaflcTah" optimistic-lock="version" schema="DESA46" table="ARFAFLC_TAH">
+    <comment>Historico de Talla de los Pedidos</comment>
+    <composite-id class="com.nafsolver.entity.ArfaflcTahId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noFactu" type="string">
+        <column length="19" name="NO_FACTU"/>
+      </key-property>
+      <key-property name="noLinea" type="java.lang.Integer">
+        <column name="NO_LINEA" precision="5" scale="0"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="cantidad" type="big_decimal">
+      <column name="CANTIDAD" precision="8"/>
+    </property>
+    <property name="cantAprobada" type="big_decimal">
+      <column name="CANT_APROBADA" precision="8"/>
+    </property>
+    <property name="cantFacturada" type="big_decimal">
+      <column name="CANT_FACTURADA" precision="8"/>
+    </property>
+  </class>
+</hibernate-mapping>

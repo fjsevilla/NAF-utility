@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckhc" optimistic-lock="version" schema="DESA46" table="ARCKHC">
+    <comment>Hist¢rico de Cuentas</comment>
+    <composite-id class="com.nafsolver.entity.ArckhcId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noCta" type="string">
+        <column length="15" name="NO_CTA"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="mes" type="byte">
+        <column name="MES" precision="2" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="cheMes" type="big_decimal">
+      <column name="CHE_MES" precision="17"/>
+    </property>
+    <property name="cheAnulmesant" type="big_decimal">
+      <column name="CHE_ANULMESANT" precision="17"/>
+    </property>
+    <property name="depMes" type="big_decimal">
+      <column name="DEP_MES" precision="17"/>
+    </property>
+    <property name="debMes" type="big_decimal">
+      <column name="DEB_MES" precision="17"/>
+    </property>
+    <property name="creMes" type="big_decimal">
+      <column name="CRE_MES" precision="17"/>
+    </property>
+    <property name="saldoFinC" type="big_decimal">
+      <column name="SALDO_FIN_C" precision="17"/>
+    </property>
+    <property name="saldoFinB" type="big_decimal">
+      <column name="SALDO_FIN_B" precision="17"/>
+    </property>
+    <property name="saldoConciliado" type="string">
+      <column length="1" name="SALDO_CONCILIADO"/>
+    </property>
+    <property name="cheMesRes" type="big_decimal">
+      <column name="CHE_MES_RES" precision="30"/>
+    </property>
+    <property name="cheAnulmesantRes" type="big_decimal">
+      <column name="CHE_ANULMESANT_RES" precision="30"/>
+    </property>
+    <property name="depMesRes" type="big_decimal">
+      <column name="DEP_MES_RES" precision="30"/>
+    </property>
+    <property name="debMesRes" type="big_decimal">
+      <column name="DEB_MES_RES" precision="30"/>
+    </property>
+    <property name="creMesRes" type="big_decimal">
+      <column name="CRE_MES_RES" precision="30"/>
+    </property>
+    <property name="saldoFinCRes" type="big_decimal">
+      <column name="SALDO_FIN_C_RES" precision="30"/>
+    </property>
+    <property name="saldoFinBRes" type="big_decimal">
+      <column name="SALDO_FIN_B_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

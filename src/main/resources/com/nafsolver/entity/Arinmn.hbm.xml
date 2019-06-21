@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinmn" optimistic-lock="version" schema="DESA46" table="ARINMN">
+    <composite-id class="com.nafsolver.entity.ArinmnId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="noLinea" type="short">
+        <column name="NO_LINEA" precision="4" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="ano" type="string">
+      <column length="4" name="ANO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="bodega" type="string">
+      <column length="4" name="BODEGA"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="3" name="CLASE"/>
+    </property>
+    <property name="categoria" type="string">
+      <column length="3" name="CATEGORIA"/>
+    </property>
+    <property name="noArti" type="string">
+      <column length="30" name="NO_ARTI"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22" scale="6"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="unidades" type="big_decimal">
+      <column name="UNIDADES" precision="17"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="22"/>
+    </property>
+    <property name="costo" type="big_decimal">
+      <column name="COSTO" precision="22"/>
+    </property>
+    <property name="costoAnt" type="big_decimal">
+      <column name="COSTO_ANT" precision="22"/>
+    </property>
+    <property name="vendedor" type="string">
+      <column length="4" name="VENDEDOR"/>
+    </property>
+    <property name="venta" type="big_decimal">
+      <column name="VENTA" precision="22"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="22"/>
+    </property>
+    <property name="indOferta" type="string">
+      <column length="1" name="IND_OFERTA"/>
+    </property>
+    <property name="tipoRefe" type="string">
+      <column length="2" name="TIPO_REFE"/>
+    </property>
+    <property name="noRefe" type="string">
+      <column length="12" name="NO_REFE"/>
+    </property>
+    <property name="conduce" type="string">
+      <column length="10" name="CONDUCE"/>
+    </property>
+    <property name="observ1" type="string">
+      <column length="250" name="OBSERV1"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="timeStamp" type="date">
+      <column length="7" name="TIME_STAMP"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="periodoProce" type="string">
+      <column length="7" name="PERIODO_PROCE"/>
+    </property>
+    <property name="semana" type="java.lang.Byte">
+      <column name="SEMANA" precision="2" scale="0"/>
+    </property>
+    <property name="centroCosto" type="string">
+      <column length="9" name="CENTRO_COSTO"/>
+    </property>
+    <property name="cantidadRecibida" type="big_decimal">
+      <column name="CANTIDAD_RECIBIDA" precision="12"/>
+    </property>
+    <property name="bodega2" type="string">
+      <column length="4" name="BODEGA2"/>
+    </property>
+    <property name="razon" type="string">
+      <column length="4" name="RAZON"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="pedidoOriginal" type="big_decimal">
+      <column name="PEDIDO_ORIGINAL" precision="12"/>
+    </property>
+    <property name="costoUniRes" type="big_decimal">
+      <column name="COSTO_UNI_RES" precision="30"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="costoRes" type="big_decimal">
+      <column name="COSTO_RES" precision="30"/>
+    </property>
+    <property name="costoAntRes" type="big_decimal">
+      <column name="COSTO_ANT_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

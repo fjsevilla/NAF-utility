@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccsc" optimistic-lock="version" schema="DESA46" table="ARCCSC">
+    <comment>Solicitudes de Credito</comment>
+    <composite-id class="com.nafsolver.entity.ArccscId" name="id">
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+      <key-property name="noCliente" type="string">
+        <column length="15" name="NO_CLIENTE"/>
+      </key-property>
+      <key-property name="noSoli" type="string">
+        <column length="8" name="NO_SOLI"/>
+      </key-property>
+    </composite-id>
+    <property name="fechaSoli" type="date">
+      <column length="7" name="FECHA_SOLI"/>
+    </property>
+    <property name="nombreEnc" type="string">
+      <column length="25" name="NOMBRE_ENC"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="8" name="TELEFONO"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="8" name="FAX"/>
+    </property>
+    <property name="noAgente" type="string">
+      <column length="4" name="NO_AGENTE"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="zona" type="string">
+      <column length="5" name="ZONA"/>
+    </property>
+    <property name="limiteCredi" type="big_decimal">
+      <column name="LIMITE_CREDI" precision="17"/>
+    </property>
+    <property name="plazo" type="java.lang.Short">
+      <column name="PLAZO" precision="3" scale="0"/>
+    </property>
+    <property name="refe1" type="string">
+      <column length="30" name="REFE_1"/>
+    </property>
+    <property name="telefono1" type="string">
+      <column length="8" name="TELEFONO_1"/>
+    </property>
+    <property name="refe2" type="string">
+      <column length="30" name="REFE_2"/>
+    </property>
+    <property name="telefono2" type="string">
+      <column length="8" name="TELEFONO_2"/>
+    </property>
+    <property name="refe3" type="string">
+      <column length="30" name="REFE_3"/>
+    </property>
+    <property name="telefono3" type="string">
+      <column length="8" name="TELEFONO_3"/>
+    </property>
+    <property name="refe4" type="string">
+      <column length="30" name="REFE_4"/>
+    </property>
+    <property name="telefono4" type="string">
+      <column length="8" name="TELEFONO_4"/>
+    </property>
+    <property name="refe5" type="string">
+      <column length="30" name="REFE_5"/>
+    </property>
+    <property name="telefono5" type="string">
+      <column length="8" name="TELEFONO_5"/>
+    </property>
+    <property name="evaluacion" type="string">
+      <column length="20" name="EVALUACION"/>
+    </property>
+    <property name="calificacion" type="string">
+      <column length="10" name="CALIFICACION"/>
+    </property>
+    <property name="MSolicitado" type="big_decimal">
+      <column name="M_SOLICITADO" precision="17"/>
+    </property>
+    <property name="aprobado" type="string">
+      <column length="1" name="APROBADO"/>
+    </property>
+    <property name="actualizado" type="string">
+      <column length="1" name="ACTUALIZADO"/>
+    </property>
+    <property name="limiteCrediRes" type="big_decimal">
+      <column name="LIMITE_CREDI_RES" precision="30"/>
+    </property>
+    <property name="MSolicitadoRes" type="big_decimal">
+      <column name="M_SOLICITADO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

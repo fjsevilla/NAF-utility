@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinrelacion" optimistic-lock="version" schema="DESA46" table="ARINRELACION">
+    <composite-id class="com.nafsolver.entity.ArinrelacionId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="3" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+      <key-property name="vendedor" type="string">
+        <column length="3" name="VENDEDOR"/>
+      </key-property>
+      <key-property name="barra" type="string">
+        <column length="24" name="BARRA"/>
+      </key-property>
+    </composite-id>
+    <property name="modelo" type="string">
+      <column length="15" name="MODELO"/>
+    </property>
+    <property name="color" type="string">
+      <column length="4" name="COLOR"/>
+    </property>
+    <property name="escala" type="string">
+      <column length="5" name="ESCALA"/>
+    </property>
+    <property name="cantidadempaque" type="big_decimal">
+      <column name="CANTIDADEMPAQUE" precision="22" scale="0"/>
+    </property>
+    <property name="nomModelo" type="string">
+      <column length="35" name="NOM_MODELO"/>
+    </property>
+    <property name="nomColor" type="string">
+      <column length="30" name="NOM_COLOR"/>
+    </property>
+    <property name="nomEscala" type="string">
+      <column length="30" name="NOM_ESCALA"/>
+    </property>
+    <property name="catalogo" type="string">
+      <column length="30" name="CATALOGO"/>
+    </property>
+    <property name="marca" type="string">
+      <column length="3" name="MARCA"/>
+    </property>
+    <property name="pvp" type="big_decimal">
+      <column name="PVP" precision="22" scale="0"/>
+    </property>
+    <property name="oferta" type="big_decimal">
+      <column name="OFERTA" precision="22" scale="0"/>
+    </property>
+    <property name="inventario" type="big_decimal">
+      <column name="INVENTARIO" precision="22" scale="0"/>
+    </property>
+    <property name="tipoInv" type="string">
+      <column length="1" name="TIPO_INV"/>
+    </property>
+    <property name="status" type="string">
+      <column length="3" name="STATUS"/>
+    </property>
+    <property name="demActiva" type="string">
+      <column length="3" name="DEM_ACTIVA"/>
+    </property>
+    <property name="demAsignada" type="big_decimal">
+      <column name="DEM_ASIGNADA" precision="22" scale="0"/>
+    </property>
+    <property name="fechaRelacion" type="date">
+      <column length="7" name="FECHA_RELACION"/>
+    </property>
+    <property name="demReasignada" type="big_decimal">
+      <column name="DEM_REASIGNADA" precision="22" scale="0"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="80" name="DESCRIPCION"/>
+    </property>
+    <property name="pvpRes" type="big_decimal">
+      <column name="PVP_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

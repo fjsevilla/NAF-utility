@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplcpto" optimistic-lock="version" schema="DESA46" table="ARPLCPTO">
+    <composite-id class="com.nafsolver.entity.ArplcptoId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noCpto" type="string">
+        <column length="10" name="NO_CPTO"/>
+      </key-property>
+      <key-property name="tipoMov" type="string">
+        <column length="10" name="TIPO_MOV"/>
+      </key-property>
+      <key-property name="tipo" type="string">
+        <column length="1" name="TIPO"/>
+      </key-property>
+    </composite-id>
+    <property name="descri" type="string">
+      <column length="200" name="DESCRI">
+        <comment>DESCRIPCION DE CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO">
+        <comment>ESTADO DE CONCEPTO ACTIVO O INACTIVO</comment>
+      </column>
+    </property>
+    <property name="usoInterno" type="string">
+      <column length="1" name="USO_INTERNO">
+        <comment>SI SOLO ES DE USO INTERNO Y NO ACUMULA SALDO</comment>
+      </column>
+    </property>
+    <property name="historico" type="string">
+      <column length="1" name="HISTORICO">
+        <comment>SI CONCEPTO GUARDARA INFORMACION EN HISTORICO</comment>
+      </column>
+    </property>
+    <property name="stConcepto" type="string">
+      <column length="1" name="ST_CONCEPTO">
+        <comment>STATUS DE CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="salidaRecibo" type="string">
+      <column length="200" name="SALIDA_RECIBO">
+        <comment>COMO SE VISUALIZARA LA INFORMACION EN EL RECIBO DE PAGO</comment>
+      </column>
+    </property>
+    <property name="cuentaContable" type="string">
+      <column length="15" name="CUENTA_CONTABLE">
+        <comment>CUENTA CONTABLE DEL CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="preliminarr" type="string">
+      <column length="500" name="PRELIMINARR"/>
+    </property>
+    <property name="preliminarf" type="string">
+      <column length="500" name="PRELIMINARF"/>
+    </property>
+    <property name="elaboracion" type="string">
+      <column length="1" name="ELABORACION"/>
+    </property>
+  </class>
+</hibernate-mapping>

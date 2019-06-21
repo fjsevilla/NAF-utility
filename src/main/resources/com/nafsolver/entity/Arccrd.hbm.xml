@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccrd" optimistic-lock="version" schema="DESA46" table="ARCCRD">
+    <comment>Referencia de Documentos</comment>
+    <composite-id class="com.nafsolver.entity.ArccrdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="noRefe" type="string">
+        <column length="12" name="NO_REFE"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO"/>
+    </property>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="tipoRefe" type="string">
+      <column length="2" name="TIPO_REFE"/>
+    </property>
+    <property name="periRefe" type="string">
+      <column length="4" name="PERI_REFE"/>
+    </property>
+    <property name="rutaRefe" type="string">
+      <column length="4" name="RUTA_REFE"/>
+    </property>
+    <property name="saldoAnterior" type="big_decimal">
+      <column name="SALDO_ANTERIOR" precision="17"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="procedencia" type="string">
+      <column length="1" name="PROCEDENCIA"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="1000" name="MOTIVO"/>
+    </property>
+    <property name="docAfecRet" type="string">
+      <column length="15" name="DOC_AFEC_RET"/>
+    </property>
+    <property name="saldoAnteriorRes" type="big_decimal">
+      <column name="SALDO_ANTERIOR_RES" precision="30"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="descuentoRes" type="big_decimal">
+      <column name="DESCUENTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

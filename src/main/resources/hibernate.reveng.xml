@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="DESA46"/>
+  <table-filter match-name="ARCKCT"/>
+  <table-filter match-name="ARGECAN"/>
+  <table-filter match-name="ARPLCAL"/>
+  <table-filter match-name="ARCGLIMP"/>
+  <table-filter match-name="ARGECT"/>
+  <table-filter match-name="DENOMINACIONES"/>
+  <table-filter match-name="ARPLGR"/>
+  <table-filter match-name="ARCGIMP"/>
+  <table-filter match-name="ARINDA"/>
+  <table-filter match-name="ARCGAEH"/>
+  <table-filter match-name="ARINGT"/>
+  <table-filter match-name="ARCPPRET"/>
+  <table-filter match-name="ARCCRD"/>
+  <table-filter match-name="ARPLME"/>
+  <table-filter match-name="ARPLPAR"/>
+  <table-filter match-name="ARINSERVICIOS"/>
+  <table-filter match-name="ARFAFL"/>
+  <table-filter match-name="ARINML_UB"/>
+  <table-filter match-name="COLOR"/>
+  <table-filter match-name="ARCGTC"/>
+  <table-filter match-name="ARGEIMPO_TXT"/>
+  <table-filter match-name="CONCEPTOS"/>
+  <table-filter match-name="ARCKCRH"/>
+  <table-filter match-name="ARINMA"/>
+  <table-filter match-name="ARPLMD"/>
+  <table-filter match-name="ARCPGR"/>
+  <table-filter match-name="COMPA_EFE"/>
+  <table-filter match-name="ARCCCK"/>
+  <table-filter match-name="ARINTP"/>
+  <table-filter match-name="ARINML_OC"/>
+  <table-filter match-name="PAISES"/>
+  <table-filter match-name="GRUPOS"/>
+  <table-filter match-name="ARCCUD"/>
+  <table-filter match-name="ARFAFEH"/>
+  <table-filter match-name="ARFAFECH"/>
+  <table-filter match-name="ARINCAT"/>
+  <table-filter match-name="ARCPCBP"/>
+  <table-filter match-name="ARCGIEE"/>
+  <table-filter match-name="ARCGGRE"/>
+  <table-filter match-name="ARPLELNOM_DET"/>
+  <table-filter match-name="ARCGCB"/>
+  <table-filter match-name="ARCGMS_C"/>
+  <table-filter match-name="ARCPMP"/>
+  <table-filter match-name="ARCGMS"/>
+  <table-filter match-name="ARINII"/>
+  <table-filter match-name="CONTROL_FORMU"/>
+  <table-filter match-name="ARCPTI"/>
+  <table-filter match-name="ARINVTM"/>
+  <table-filter match-name="ARCGLVE_ANU"/>
+  <table-filter match-name="ARFAEV"/>
+  <table-filter match-name="ARINMN"/>
+  <table-filter match-name="ARGEMOT"/>
+  <table-filter match-name="ARCKRD"/>
+  <table-filter match-name="ARINLO"/>
+  <table-filter match-name="ARINBO"/>
+  <table-filter match-name="ARPLELNOM"/>
+  <table-filter match-name="ENC_DESPACHO"/>
+  <table-filter match-name="ARPLPGD"/>
+  <table-filter match-name="ARCKCAEE"/>
+  <table-filter match-name="ARCCAUX1"/>
+  <table-filter match-name="ARGECO"/>
+  <table-filter match-name="USU_CIA"/>
+  <table-filter match-name="ARINML_AJ"/>
+  <table-filter match-name="ARINDA_TA"/>
+  <table-filter match-name="ARINME_AJ"/>
+  <table-filter match-name="ARCGAE"/>
+  <table-filter match-name="ARCCMD"/>
+  <table-filter match-name="ARFAFLC"/>
+  <table-filter match-name="ARCPMD"/>
+  <table-filter match-name="ARCKTD"/>
+  <table-filter match-name="COM_ESTADOS_ORDEN"/>
+  <table-filter match-name="ARCGLVE"/>
+  <table-filter match-name="ARFAFLCH"/>
+  <table-filter match-name="ARCPSA"/>
+  <table-filter match-name="MONEDAS"/>
+  <table-filter match-name="ARGETB"/>
+  <table-filter match-name="ARINEC"/>
+  <table-filter match-name="ARCGCECO"/>
+  <table-filter match-name="ARCGLCO"/>
+  <table-filter match-name="ARFAFEC"/>
+  <table-filter match-name="ARCGHC_C"/>
+  <table-filter match-name="ARGEAC"/>
+  <table-filter match-name="ARFAFL_TAH"/>
+  <table-filter match-name="ARFAFLH"/>
+  <table-filter match-name="ARGESEC"/>
+  <table-filter match-name="ARCKMC"/>
+  <table-filter match-name="ARPLTIT"/>
+  <table-filter match-name="ARINCL"/>
+  <table-filter match-name="ARCKUF"/>
+  <table-filter match-name="ARCGMB"/>
+  <table-filter match-name="ARCCCC"/>
+  <table-filter match-name="ARINTB"/>
+  <table-filter match-name="ARCKCAED"/>
+  <table-filter match-name="ARPLMOD"/>
+  <table-filter match-name="ARCGMC"/>
+  <table-filter match-name="ARPLCPTO"/>
+  <table-filter match-name="ARCCMC_DIR"/>
+  <table-filter match-name="ARCKMM"/>
+  <table-filter match-name="ARCPCT"/>
+  <table-filter match-name="ARINHP"/>
+  <table-filter match-name="ARCCTE"/>
+  <table-filter match-name="ARGEMT"/>
+  <table-filter match-name="ARFACT"/>
+  <table-filter match-name="MESES"/>
+  <table-filter match-name="ARFAMC"/>
+  <table-filter match-name="ARCCAR"/>
+  <table-filter match-name="ARINUM"/>
+  <table-filter match-name="ARCGCDM"/>
+  <table-filter match-name="DET_TRANSPORTE"/>
+  <table-filter match-name="ARPLPGE"/>
+  <table-filter match-name="ARINML"/>
+  <table-filter match-name="ARINDP"/>
+  <table-filter match-name="ARINTXD"/>
+  <table-filter match-name="CALENDARIO"/>
+  <table-filter match-name="ARINCUR"/>
+  <table-filter match-name="ARPLCAL_DET"/>
+  <table-filter match-name="ARPL_TIP_MOV"/>
+  <table-filter match-name="ARPLPAN"/>
+  <table-filter match-name="ARPLASISP"/>
+  <table-filter match-name="ARCKDB"/>
+  <table-filter match-name="ARCKHC"/>
+  <table-filter match-name="ARCGGI"/>
+  <table-filter match-name="ARFAFE"/>
+  <table-filter match-name="ARCCMD_H"/>
+  <table-filter match-name="TAPCIA"/>
+  <table-filter match-name="ARCCTD"/>
+  <table-filter match-name="ARCCGD"/>
+  <table-filter match-name="CCATALOGO"/>
+  <table-filter match-name="ARPLCONST_DET"/>
+  <table-filter match-name="ENC_TRANSPORTE"/>
+  <table-filter match-name="ARINIA"/>
+  <table-filter match-name="ARINRELACION"/>
+  <table-filter match-name="ARFAGR_CT"/>
+  <table-filter match-name="MARCAS"/>
+  <table-filter match-name="ARCKTB"/>
+  <table-filter match-name="ARFAFLC_TAH"/>
+  <table-filter match-name="ARCGMM"/>
+  <table-filter match-name="ARINME_OC"/>
+  <table-filter match-name="ARINCAT_TIPO"/>
+  <table-filter match-name="ARCCER"/>
+  <table-filter match-name="ARCGTI"/>
+  <table-filter match-name="CIERRE_EFE"/>
+  <table-filter match-name="ARFAFL_TA"/>
+  <table-filter match-name="ARCGCD"/>
+  <table-filter match-name="ARINMT"/>
+  <table-filter match-name="ARPLMI"/>
+  <table-filter match-name="ARGEBAR"/>
+  <table-filter match-name="ARPLSPER"/>
+  <table-filter match-name="ARINCD"/>
+  <table-filter match-name="ARCCRU"/>
+  <table-filter match-name="ARGEPRO"/>
+  <table-filter match-name="ARINCC"/>
+  <table-filter match-name="ARINHA"/>
+  <table-filter match-name="ARCPRETAP"/>
+  <table-filter match-name="MOV_EFE"/>
+  <table-filter match-name="ARCKTB_CTA"/>
+  <table-filter match-name="MAN_TRANSPORTE"/>
+  <table-filter match-name="ARCGIED"/>
+  <table-filter match-name="ARGEPAI"/>
+  <table-filter match-name="ARFAUS"/>
+  <table-filter match-name="ARCCSC"/>
+  <table-filter match-name="ARCGHC_T"/>
+  <table-filter match-name="ARCPTD"/>
+  <table-filter match-name="ARPLCL"/>
+  <table-filter match-name="ARPLCAT"/>
+  <table-filter match-name="ARINME"/>
+  <table-filter match-name="ARCCDR"/>
+  <table-filter match-name="ARINTA"/>
+  <table-filter match-name="ARCGGRL"/>
+  <table-filter match-name="ARGEMOD"/>
+  <table-filter match-name="ARCCGR"/>
+  <table-filter match-name="ARPLCP"/>
+  <table-filter match-name="ARCKCNC"/>
+  <table-filter match-name="ARCKCNCH"/>
+  <table-filter match-name="ARCKCE"/>
+  <table-filter match-name="ARPLMOVIMI"/>
+  <table-filter match-name="ARINHA_TA"/>
+  <table-filter match-name="ARCKCC"/>
+  <table-filter match-name="MODELOS"/>
+  <table-filter match-name="ARCPCL"/>
+  <table-filter match-name="ARGEDIS"/>
+  <table-filter match-name="ARCCZG"/>
+  <table-filter match-name="ARCGCT_C"/>
+  <table-filter match-name="ARCCMC"/>
+  <table-filter match-name="ARPLTE"/>
+  <table-filter match-name="ARCPRD"/>
+  <table-filter match-name="ARFAFT"/>
+  <table-filter match-name="ARCCTI"/>
+  <table-filter match-name="ARPLTPER"/>
+  <table-filter match-name="ARINMEH"/>
+  <table-filter match-name="ARGETID"/>
+  <table-filter match-name="ARPLCONST"/>
+  <table-filter match-name="ARINCA"/>
+  <table-filter match-name="ARCCTC"/>
+  <table-filter match-name="ARINMA_TA"/>
+  <table-filter match-name="CONSEC_PERIODO"/>
+  <table-filter match-name="ARFAFLI"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ComEstadosOrden" optimistic-lock="version" schema="DESA46" table="COM_ESTADOS_ORDEN">
+    <comment>Contiene la información de los estados que pueden tener tanto las Ordenes de Compra como las Solicitudes de Compra en general.</comment>
+    <id name="codigo" type="string">
+      <column length="3" name="CODIGO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="descripcion" type="string">
+      <column length="40" name="DESCRIPCION" not-null="true">
+        <comment>Nombre o descripción del Estado</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

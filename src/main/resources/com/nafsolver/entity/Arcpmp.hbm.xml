@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcpmp" optimistic-lock="version" schema="DESA46" table="ARCPMP">
+    <comment>Maestro de proveedores</comment>
+    <composite-id class="com.nafsolver.entity.ArcpmpId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noProve" type="string">
+        <column length="15" name="NO_PROVE"/>
+      </key-property>
+    </composite-id>
+    <property name="clase" type="string">
+      <column length="6" name="CLASE"/>
+    </property>
+    <property name="corporacion" type="string">
+      <column length="6" name="CORPORACION"/>
+    </property>
+    <property name="nombre" type="string">
+      <column length="200" name="NOMBRE"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="1000" name="DIRECCION"/>
+    </property>
+    <property name="direccion1" type="string">
+      <column length="30" name="DIRECCION1"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="13" name="TELEFONO"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="13" name="FAX"/>
+    </property>
+    <property name="tipoIdTributario" type="string">
+      <column length="1" name="TIPO_ID_TRIBUTARIO"/>
+    </property>
+    <property name="cedula" type="string">
+      <column length="15" name="CEDULA"/>
+    </property>
+    <property name="encar" type="string">
+      <column length="30" name="ENCAR"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="plazoC" type="java.lang.Short">
+      <column name="PLAZO_C" precision="3" scale="0"/>
+    </property>
+    <property name="plazoP" type="java.lang.Short">
+      <column name="PLAZO_P" precision="3" scale="0"/>
+    </property>
+    <property name="desC" type="big_decimal">
+      <column name="DES_C" precision="5"/>
+    </property>
+    <property name="desP" type="big_decimal">
+      <column name="DES_P" precision="5"/>
+    </property>
+    <property name="creMax" type="big_decimal">
+      <column name="CRE_MAX" precision="17"/>
+    </property>
+    <property name="SPerAnt" type="big_decimal">
+      <column name="S_PER_ANT" precision="17"/>
+    </property>
+    <property name="salAnt" type="big_decimal">
+      <column name="SAL_ANT" precision="17"/>
+    </property>
+    <property name="debitos" type="big_decimal">
+      <column name="DEBITOS" precision="17"/>
+    </property>
+    <property name="creditos" type="big_decimal">
+      <column name="CREDITOS" precision="17"/>
+    </property>
+    <property name="FUCo" type="date">
+      <column length="7" name="F_U_CO"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO"/>
+    </property>
+    <property name="observaciones" type="string">
+      <column length="240" name="OBSERVACIONES"/>
+    </property>
+    <property name="bloqueado" type="string">
+      <column length="1" name="BLOQUEADO"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="30" name="MOTIVO"/>
+    </property>
+    <property name="indNacional" type="string">
+      <column length="1" name="IND_NACIONAL"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="condicionTributaria" type="string">
+      <column length="3" name="CONDICION_TRIBUTARIA"/>
+    </property>
+    <property name="sector" type="string">
+      <column length="2" name="SECTOR"/>
+    </property>
+    <property name="actividad" type="string">
+      <column length="4" name="ACTIVIDAD"/>
+    </property>
+    <property name="pais" type="string">
+      <column length="6" name="PAIS"/>
+    </property>
+    <property name="provincia" type="string">
+      <column length="6" name="PROVINCIA"/>
+    </property>
+    <property name="canton" type="string">
+      <column length="6" name="CANTON"/>
+    </property>
+    <property name="distrito" type="string">
+      <column length="2" name="DISTRITO"/>
+    </property>
+    <property name="barrio" type="string">
+      <column length="2" name="BARRIO"/>
+    </property>
+    <property name="nombreLargo" type="string">
+      <column length="60" name="NOMBRE_LARGO"/>
+    </property>
+    <property name="contacto" type="string">
+      <column length="30" name="CONTACTO"/>
+    </property>
+    <property name="telefonoContacto" type="string">
+      <column length="20" name="TELEFONO_CONTACTO"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="tipoFormaPago" type="string">
+      <column length="3" name="TIPO_FORMA_PAGO"/>
+    </property>
+    <property name="diasEntrega" type="java.lang.Short">
+      <column name="DIAS_ENTREGA" precision="3" scale="0"/>
+    </property>
+    <property name="rangoSeguridad" type="java.lang.Short">
+      <column name="RANGO_SEGURIDAD" precision="3" scale="0"/>
+    </property>
+    <property name="cargosIntereses" type="big_decimal">
+      <column name="CARGOS_INTERESES" precision="10" scale="5"/>
+    </property>
+    <property name="idMomentoPago" type="string">
+      <column length="3" name="ID_MOMENTO_PAGO"/>
+    </property>
+    <property name="cargosFinanciamiento" type="big_decimal">
+      <column name="CARGOS_FINANCIAMIENTO" precision="10" scale="5"/>
+    </property>
+    <property name="replicarTpm" type="string">
+      <column length="1" name="REPLICAR_TPM"/>
+    </property>
+    <property name="porctRi" type="big_decimal">
+      <column name="PORCT_RI" precision="17"/>
+    </property>
+    <property name="ccRi" type="string">
+      <column length="20" name="CC_RI"/>
+    </property>
+    <property name="telefono2" type="string">
+      <column length="13" name="TELEFONO2"/>
+    </property>
+    <property name="telefono3" type="string">
+      <column length="13" name="TELEFONO3"/>
+    </property>
+    <property name="creMaxRes" type="big_decimal">
+      <column name="CRE_MAX_RES" precision="30"/>
+    </property>
+    <property name="SPerAntRes" type="big_decimal">
+      <column name="S_PER_ANT_RES" precision="30"/>
+    </property>
+    <property name="salAntRes" type="big_decimal">
+      <column name="SAL_ANT_RES" precision="30"/>
+    </property>
+    <property name="debitosRes" type="big_decimal">
+      <column name="DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="creditosRes" type="big_decimal">
+      <column name="CREDITOS_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

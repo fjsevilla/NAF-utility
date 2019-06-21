@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccru" optimistic-lock="version" schema="DESA46" table="ARCCRU">
+    <composite-id class="com.nafsolver.entity.ArccruId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codigo" type="string">
+        <column length="4" name="CODIGO"/>
+      </key-property>
+    </composite-id>
+    <property name="fechacreacion" type="date">
+      <column length="7" name="FECHACREACION"/>
+    </property>
+    <property name="tipogrupo" type="string">
+      <column length="1" name="TIPOGRUPO"/>
+    </property>
+    <property name="gruporuta" type="string">
+      <column length="4" name="GRUPORUTA"/>
+    </property>
+    <property name="tiporuta" type="string">
+      <column length="1" name="TIPORUTA"/>
+    </property>
+    <property name="presupuestado" type="big_decimal">
+      <column name="PRESUPUESTADO" precision="17"/>
+    </property>
+    <property name="vendido" type="big_decimal">
+      <column name="VENDIDO" precision="17"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="25" name="DESCRIPCION"/>
+    </property>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="vendedor" type="string">
+      <column length="4" name="VENDEDOR"/>
+    </property>
+    <property name="ctaEfectivo" type="string">
+      <column length="15" name="CTA_EFECTIVO"/>
+    </property>
+    <property name="ctaDescFinanciero" type="string">
+      <column length="15" name="CTA_DESC_FINANCIERO"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="1" name="TIPO"/>
+    </property>
+    <property name="factActualizaInv" type="string">
+      <column length="1" name="FACT_ACTUALIZA_INV"/>
+    </property>
+    <property name="cajeroActual" type="string">
+      <column length="4" name="CAJERO_ACTUAL"/>
+    </property>
+    <property name="contTurnos" type="java.lang.Integer">
+      <column name="CONT_TURNOS" precision="8" scale="0"/>
+    </property>
+    <property name="noCierreCaja" type="java.lang.Integer">
+      <column name="NO_CIERRE_CAJA" precision="5" scale="0"/>
+    </property>
+    <property name="bodegaDef" type="string">
+      <column length="4" name="BODEGA_DEF"/>
+    </property>
+    <property name="tipoPrecioDef" type="string">
+      <column length="2" name="TIPO_PRECIO_DEF"/>
+    </property>
+    <property name="noAutorizacionRenta" type="string">
+      <column length="20" name="NO_AUTORIZACION_RENTA"/>
+    </property>
+    <property name="FProceso" type="date">
+      <column length="7" name="F_PROCESO"/>
+    </property>
+    <property name="indCosteoEfectuado" type="string">
+      <column length="1" name="IND_COSTEO_EFECTUADO"/>
+    </property>
+    <property name="tipoCajon" type="string">
+      <column length="15" name="TIPO_CAJON"/>
+    </property>
+    <property name="puertoCajon" type="string">
+      <column length="30" name="PUERTO_CAJON"/>
+    </property>
+    <property name="puertoImpresora" type="string">
+      <column length="30" name="PUERTO_IMPRESORA"/>
+    </property>
+    <property name="secuenciaAbreCajon" type="string">
+      <column length="20" name="SECUENCIA_ABRE_CAJON"/>
+    </property>
+    <property name="FUltCierre" type="date">
+      <column length="7" name="F_ULT_CIERRE"/>
+    </property>
+    <property name="indCortePapel" type="string">
+      <column length="1" name="IND_CORTE_PAPEL"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+  </class>
+</hibernate-mapping>

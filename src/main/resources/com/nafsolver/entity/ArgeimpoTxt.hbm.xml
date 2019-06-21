@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArgeimpoTxt" optimistic-lock="version" schema="DESA46" table="ARGEIMPO_TXT">
+    <comment>Tabla de apoyo para importar archivo de texto</comment>
+    <composite-id class="com.nafsolver.entity.ArgeimpoTxtId" name="id">
+      <key-property name="id" type="short">
+        <column name="ID" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="numLinea" type="short">
+        <column name="NUM_LINEA" precision="4" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="timeStamp" type="date">
+      <column length="7" name="TIME_STAMP"/>
+    </property>
+    <property name="hilera" type="string">
+      <column length="400" name="HILERA"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arincd" optimistic-lock="version" schema="DESA46" table="ARINCD">
+    <composite-id class="com.nafsolver.entity.ArincdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="centro" type="string">
+        <column length="2" name="CENTRO"/>
+      </key-property>
+    </composite-id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE"/>
+    </property>
+    <property name="anoProce" type="java.lang.Short">
+      <column name="ANO_PROCE" precision="4" scale="0"/>
+    </property>
+    <property name="mesProce" type="java.lang.Byte">
+      <column name="MES_PROCE" precision="2" scale="0"/>
+    </property>
+    <property name="semanaProce" type="string">
+      <column length="2" name="SEMANA_PROCE"/>
+    </property>
+    <property name="indicadorSem" type="string">
+      <column length="1" name="INDICADOR_SEM"/>
+    </property>
+    <property name="diaProceso" type="date">
+      <column length="7" name="DIA_PROCESO"/>
+    </property>
+    <property name="anoProceCxc" type="java.lang.Short">
+      <column name="ANO_PROCE_CXC" precision="4" scale="0"/>
+    </property>
+    <property name="mesProceCxc" type="java.lang.Byte">
+      <column name="MES_PROCE_CXC" precision="2" scale="0"/>
+    </property>
+    <property name="semanaProceCxc" type="string">
+      <column length="2" name="SEMANA_PROCE_CXC"/>
+    </property>
+    <property name="indicadorSemCxc" type="string">
+      <column length="1" name="INDICADOR_SEM_CXC"/>
+    </property>
+    <property name="diaProcesoCxc" type="date">
+      <column length="7" name="DIA_PROCESO_CXC"/>
+    </property>
+    <property name="anoProceFact" type="java.lang.Short">
+      <column name="ANO_PROCE_FACT" precision="4" scale="0"/>
+    </property>
+    <property name="mesProceFact" type="java.lang.Byte">
+      <column name="MES_PROCE_FACT" precision="2" scale="0"/>
+    </property>
+    <property name="semanaProceFact" type="string">
+      <column length="2" name="SEMANA_PROCE_FACT"/>
+    </property>
+    <property name="diaProcesoFact" type="date">
+      <column length="7" name="DIA_PROCESO_FACT"/>
+    </property>
+    <property name="indicadorSemFact" type="string">
+      <column length="1" name="INDICADOR_SEM_FACT"/>
+    </property>
+    <property name="generaAprobExacto" type="string">
+      <column length="1" name="GENERA_APROB_EXACTO"/>
+    </property>
+    <property name="formulario" type="string">
+      <column length="2" name="FORMULARIO"/>
+    </property>
+    <property name="indCierrePendientePv" type="string">
+      <column length="1" name="IND_CIERRE_PENDIENTE_PV"/>
+    </property>
+    <property name="anoProcePv" type="java.lang.Short">
+      <column name="ANO_PROCE_PV" precision="4" scale="0"/>
+    </property>
+    <property name="mesProcePv" type="java.lang.Byte">
+      <column name="MES_PROCE_PV" precision="2" scale="0"/>
+    </property>
+    <property name="diaProcesoPv" type="date">
+      <column length="7" name="DIA_PROCESO_PV"/>
+    </property>
+    <property name="codFormuApartado" type="string">
+      <column length="12" name="COD_FORMU_APARTADO"/>
+    </property>
+    <property name="codFormuEnvio" type="string">
+      <column length="12" name="COD_FORMU_ENVIO"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="50" name="DIRECCION"/>
+    </property>
+    <property name="diaProxCierre" type="date">
+      <column length="7" name="DIA_PROX_CIERRE"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="15" name="TELEFONO"/>
+    </property>
+    <property name="centroCosto" type="string">
+      <column length="9" name="CENTRO_COSTO"/>
+    </property>
+    <property name="ctaCxcApdo" type="string">
+      <column length="15" name="CTA_CXC_APDO"/>
+    </property>
+  </class>
+</hibernate-mapping>

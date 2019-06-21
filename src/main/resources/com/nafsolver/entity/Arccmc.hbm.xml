@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccmc" optimistic-lock="version" schema="DESA46" table="ARCCMC">
+    <comment>Maestro de Clientes</comment>
+    <composite-id class="com.nafsolver.entity.ArccmcId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+      <key-property name="noCliente" type="string">
+        <column length="15" name="NO_CLIENTE"/>
+      </key-property>
+    </composite-id>
+    <property name="corporacion" type="string">
+      <column length="6" name="CORPORACION"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="tipoCliente" type="string">
+      <column length="2" name="TIPO_CLIENTE"/>
+    </property>
+    <property name="nombre" type="string">
+      <column length="40" name="NOMBRE"/>
+    </property>
+    <property name="alias" type="string">
+      <column length="40" name="ALIAS"/>
+    </property>
+    <property name="nombreComercial" type="string">
+      <column length="40" name="NOMBRE_COMERCIAL"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="500" name="DIRECCION"/>
+    </property>
+    <property name="apartado" type="string">
+      <column length="20" name="APARTADO"/>
+    </property>
+    <property name="noSoli" type="string">
+      <column length="8" name="NO_SOLI"/>
+    </property>
+    <property name="fechaIngre" type="date">
+      <column length="7" name="FECHA_INGRE"/>
+    </property>
+    <property name="nombreEnc" type="string">
+      <column length="25" name="NOMBRE_ENC"/>
+    </property>
+    <property name="cobrador" type="string">
+      <column length="4" name="COBRADOR"/>
+    </property>
+    <property name="usaOrden" type="string">
+      <column length="1" name="USA_ORDEN"/>
+    </property>
+    <property name="intereses" type="string">
+      <column length="1" name="INTERESES"/>
+    </property>
+    <property name="excentoImp" type="string">
+      <column length="1" name="EXCENTO_IMP"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="saldoMax" type="big_decimal">
+      <column name="SALDO_MAX" precision="17"/>
+    </property>
+    <property name="fechaMax" type="date">
+      <column length="7" name="FECHA_MAX"/>
+    </property>
+    <property name="tasaInt" type="big_decimal">
+      <column name="TASA_INT" precision="5"/>
+    </property>
+    <property name="limiteCredi" type="big_decimal">
+      <column name="LIMITE_CREDI" precision="17"/>
+    </property>
+    <property name="saldoAnte" type="big_decimal">
+      <column name="SALDO_ANTE" precision="17"/>
+    </property>
+    <property name="debitos" type="big_decimal">
+      <column name="DEBITOS" precision="17"/>
+    </property>
+    <property name="creditos" type="big_decimal">
+      <column name="CREDITOS" precision="17"/>
+    </property>
+    <property name="FUltCom" type="date">
+      <column length="7" name="F_ULT_COM"/>
+    </property>
+    <property name="FUltPago" type="date">
+      <column length="7" name="F_ULT_PAGO"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="12" name="TELEFONO"/>
+    </property>
+    <property name="telefono2" type="string">
+      <column length="12" name="TELEFONO2"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="12" name="FAX"/>
+    </property>
+    <property name="email1" type="string">
+      <column length="40" name="EMAIL1"/>
+    </property>
+    <property name="email2" type="string">
+      <column length="40" name="EMAIL2"/>
+    </property>
+    <property name="FCierre" type="date">
+      <column length="7" name="F_CIERRE"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="80" name="MOTIVO"/>
+    </property>
+    <property name="plazo" type="java.lang.Short">
+      <column name="PLAZO" precision="3" scale="0"/>
+    </property>
+    <property name="descProntoPago" type="big_decimal">
+      <column name="DESC_PRONTO_PAGO" precision="4"/>
+    </property>
+    <property name="tipoIdTributario" type="string">
+      <column length="1" name="TIPO_ID_TRIBUTARIO"/>
+    </property>
+    <property name="cedula" type="string">
+      <column length="15" name="CEDULA"/>
+    </property>
+    <property name="gracia" type="java.lang.Short">
+      <column name="GRACIA" precision="3" scale="0"/>
+    </property>
+    <property name="objetivoventa" type="big_decimal">
+      <column name="OBJETIVOVENTA" precision="17"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="1" name="CLASE"/>
+    </property>
+    <property name="oferta" type="string">
+      <column length="1" name="OFERTA"/>
+    </property>
+    <property name="condicioncheque" type="string">
+      <column length="1" name="CONDICIONCHEQUE"/>
+    </property>
+    <property name="diasCheque" type="java.lang.Short">
+      <column name="DIAS_CHEQUE" precision="3" scale="0"/>
+    </property>
+    <property name="balancefactura" type="string">
+      <column length="1" name="BALANCEFACTURA"/>
+    </property>
+    <property name="zona" type="string">
+      <column length="5" name="ZONA"/>
+    </property>
+    <property name="pais" type="string">
+      <column length="6" name="PAIS"/>
+    </property>
+    <property name="provincia" type="string">
+      <column length="6" name="PROVINCIA"/>
+    </property>
+    <property name="canton" type="string">
+      <column length="6" name="CANTON"/>
+    </property>
+    <property name="distrito" type="string">
+      <column length="2" name="DISTRITO"/>
+    </property>
+    <property name="barrio" type="string">
+      <column length="2" name="BARRIO"/>
+    </property>
+    <property name="segCensal" type="java.lang.Integer">
+      <column name="SEG_CENSAL" precision="6" scale="0"/>
+    </property>
+    <property name="tipoprecio" type="string">
+      <column length="2" name="TIPOPRECIO"/>
+    </property>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="FDelayi" type="string">
+      <column length="1" name="F_DELAYI"/>
+    </property>
+    <property name="FSpliti" type="string">
+      <column length="1" name="F_SPLITI"/>
+    </property>
+    <property name="FPrtupc" type="string">
+      <column length="1" name="F_PRTUPC"/>
+    </property>
+    <property name="cksDev" type="java.lang.Long">
+      <column name="CKS_DEV" precision="10" scale="0"/>
+    </property>
+    <property name="mtoComp" type="big_decimal">
+      <column name="MTO_COMP" precision="24"/>
+    </property>
+    <property name="clienteNacional" type="string">
+      <column length="1" name="CLIENTE_NACIONAL"/>
+    </property>
+    <property name="sector" type="string">
+      <column length="2" name="SECTOR"/>
+    </property>
+    <property name="actividad" type="string">
+      <column length="4" name="ACTIVIDAD"/>
+    </property>
+    <property name="condicionTributaria" type="string">
+      <column length="3" name="CONDICION_TRIBUTARIA"/>
+    </property>
+    <property name="nombreLargo" type="string">
+      <column length="200" name="NOMBRE_LARGO"/>
+    </property>
+    <property name="codClientePv" type="string">
+      <column length="15" name="COD_CLIENTE_PV"/>
+    </property>
+    <property name="porcDesc" type="big_decimal">
+      <column name="PORC_DESC" precision="9"/>
+    </property>
+    <property name="chequeSeguro" type="string">
+      <column length="1" name="CHEQUE_SEGURO"/>
+    </property>
+    <property name="dirDesp" type="string">
+      <column length="800" name="DIR_DESP"/>
+    </property>
+    <property name="st" type="string">
+      <column length="1" name="ST">
+        <comment>estatus para activar o desactivar los clientes</comment>
+      </column>
+    </property>
+    <property name="cdescuento" type="string">
+      <column length="3" name="CDESCUENTO"/>
+    </property>
+    <property name="suspendidosCxc" type="string">
+      <column length="1" name="SUSPENDIDOS_CXC"/>
+    </property>
+    <property name="porcRetIva" type="big_decimal">
+      <column name="PORC_RET_IVA" precision="17"/>
+    </property>
+    <property name="porcRetIslr" type="big_decimal">
+      <column name="PORC_RET_ISLR" precision="17"/>
+    </property>
+    <property name="formaPago" type="string">
+      <column length="50" name="FORMA_PAGO"/>
+    </property>
+    <property name="noComprobante" type="string">
+      <column length="14" name="NO_COMPROBANTE"/>
+    </property>
+    <property name="condicionPago" type="string">
+      <column length="100" name="CONDICION_PAGO"/>
+    </property>
+    <property name="saldoMaxRes" type="big_decimal">
+      <column name="SALDO_MAX_RES" precision="30"/>
+    </property>
+    <property name="limiteCrediRes" type="big_decimal">
+      <column name="LIMITE_CREDI_RES" precision="30"/>
+    </property>
+    <property name="saldoAnteRes" type="big_decimal">
+      <column name="SALDO_ANTE_RES" precision="30"/>
+    </property>
+    <property name="debitosRes" type="big_decimal">
+      <column name="DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="creditosRes" type="big_decimal">
+      <column name="CREDITOS_RES" precision="30"/>
+    </property>
+    <property name="objetivoventaRes" type="big_decimal">
+      <column name="OBJETIVOVENTA_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

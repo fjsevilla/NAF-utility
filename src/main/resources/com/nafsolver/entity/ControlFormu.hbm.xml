@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ControlFormu" optimistic-lock="version" schema="DESA46" table="CONTROL_FORMU">
+    <comment>Formularios</comment>
+    <composite-id class="com.nafsolver.entity.ControlFormuId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="formulario" type="string">
+        <column length="10" name="FORMULARIO"/>
+      </key-property>
+    </composite-id>
+    <property name="siguiente" type="java.lang.Long">
+      <column name="SIGUIENTE" precision="10" scale="0"/>
+    </property>
+    <property name="serie" type="string">
+      <column length="15" name="SERIE"/>
+    </property>
+    <property name="nombreReporte" type="string">
+      <column length="40" name="NOMBRE_REPORTE"/>
+    </property>
+    <property name="impresora" type="string">
+      <column name="IMPRESORA"/>
+    </property>
+    <property name="numInicial" type="java.lang.Long">
+      <column name="NUM_INICIAL" precision="10" scale="0"/>
+    </property>
+    <property name="numFinal" type="java.lang.Long">
+      <column name="NUM_FINAL" precision="10" scale="0"/>
+    </property>
+    <property name="modulo" type="string">
+      <column length="2" name="MODULO"/>
+    </property>
+    <property name="indReseteo" type="string">
+      <column length="2" name="IND_RESETEO"/>
+    </property>
+    <property name="reservados" type="java.lang.Integer">
+      <column name="RESERVADOS" precision="5" scale="0"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="40" name="DESCRIPCION"/>
+    </property>
+    <property name="fecAutorizacion" type="date">
+      <column length="7" name="FEC_AUTORIZACION"/>
+    </property>
+    <property name="activo" type="string">
+      <column length="1" name="ACTIVO"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplcat" optimistic-lock="version" schema="DESA46" table="ARPLCAT">
+    <id name="categoria" type="string">
+      <column length="2" name="CATEGORIA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="descripcion" type="string">
+      <column length="30" name="DESCRIPCION"/>
+    </property>
+    <property name="BFuncional" type="big_decimal">
+      <column name="B_FUNCIONAL" precision="5"/>
+    </property>
+  </class>
+</hibernate-mapping>

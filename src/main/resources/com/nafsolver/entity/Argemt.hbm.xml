@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Argemt" optimistic-lock="version" schema="DESA46" table="ARGEMT">
+    <comment>Maestro de terceros</comment>
+    <id name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tipoIdentificacion" type="string">
+      <column length="1" name="TIPO_IDENTIFICACION"/>
+    </property>
+    <property name="idTributario" type="string">
+      <column length="15" name="ID_TRIBUTARIO"/>
+    </property>
+    <property name="razonSocial" type="string">
+      <column length="500" name="RAZON_SOCIAL"/>
+    </property>
+    <property name="condicionTributaria" type="string">
+      <column length="3" name="CONDICION_TRIBUTARIA"/>
+    </property>
+    <property name="sector" type="string">
+      <column length="2" name="SECTOR"/>
+    </property>
+    <property name="actividad" type="string">
+      <column length="4" name="ACTIVIDAD"/>
+    </property>
+    <property name="pais" type="string">
+      <column length="6" name="PAIS"/>
+    </property>
+    <property name="provincia" type="string">
+      <column length="6" name="PROVINCIA"/>
+    </property>
+    <property name="canton" type="string">
+      <column length="6" name="CANTON"/>
+    </property>
+    <property name="distrito" type="string">
+      <column length="2" name="DISTRITO"/>
+    </property>
+    <property name="barrio" type="string">
+      <column length="2" name="BARRIO"/>
+    </property>
+    <property name="nombreComercial" type="string">
+      <column length="500" name="NOMBRE_COMERCIAL"/>
+    </property>
+    <property name="representanteLegal" type="string">
+      <column length="500" name="REPRESENTANTE_LEGAL"/>
+    </property>
+    <property name="contacto" type="string">
+      <column length="50" name="CONTACTO"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="1000" name="DIRECCION"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="15" name="TELEFONO"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="15" name="FAX"/>
+    </property>
+    <property name="EMail" type="string">
+      <column length="30" name="E_MAIL"/>
+    </property>
+    <property name="idRepresentante" type="string">
+      <column length="18" name="ID_REPRESENTANTE"/>
+    </property>
+    <property name="noCamaraComercio" type="string">
+      <column length="20" name="NO_CAMARA_COMERCIO"/>
+    </property>
+  </class>
+</hibernate-mapping>

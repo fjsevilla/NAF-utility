@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcpretap" optimistic-lock="version" schema="DESA46" table="ARCPRETAP">
+    <composite-id class="com.nafsolver.entity.ArcpretapId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="8" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="noRefe" type="string">
+        <column length="8" name="NO_REFE"/>
+      </key-property>
+      <key-property name="clave" type="string">
+        <column length="2" name="CLAVE"/>
+      </key-property>
+    </composite-id>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="montoRetenido" type="big_decimal">
+      <column name="MONTO_RETENIDO" precision="17"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="pagado" type="string">
+      <column length="1" name="PAGADO"/>
+    </property>
+    <property name="noDocuPago" type="string">
+      <column length="8" name="NO_DOCU_PAGO"/>
+    </property>
+    <property name="montoRetenidoRes" type="big_decimal">
+      <column name="MONTO_RETENIDO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

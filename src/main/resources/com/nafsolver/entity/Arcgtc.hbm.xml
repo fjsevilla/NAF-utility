@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgtc" optimistic-lock="version" schema="DESA46" table="ARCGTC">
+    <comment>Tipos de cambio</comment>
+    <composite-id class="com.nafsolver.entity.ArcgtcId" name="id">
+      <key-property name="claseCambio" type="string">
+        <column length="3" name="CLASE_CAMBIO"/>
+      </key-property>
+      <key-property name="fecha" type="date">
+        <column length="7" name="FECHA"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="tipoCambioVenta" type="big_decimal">
+      <column name="TIPO_CAMBIO_VENTA" precision="17" scale="4"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+  </class>
+</hibernate-mapping>

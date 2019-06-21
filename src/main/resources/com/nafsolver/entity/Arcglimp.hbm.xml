@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcglimp" optimistic-lock="version" schema="DESA46" table="ARCGLIMP">
+    <comment>Libro de impuestos por tercero</comment>
+    <composite-id class="com.nafsolver.entity.ArcglimpId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noTransa" type="string">
+        <column length="12" name="NO_TRANSA"/>
+      </key-property>
+      <key-property name="clave" type="string">
+        <column length="2" name="CLAVE"/>
+      </key-property>
+      <key-property name="noRefe" type="string">
+        <column length="12" name="NO_REFE"/>
+      </key-property>
+    </composite-id>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="sector" type="string">
+      <column length="2" name="SECTOR"/>
+    </property>
+    <property name="actividad" type="string">
+      <column length="4" name="ACTIVIDAD"/>
+    </property>
+    <property name="pais" type="string">
+      <column length="6" name="PAIS"/>
+    </property>
+    <property name="provincia" type="string">
+      <column length="6" name="PROVINCIA"/>
+    </property>
+    <property name="canton" type="string">
+      <column length="6" name="CANTON"/>
+    </property>
+    <property name="porcentaje" type="big_decimal">
+      <column name="PORCENTAJE" precision="7" scale="4"/>
+    </property>
+    <property name="base" type="big_decimal">
+      <column name="BASE" precision="17"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="idSec" type="string">
+      <column length="5" name="ID_SEC"/>
+    </property>
+    <property name="indImpRet" type="string">
+      <column length="1" name="IND_IMP_RET"/>
+    </property>
+    <property name="aplicaCredFiscal" type="string">
+      <column length="1" name="APLICA_CRED_FISCAL"/>
+    </property>
+    <property name="comportamiento" type="string">
+      <column length="1" name="COMPORTAMIENTO"/>
+    </property>
+    <property name="baseRes" type="big_decimal">
+      <column name="BASE_RES" precision="30"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

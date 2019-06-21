@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Modelos" optimistic-lock="version" schema="DESA46" table="MODELOS">
+    <composite-id class="com.nafsolver.entity.ModelosId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="cmarca" type="string">
+        <column length="6" name="CMARCA"/>
+      </key-property>
+      <key-property name="cmodelo" type="string">
+        <column length="25" name="CMODELO"/>
+      </key-property>
+    </composite-id>
+    <property name="xmodelo" type="string">
+      <column length="50" name="XMODELO"/>
+    </property>
+  </class>
+</hibernate-mapping>

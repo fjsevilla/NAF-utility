@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArincatTipo" optimistic-lock="version" schema="DESA46" table="ARINCAT_TIPO">
+    <composite-id class="com.nafsolver.entity.ArincatTipoId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="tipo" type="string">
+        <column length="30" name="TIPO"/>
+      </key-property>
+    </composite-id>
+    <property name="nomTipo" type="string">
+      <column length="500" name="NOM_TIPO"/>
+    </property>
+    <property name="correlativo" type="java.lang.Long">
+      <column name="CORRELATIVO" precision="17" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

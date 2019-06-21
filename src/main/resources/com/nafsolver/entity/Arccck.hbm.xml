@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccck" optimistic-lock="version" schema="DESA46" table="ARCCCK">
+    <composite-id class="com.nafsolver.entity.ArccckId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO"/>
+    </property>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE"/>
+    </property>
+    <property name="banco" type="string">
+      <column length="2" name="BANCO"/>
+    </property>
+    <property name="noCheque" type="string">
+      <column length="12" name="NO_CHEQUE"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="20" name="MOTIVO"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="estadoNuevo" type="string">
+      <column length="1" name="ESTADO_NUEVO"/>
+    </property>
+    <property name="vendedor" type="string">
+      <column length="4" name="VENDEDOR"/>
+    </property>
+    <property name="cobradorOrig" type="string">
+      <column length="4" name="COBRADOR_ORIG"/>
+    </property>
+    <property name="noDocuCobro" type="string">
+      <column length="12" name="NO_DOCU_COBRO"/>
+    </property>
+    <property name="tipoDocCobro" type="string">
+      <column length="2" name="TIPO_DOC_COBRO"/>
+    </property>
+    <property name="cobrador" type="string">
+      <column length="4" name="COBRADOR"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

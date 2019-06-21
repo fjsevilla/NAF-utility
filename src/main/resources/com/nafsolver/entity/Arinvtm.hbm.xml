@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinvtm" optimistic-lock="version" schema="DESA46" table="ARINVTM">
+    <composite-id class="com.nafsolver.entity.ArinvtmId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoM" type="string">
+        <column length="2" name="TIPO_M"/>
+      </key-property>
+    </composite-id>
+    <property name="descri" type="string">
+      <column length="20" name="DESCRI"/>
+    </property>
+    <property name="movimi" type="string">
+      <column length="1" name="MOVIMI"/>
+    </property>
+    <property name="consum" type="string">
+      <column length="1" name="CONSUM"/>
+    </property>
+    <property name="compra" type="string">
+      <column length="1" name="COMPRA"/>
+    </property>
+    <property name="ventas" type="string">
+      <column length="1" name="VENTAS"/>
+    </property>
+    <property name="trasla" type="string">
+      <column length="1" name="TRASLA"/>
+    </property>
+    <property name="ajuste" type="string">
+      <column length="1" name="AJUSTE"/>
+    </property>
+    <property name="ajusteFt" type="string">
+      <column length="1" name="AJUSTE_FT"/>
+    </property>
+    <property name="regMov" type="string">
+      <column length="1" name="REG_MOV"/>
+    </property>
+    <property name="manifiesto" type="string">
+      <column length="1" name="MANIFIESTO"/>
+    </property>
+    <property name="produccion" type="string">
+      <column length="1" name="PRODUCCION"/>
+    </property>
+    <property name="trasladoV" type="string">
+      <column length="1" name="TRASLADO_V"/>
+    </property>
+    <property name="interface_" type="string">
+      <column length="2" name="INTERFACE"/>
+    </property>
+    <property name="idRazon" type="string">
+      <column length="2" name="ID_RAZON"/>
+    </property>
+    <property name="ctaContrapartida" type="string">
+      <column length="15" name="CTA_CONTRAPARTIDA"/>
+    </property>
+    <property name="formulario" type="string">
+      <column length="10" name="FORMULARIO"/>
+    </property>
+  </class>
+</hibernate-mapping>

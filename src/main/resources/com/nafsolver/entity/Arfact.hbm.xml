@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfact" optimistic-lock="version" schema="DESA46" table="ARFACT">
+    <comment>Tipos de Documnetos</comment>
+    <composite-id class="com.nafsolver.entity.ArfactId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipo" type="string">
+        <column length="2" name="TIPO"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoMov" type="string">
+      <column length="1" name="TIPO_MOV"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="35" name="DESCRIPCION"/>
+    </property>
+    <property name="afectaSaldo" type="string">
+      <column length="1" name="AFECTA_SALDO"/>
+    </property>
+    <property name="indFacDev" type="string">
+      <column length="1" name="IND_FAC_DEV"/>
+    </property>
+    <property name="liquidacion" type="string">
+      <column length="1" name="LIQUIDACION"/>
+    </property>
+    <property name="anulaFactu" type="string">
+      <column length="1" name="ANULA_FACTU"/>
+    </property>
+    <property name="obsequio" type="string">
+      <column length="1" name="OBSEQUIO"/>
+    </property>
+    <property name="maxLinea" type="java.lang.Short">
+      <column name="MAX_LINEA" precision="3" scale="0"/>
+    </property>
+    <property name="pedido" type="string">
+      <column length="1" name="PEDIDO"/>
+    </property>
+    <property name="formularioCtrl" type="string">
+      <column length="10" name="FORMULARIO_CTRL"/>
+    </property>
+    <property name="msgDoc1" type="string">
+      <column length="100" name="MSG_DOC1"/>
+    </property>
+    <property name="msgDoc2" type="string">
+      <column length="100" name="MSG_DOC2"/>
+    </property>
+    <property name="msgDoc3" type="string">
+      <column length="100" name="MSG_DOC3"/>
+    </property>
+    <property name="msgDoc4" type="string">
+      <column length="100" name="MSG_DOC4"/>
+    </property>
+    <property name="msgDoc5" type="string">
+      <column length="100" name="MSG_DOC5"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArcglveAnu" optimistic-lock="version" schema="DESA46" table="ARCGLVE_ANU">
+    <composite-id class="com.nafsolver.entity.ArcglveAnuId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noControl" type="string">
+        <column length="12" name="NO_CONTROL"/>
+      </key-property>
+    </composite-id>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="descripcionAnu" type="string">
+      <column length="200" name="DESCRIPCION_ANU"/>
+    </property>
+    <property name="ano" type="java.lang.Short">
+      <column name="ANO" precision="4" scale="0"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="nro" type="java.lang.Long">
+      <column name="NRO" precision="17" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

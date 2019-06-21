@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplasisp" optimistic-lock="version" schema="DESA46" table="ARPLASISP">
+    <composite-id class="com.nafsolver.entity.ArplasispId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="10" name="NO_EMPLE"/>
+      </key-property>
+      <key-property name="dia" type="date">
+        <column length="7" name="DIA"/>
+      </key-property>
+    </composite-id>
+    <property name="entrada" type="date">
+      <column length="7" name="ENTRADA">
+        <comment>HORA DE ENTRADA</comment>
+      </column>
+    </property>
+    <property name="salida" type="date">
+      <column length="7" name="SALIDA">
+        <comment>HORA SALIDA</comment>
+      </column>
+    </property>
+    <property name="horaExtDiurna" type="date">
+      <column length="7" name="HORA_EXT_DIURNA">
+        <comment>HORA EXTRA DIURNA</comment>
+      </column>
+    </property>
+    <property name="horaExtNocturna" type="date">
+      <column length="7" name="HORA_EXT_NOCTURNA">
+        <comment>HORA EXTRA NOCTURNA</comment>
+      </column>
+    </property>
+    <property name="retardos" type="date">
+      <column length="7" name="RETARDOS">
+        <comment>RETARDO</comment>
+      </column>
+    </property>
+    <property name="feriado" type="string">
+      <column length="1" name="FERIADO">
+        <comment>SI DIA ES FERIADO</comment>
+      </column>
+    </property>
+    <property name="sabado" type="string">
+      <column length="1" name="SABADO">
+        <comment>SI DIA ES SABADO</comment>
+      </column>
+    </property>
+    <property name="domingo" type="string">
+      <column length="1" name="DOMINGO">
+        <comment>SI DIA ES DOMINGO</comment>
+      </column>
+    </property>
+    <property name="vacaciones" type="string">
+      <column length="1" name="VACACIONES">
+        <comment>SI EL TRABAJADOR ESTA DE VACACIONES</comment>
+      </column>
+    </property>
+    <property name="horaSalPermiso" type="date">
+      <column length="7" name="HORA_SAL_PERMISO">
+        <comment>HORA DE SALIDA DE PERMISO</comment>
+      </column>
+    </property>
+    <property name="horaEntPermiso" type="date">
+      <column length="7" name="HORA_ENT_PERMISO">
+        <comment>HORA DE ENTRADA DE PERMISO</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

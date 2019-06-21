@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccaux1" optimistic-lock="version" schema="DESA46" table="ARCCAUX1">
+    <composite-id class="com.nafsolver.entity.Arccaux1Id" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="centro" type="string">
+        <column length="2" name="CENTRO"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="2" name="TIPO_DOC"/>
+      </key-property>
+      <key-property name="periodo" type="string">
+        <column length="4" name="PERIODO"/>
+      </key-property>
+      <key-property name="ruta" type="string">
+        <column length="4" name="RUTA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+      <key-property name="noCliente" type="string">
+        <column length="15" name="NO_CLIENTE"/>
+      </key-property>
+    </composite-id>
+    <property name="saldo" type="big_decimal">
+      <column name="SALDO" precision="17"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="ajusteONd" type="string">
+      <column length="1" name="AJUSTE_O_ND"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arintp" optimistic-lock="version" schema="DESA46" table="ARINTP">
+    <comment>Precios por segmento</comment>
+    <composite-id class="com.nafsolver.entity.ArintpId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="codigo" type="string">
+        <column length="30" name="CODIGO"/>
+      </key-property>
+      <key-property name="tipo" type="string">
+        <column length="2" name="TIPO"/>
+      </key-property>
+    </composite-id>
+    <property name="indPrecioFijo" type="string">
+      <column length="1" name="IND_PRECIO_FIJO"/>
+    </property>
+    <property name="porcVariacion" type="big_decimal">
+      <column name="PORC_VARIACION" precision="8" scale="4"/>
+    </property>
+    <property name="redondeo" type="big_decimal">
+      <column name="REDONDEO" precision="7"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="precio" type="big_decimal">
+      <column name="PRECIO" precision="22" scale="6"/>
+    </property>
+    <property name="indPrecioFijoNue" type="string">
+      <column length="1" name="IND_PRECIO_FIJO_NUE"/>
+    </property>
+    <property name="porcVariacionNue" type="big_decimal">
+      <column name="PORC_VARIACION_NUE" precision="8" scale="4"/>
+    </property>
+    <property name="redondeoNue" type="big_decimal">
+      <column name="REDONDEO_NUE" precision="7"/>
+    </property>
+    <property name="monedaNue" type="string">
+      <column length="1" name="MONEDA_NUE"/>
+    </property>
+    <property name="precioNue" type="big_decimal">
+      <column name="PRECIO_NUE" precision="22" scale="6"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="precioRes" type="big_decimal">
+      <column name="PRECIO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

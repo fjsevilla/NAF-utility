@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinum" optimistic-lock="version" schema="DESA46" table="ARINUM">
+    <composite-id class="com.nafsolver.entity.ArinumId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="unidad" type="string">
+        <column length="2" name="UNIDAD"/>
+      </key-property>
+    </composite-id>
+    <property name="nom" type="string">
+      <column length="10" name="NOM"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="1" name="TIPO"/>
+    </property>
+    <property name="indFactCantidad" type="string">
+      <column length="1" name="IND_FACT_CANTIDAD"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcpsa" optimistic-lock="version" schema="DESA46" table="ARCPSA">
+    <comment>Histórico de saldos por proveedor</comment>
+    <composite-id class="com.nafsolver.entity.ArcpsaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noProve" type="string">
+        <column length="15" name="NO_PROVE"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="mes" type="byte">
+        <column name="MES" precision="2" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="saldoAnt" type="big_decimal">
+      <column name="SALDO_ANT" precision="17"/>
+    </property>
+    <property name="debitos" type="big_decimal">
+      <column name="DEBITOS" precision="17"/>
+    </property>
+    <property name="creditos" type="big_decimal">
+      <column name="CREDITOS" precision="17"/>
+    </property>
+    <property name="saldoAntRes" type="big_decimal">
+      <column name="SALDO_ANT_RES" precision="30"/>
+    </property>
+    <property name="debitosRes" type="big_decimal">
+      <column name="DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="creditosRes" type="big_decimal">
+      <column name="CREDITOS_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

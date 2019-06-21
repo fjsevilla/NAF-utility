@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckcnc" optimistic-lock="version" schema="DESA46" table="ARCKCNC">
+    <composite-id class="com.nafsolver.entity.ArckcnchId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="int">
+        <column name="NO_DOCU" precision="8" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="noCta" type="string">
+      <column length="15" name="NO_CTA"/>
+    </property>
+    <property name="procedencia" type="string">
+      <column length="1" name="PROCEDENCIA"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="beneficiario" type="string">
+      <column length="60" name="BENEFICIARIO"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="mensaje" type="string">
+      <column length="20" name="MENSAJE"/>
+    </property>
+    <property name="montoBco" type="big_decimal">
+      <column name="MONTO_BCO" precision="17"/>
+    </property>
+    <property name="difere" type="big_decimal">
+      <column name="DIFERE" precision="17"/>
+    </property>
+    <property name="codMsg" type="string">
+      <column length="5" name="COD_MSG"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="montoBcoRes" type="big_decimal">
+      <column name="MONTO_BCO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplte" optimistic-lock="version" schema="DESA46" table="ARPLTE">
+    <composite-id class="com.nafsolver.entity.ArplteId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoEmp" type="string">
+        <column length="2" name="TIPO_EMP"/>
+      </key-property>
+    </composite-id>
+    <property name="descrip" type="string">
+      <column length="30" name="DESCRIP"/>
+    </property>
+    <property name="NHoras" type="java.lang.Integer">
+      <column name="N_HORAS" precision="5" scale="0"/>
+    </property>
+    <property name="diasTrab" type="java.lang.Byte">
+      <column name="DIAS_TRAB" precision="2" scale="0"/>
+    </property>
+    <property name="horxmes" type="java.lang.Short">
+      <column name="HORXMES" precision="4" scale="0"/>
+    </property>
+    <property name="claseEmp" type="string">
+      <column length="1" name="CLASE_EMP"/>
+    </property>
+    <property name="jornada" type="string">
+      <column length="1" name="JORNADA" not-null="true"/>
+    </property>
+    <property name="tipoCalculoVac" type="string">
+      <column length="1" name="TIPO_CALCULO_VAC" not-null="true"/>
+    </property>
+    <property name="sabadoEsDescanso" type="string">
+      <column length="1" name="SABADO_ES_DESCANSO" not-null="true"/>
+    </property>
+    <property name="domingoEsDescanso" type="string">
+      <column length="1" name="DOMINGO_ES_DESCANSO" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

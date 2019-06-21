@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.10.30:1521:XE</property>
+    <property name="hibernate.connection.username">desa46</property>
+    <property name="hibernate.connection.password">111050</property>
+    <mapping resource="com/nafsolver/entity/ManTransporte.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arintb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ControlFormu.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argect.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArfaflcTah.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argemod.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckdb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArincatTipo.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgmb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafeh.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpsa.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplgr.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaev.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArccmcDir.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcgmsC.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinda.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfact.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccgd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argecan.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argesec.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmeAj.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaus.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Monedas.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcktbCta.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpcbp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckrd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpti.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcczg.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcaee.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplpan.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmlAj.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpct.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplte.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinec.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArfaflTa.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgcb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgmm.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplmovimi.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArplelnomDet.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/MovEfe.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinme.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arpltper.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccmd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplpgd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Calendario.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplme.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplcp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argemot.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcctd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckmc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argemt.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafli.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arpltit.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Meses.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcggre.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Conceptos.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcprd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ConsecPeriodo.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplconst.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArindaTa.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcghcC.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argepai.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccsc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/CompaEfe.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Denominaciones.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcglco.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinma.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfamc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplcal.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccte.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinml.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplmod.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplpge.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgms.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplmd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgtc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinha.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafec.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinta.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpretap.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcggi.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Paises.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinmeh.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argeco.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplcat.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArplcalDet.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgmc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafe.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgimp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/DetTransporte.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccud.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccaux1.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcptd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/EncTransporte.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpmd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckct.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arincd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argedis.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arintxd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinmn.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinii.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgceco.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arindp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Ccatalogo.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinum.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccck.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaflc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplsper.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Color.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplasisp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgti.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcrh.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArplconstDet.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcglve.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpmp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinia.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinlo.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplpar.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arincl.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argetid.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinca.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccdr.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcccc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccru.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcgctC.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinrelacion.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argepro.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgae.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Modelos.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arincur.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinhp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaflch.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplcl.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcktd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccrd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplmi.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgied.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckuf.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArfagrCt.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcghcT.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmeOc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmaTa.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ComEstadosOrden.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinmt.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcaed.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckhc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArgeimpoTxt.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinservicios.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argetb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccar.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgaeh.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Marcas.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArccmdH.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcnc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckcnch.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafl.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinbo.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArfaflTah.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpgr.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgiee.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccmc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckmm.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplcpto.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccti.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmlUb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arincc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arintp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcggrl.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcglimp.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgcdm.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinhaTa.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcppret.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaflh.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccer.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArplTipMov.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcctc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/UsuCia.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argebar.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/CierreEfe.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcgcd.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcpcl.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfafech.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arinvtm.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arfaft.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/EncDespacho.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arcktb.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArcglveAnu.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arincat.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arckce.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arccgr.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/ArinmlOc.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Arplelnom.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Tapcia.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Argeac.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Grupos.hbm.xml"/>
+    <mapping resource="com/nafsolver/entity/Aringt.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

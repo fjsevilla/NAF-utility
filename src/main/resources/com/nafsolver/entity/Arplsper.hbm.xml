@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplsper" optimistic-lock="version" schema="DESA46" table="ARPLSPER">
+    <composite-id class="com.nafsolver.entity.ArplsperId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="10" name="NO_EMPLE"/>
+      </key-property>
+      <key-property name="noSolper" type="string">
+        <column length="5" name="NO_SOLPER"/>
+      </key-property>
+      <key-property name="diaSolicitud" type="date">
+        <column length="7" name="DIA_SOLICITUD"/>
+      </key-property>
+    </composite-id>
+    <property name="fechaPermiso" type="date">
+      <column length="7" name="FECHA_PERMISO"/>
+    </property>
+    <property name="tipoPermiso" type="string">
+      <column length="5" name="TIPO_PERMISO"/>
+    </property>
+    <property name="detaPermiso" type="string">
+      <column length="200" name="DETA_PERMISO"/>
+    </property>
+    <property name="horaSalida" type="date">
+      <column length="7" name="HORA_SALIDA"/>
+    </property>
+    <property name="horaRegreso" type="date">
+      <column length="7" name="HORA_REGRESO"/>
+    </property>
+    <property name="solicitPor" type="string">
+      <column length="50" name="SOLICIT_POR"/>
+    </property>
+    <property name="autoriPor" type="string">
+      <column length="50" name="AUTORI_POR"/>
+    </property>
+    <property name="remun" type="string">
+      <column length="1" name="REMUN"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="50" name="ESTADO"/>
+    </property>
+  </class>
+</hibernate-mapping>

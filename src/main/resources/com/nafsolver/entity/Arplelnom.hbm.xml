@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplelnom" optimistic-lock="version" schema="DESA46" table="ARPLELNOM">
+    <composite-id class="com.nafsolver.entity.ArplelnomId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noElnom" type="string">
+        <column length="10" name="NO_ELNOM"/>
+      </key-property>
+      <key-property name="codpla" type="string">
+        <column length="2" name="CODPLA"/>
+      </key-property>
+      <key-property name="tipoEmp" type="string">
+        <column length="2" name="TIPO_EMP"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="10" name="NO_EMPLE"/>
+      </key-property>
+    </composite-id>
+    <property name="mes" type="string">
+      <column length="2" name="MES">
+        <comment>MES EN PROCESO</comment>
+      </column>
+    </property>
+    <property name="ano" type="string">
+      <column length="4" name="ANO">
+        <comment>ANO EN PROCESO</comment>
+      </column>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA">
+        <comment>FECHA DE REGISTRO DE ELABORACION DE NOMINA</comment>
+      </column>
+    </property>
+    <property name="fechIniPer" type="date">
+      <column length="7" name="FECH_INI_PER">
+        <comment>FECHA DE INICIO DE PERIODO</comment>
+      </column>
+    </property>
+    <property name="fechFinPer" type="date">
+      <column length="7" name="FECH_FIN_PER">
+        <comment>FECHA DE FIN DE PERIODO</comment>
+      </column>
+    </property>
+    <property name="totAsig" type="big_decimal">
+      <column name="TOT_ASIG" precision="12">
+        <comment>SALDO TOTAL DE ASIGNACIONES EN ELABORACION DE NOMINA</comment>
+      </column>
+    </property>
+    <property name="totDedu" type="big_decimal">
+      <column name="TOT_DEDU" precision="12">
+        <comment>SALDO TOTAL DE DEDUCCIONES EN ELABORACION DE NOMINA</comment>
+      </column>
+    </property>
+    <property name="totGen" type="big_decimal">
+      <column name="TOT_GEN" precision="12">
+        <comment>SALDO DE RESULTADO</comment>
+      </column>
+    </property>
+    <property name="observ" type="string">
+      <column length="300" name="OBSERV">
+        <comment>OBSERVACION DE ELABORACION DE NOMINA</comment>
+      </column>
+    </property>
+    <property name="fechAct" type="date">
+      <column length="7" name="FECH_ACT">
+        <comment>FECHA DE CIERRE DE PROCESO DE ELABORACION</comment>
+      </column>
+    </property>
+    <property name="userAct" type="string">
+      <column length="30" name="USER_ACT">
+        <comment>REGISTRO DE USUARIO QUE REALIZO EL CIERRE DE PROCESO DE LA ELABORACION DE NOMINA</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

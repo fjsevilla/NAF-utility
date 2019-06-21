@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArinmlUb" optimistic-lock="version" schema="DESA46" table="ARINML_UB">
+    <composite-id class="com.nafsolver.entity.ArinmlUbId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="2" name="TIPO_DOC"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="linea" type="int">
+        <column name="LINEA" precision="5" scale="0"/>
+      </key-property>
+      <key-property name="bodega" type="string">
+        <column length="5" name="BODEGA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+      <key-property name="codUbicacion" type="string">
+        <column length="10" name="COD_UBICACION"/>
+      </key-property>
+      <key-property name="noLote" type="string">
+        <column length="30" name="NO_LOTE"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="cantidad" type="big_decimal">
+      <column name="CANTIDAD" precision="17"/>
+    </property>
+    <property name="codUbicacionDestino" type="string">
+      <column length="10" name="COD_UBICACION_DESTINO"/>
+    </property>
+    <property name="unidadesRecep" type="big_decimal">
+      <column name="UNIDADES_RECEP" precision="17"/>
+    </property>
+    <property name="costo" type="big_decimal">
+      <column name="COSTO" precision="17"/>
+    </property>
+    <property name="noRefeDocu" type="string">
+      <column length="12" name="NO_REFE_DOCU"/>
+    </property>
+    <property name="noCiaDestino" type="string">
+      <column length="2" name="NO_CIA_DESTINO"/>
+    </property>
+    <property name="undTemp" type="big_decimal">
+      <column name="UND_TEMP" precision="17"/>
+    </property>
+    <property name="cantidadDev" type="big_decimal">
+      <column name="CANTIDAD_DEV" precision="17"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="22" scale="6"/>
+    </property>
+  </class>
+</hibernate-mapping>

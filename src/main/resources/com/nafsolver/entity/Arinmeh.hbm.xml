@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinmeh" optimistic-lock="version" schema="DESA46" table="ARINMEH">
+    <composite-id class="com.nafsolver.entity.ArinmehId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="noFisico" type="string">
+      <column length="12" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="15" name="SERIE_FISICO"/>
+    </property>
+    <property name="conduce" type="string">
+      <column length="10" name="CONDUCE"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="tipoRefe" type="string">
+      <column length="2" name="TIPO_REFE"/>
+    </property>
+    <property name="noRefe" type="string">
+      <column length="12" name="NO_REFE"/>
+    </property>
+    <property name="serieRefe" type="string">
+      <column length="15" name="SERIE_REFE"/>
+    </property>
+    <property name="noDocuRefe" type="string">
+      <column length="12" name="NO_DOCU_REFE"/>
+    </property>
+    <property name="impVentas" type="big_decimal">
+      <column name="IMP_VENTAS" precision="22"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="22"/>
+    </property>
+    <property name="movTot" type="big_decimal">
+      <column name="MOV_TOT" precision="22"/>
+    </property>
+    <property name="totArtIv" type="big_decimal">
+      <column name="TOT_ART_IV" precision="22"/>
+    </property>
+    <property name="observ1" type="string">
+      <column length="250" name="OBSERV1"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="22" scale="4"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="semana" type="java.lang.Byte">
+      <column name="SEMANA" precision="2" scale="0"/>
+    </property>
+    <property name="indSem" type="string">
+      <column length="1" name="IND_SEM"/>
+    </property>
+    <property name="fechaAplicacion" type="date">
+      <column length="7" name="FECHA_APLICACION"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="noTraslado" type="string">
+      <column length="12" name="NO_TRASLADO"/>
+    </property>
+    <property name="movTotRes" type="big_decimal">
+      <column name="MOV_TOT_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

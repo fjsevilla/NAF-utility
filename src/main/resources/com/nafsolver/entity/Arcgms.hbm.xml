@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgms" optimistic-lock="version" schema="DESA46" table="ARCGMS">
+    <comment>Maestro de cuentas contables</comment>
+    <composite-id class="com.nafsolver.entity.ArcgmsId" name="id">
+      <key-property name="cuenta" type="string">
+        <column length="15" name="CUENTA"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="descri" type="string">
+      <column length="35" name="DESCRI"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="2" name="TIPO"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="1" name="CLASE"/>
+    </property>
+    <property name="indMov" type="string">
+      <column length="1" name="IND_MOV"/>
+    </property>
+    <property name="indPresup" type="string">
+      <column length="1" name="IND_PRESUP"/>
+    </property>
+    <property name="presupCambio" type="string">
+      <column length="1" name="PRESUP_CAMBIO"/>
+    </property>
+    <property name="debitos" type="big_decimal">
+      <column name="DEBITOS" precision="17"/>
+    </property>
+    <property name="creditos" type="big_decimal">
+      <column name="CREDITOS" precision="17"/>
+    </property>
+    <property name="saldoPerAnt" type="big_decimal">
+      <column name="SALDO_PER_ANT" precision="17"/>
+    </property>
+    <property name="saldoMesAnt" type="big_decimal">
+      <column name="SALDO_MES_ANT" precision="17"/>
+    </property>
+    <property name="descri1" type="string">
+      <column length="800" name="DESCRI_1"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="activa" type="string">
+      <column length="1" name="ACTIVA"/>
+    </property>
+    <property name="FInactiva" type="date">
+      <column length="7" name="F_INACTIVA"/>
+    </property>
+    <property name="saldoPerAntDol" type="big_decimal">
+      <column name="SALDO_PER_ANT_DOL" precision="17"/>
+    </property>
+    <property name="saldoMesAntDol" type="big_decimal">
+      <column name="SALDO_MES_ANT_DOL" precision="17"/>
+    </property>
+    <property name="debitosDol" type="big_decimal">
+      <column name="DEBITOS_DOL" precision="17"/>
+    </property>
+    <property name="creditosDol" type="big_decimal">
+      <column name="CREDITOS_DOL" precision="17"/>
+    </property>
+    <property name="permisoCon" type="string">
+      <column length="1" name="PERMISO_CON"/>
+    </property>
+    <property name="permisoChe" type="string">
+      <column length="1" name="PERMISO_CHE"/>
+    </property>
+    <property name="permisoCxp" type="string">
+      <column length="1" name="PERMISO_CXP"/>
+    </property>
+    <property name="permisoPla" type="string">
+      <column length="1" name="PERMISO_PLA"/>
+    </property>
+    <property name="permisoAfijo" type="string">
+      <column length="1" name="PERMISO_AFIJO"/>
+    </property>
+    <property name="permisoInv" type="string">
+      <column length="1" name="PERMISO_INV"/>
+    </property>
+    <property name="permisoAprov" type="string">
+      <column length="1" name="PERMISO_APROV"/>
+    </property>
+    <property name="permisoFact" type="string">
+      <column length="1" name="PERMISO_FACT"/>
+    </property>
+    <property name="permisoCxc" type="string">
+      <column length="1" name="PERMISO_CXC"/>
+    </property>
+    <property name="permisoCch" type="string">
+      <column length="2" name="PERMISO_CCH"/>
+    </property>
+    <property name="permisoTpmInv" type="string">
+      <column length="1" name="PERMISO_TPM_INV"/>
+    </property>
+    <property name="permisoTpmCom" type="string">
+      <column length="1" name="PERMISO_TPM_COM"/>
+    </property>
+    <property name="permisoTpmC2p" type="string">
+      <column length="1" name="PERMISO_TPM_C2P"/>
+    </property>
+    <property name="monetaria" type="string">
+      <column length="1" name="MONETARIA"/>
+    </property>
+    <property name="ajustable" type="string">
+      <column length="1" name="AJUSTABLE"/>
+    </property>
+    <property name="aceptaCc" type="string">
+      <column length="1" name="ACEPTA_CC"/>
+    </property>
+    <property name="creditosPend" type="big_decimal">
+      <column name="CREDITOS_PEND" precision="17"/>
+    </property>
+    <property name="debitosPend" type="big_decimal">
+      <column name="DEBITOS_PEND" precision="17"/>
+    </property>
+    <property name="usadoEn" type="string">
+      <column length="2" name="USADO_EN"/>
+    </property>
+    <property name="compartido" type="string">
+      <column length="1" name="COMPARTIDO"/>
+    </property>
+    <property name="tcambioConversion" type="string">
+      <column length="1" name="TCAMBIO_CONVERSION"/>
+    </property>
+    <property name="padre" type="string">
+      <column length="15" name="PADRE"/>
+    </property>
+    <property name="nivel" type="java.lang.Boolean">
+      <column name="NIVEL" precision="1" scale="0"/>
+    </property>
+    <property name="indTercero" type="string">
+      <column length="1" name="IND_TERCERO"/>
+    </property>
+    <property name="ctaAjusteInflacion" type="string">
+      <column length="15" name="CTA_AJUSTE_INFLACION"/>
+    </property>
+    <property name="ctaCorreccion" type="string">
+      <column length="15" name="CTA_CORRECCION"/>
+    </property>
+    <property name="codAjuste" type="string">
+      <column length="5" name="COD_AJUSTE"/>
+    </property>
+    <property name="descriLarga" type="string">
+      <column length="100" name="DESCRI_LARGA"/>
+    </property>
+    <property name="naturaleza" type="string">
+      <column length="1" name="NATURALEZA"/>
+    </property>
+    <property name="permisoImp" type="string">
+      <column length="1" name="PERMISO_IMP"/>
+    </property>
+    <property name="debitosRes" type="big_decimal">
+      <column name="DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="creditosRes" type="big_decimal">
+      <column name="CREDITOS_RES" precision="30"/>
+    </property>
+    <property name="saldoPerAntRes" type="big_decimal">
+      <column name="SALDO_PER_ANT_RES" precision="30"/>
+    </property>
+    <property name="saldoMesAntRes" type="big_decimal">
+      <column name="SALDO_MES_ANT_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

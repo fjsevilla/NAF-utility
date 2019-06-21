@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArcktbCta" optimistic-lock="version" schema="DESA46" table="ARCKTB_CTA">
+    <composite-id class="com.nafsolver.entity.ArcktbCtaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noCta" type="string">
+        <column length="15" name="NO_CTA"/>
+      </key-property>
+      <key-property name="tipoMovExt" type="string">
+        <column length="30" name="TIPO_MOV_EXT"/>
+      </key-property>
+    </composite-id>
+    <property name="descri" type="string">
+      <column length="500" name="DESCRI"/>
+    </property>
+    <property name="centro" type="string">
+      <column length="9" name="CENTRO"/>
+    </property>
+    <property name="cuenta" type="string">
+      <column length="15" name="CUENTA"/>
+    </property>
+  </class>
+</hibernate-mapping>

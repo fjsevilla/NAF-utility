@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplconst" optimistic-lock="version" schema="DESA46" table="ARPLCONST">
+    <composite-id class="com.nafsolver.entity.ArplconstId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noConst" type="string">
+        <column length="10" name="NO_CONST"/>
+      </key-property>
+    </composite-id>
+    <property name="descripConst" type="string">
+      <column length="150" name="DESCRIP_CONST">
+        <comment>DESCRIPCION DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="unidad" type="string">
+      <column length="40" name="UNIDAD">
+        <comment>UNIDAD EN QUE SE EXPRESA LA CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="equivalencia" type="big_decimal">
+      <column name="EQUIVALENCIA" precision="12">
+        <comment>VALOR DE EQUIVALENCIA DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="maximo" type="big_decimal">
+      <column name="MAXIMO" precision="12">
+        <comment>VALOR TOPE DE USO DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="valor" type="big_decimal">
+      <column name="VALOR" precision="12">
+        <comment>VALOR DE USO DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="abrev" type="string">
+      <column length="40" name="ABREV">
+        <comment>ABREVIATURA DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="st" type="string">
+      <column length="1" name="ST">
+        <comment>ESTATUS DE CONSTANTE</comment>
+      </column>
+    </property>
+    <property name="fijo" type="string">
+      <column length="1" name="FIJO">
+        <comment>SI EL VALOR DE LA CONSTANTE ES FIJO</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

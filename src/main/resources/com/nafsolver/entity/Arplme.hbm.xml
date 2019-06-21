@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplme" optimistic-lock="version" schema="DESA46" table="ARPLME">
+    <composite-id class="com.nafsolver.entity.ArplmeId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codpla" type="string">
+        <column length="100" name="CODPLA"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="10" name="NO_EMPLE"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoEmp" type="string">
+      <column length="2" name="TIPO_EMP"/>
+    </property>
+    <property name="nombre" type="string">
+      <column length="45" name="NOMBRE"/>
+    </property>
+    <property name="nombrePila" type="string">
+      <column length="20" name="NOMBRE_PILA"/>
+    </property>
+    <property name="apePat" type="string">
+      <column length="20" name="APE_PAT"/>
+    </property>
+    <property name="apeMat" type="string">
+      <column length="25" name="APE_MAT"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="estadoProp" type="string">
+      <column length="1" name="ESTADO_PROP"/>
+    </property>
+    <property name="cedula" type="string">
+      <column length="12" name="CEDULA"/>
+    </property>
+    <property name="ciudadCedula" type="string">
+      <column length="4" name="CIUDAD_CEDULA"/>
+    </property>
+    <property name="nacion" type="string">
+      <column length="1" name="NACION"/>
+    </property>
+    <property name="asegu" type="string">
+      <column length="15" name="ASEGU"/>
+    </property>
+    <property name="afp" type="string">
+      <column length="2" name="AFP"/>
+    </property>
+    <property name="nivel" type="string">
+      <column length="6" name="NIVEL"/>
+    </property>
+    <property name="subNivel" type="string">
+      <column length="2" name="SUB_NIVEL"/>
+    </property>
+    <property name="formaPago" type="string">
+      <column length="1" name="FORMA_PAGO"/>
+    </property>
+    <property name="idCta" type="string">
+      <column length="2" name="ID_CTA"/>
+    </property>
+    <property name="tipoCta" type="string">
+      <column length="1" name="TIPO_CTA"/>
+    </property>
+    <property name="numCuenta" type="string">
+      <column length="20" name="NUM_CUENTA"/>
+    </property>
+    <property name="sangre" type="string">
+      <column length="4" name="SANGRE"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="9" name="TELEFONO"/>
+    </property>
+    <property name="notifica" type="string">
+      <column length="30" name="NOTIFICA"/>
+    </property>
+    <property name="telNoti" type="string">
+      <column length="9" name="TEL_NOTI"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="50" name="DIRECCION"/>
+    </property>
+    <property name="apartado" type="string">
+      <column length="20" name="APARTADO"/>
+    </property>
+    <property name="cc1" type="string">
+      <column length="3" name="CC_1"/>
+    </property>
+    <property name="cc2" type="string">
+      <column length="3" name="CC_2"/>
+    </property>
+    <property name="cc3" type="string">
+      <column length="3" name="CC_3"/>
+    </property>
+    <property name="FIngreso" type="date">
+      <column length="7" name="F_INGRESO"/>
+    </property>
+    <property name="FEgreso" type="date">
+      <column length="7" name="F_EGRESO"/>
+    </property>
+    <property name="FFinContrato" type="date">
+      <column length="7" name="F_FIN_CONTRATO"/>
+    </property>
+    <property name="FReingreso" type="date">
+      <column length="7" name="F_REINGRESO"/>
+    </property>
+    <property name="condicion" type="string">
+      <column length="1" name="CONDICION"/>
+    </property>
+    <property name="ECivil" type="string">
+      <column length="1" name="E_CIVIL"/>
+    </property>
+    <property name="noHora" type="string">
+      <column length="3" name="NO_HORA"/>
+    </property>
+    <property name="FNacimi" type="date">
+      <column length="7" name="F_NACIMI"/>
+    </property>
+    <property name="lugarNac" type="string">
+      <column length="20" name="LUGAR_NAC"/>
+    </property>
+    <property name="servMilitar" type="string">
+      <column length="10" name="SERV_MILITAR"/>
+    </property>
+    <property name="categoria" type="string">
+      <column length="2" name="CATEGORIA"/>
+    </property>
+    <property name="titulo" type="string">
+      <column length="4" name="TITULO"/>
+    </property>
+    <property name="titProvNal" type="string">
+      <column length="10" name="TIT_PROV_NAL"/>
+    </property>
+    <property name="tarjeta" type="string">
+      <column length="1" name="TARJETA"/>
+    </property>
+    <property name="procesaTarj" type="string">
+      <column length="1" name="PROCESA_TARJ"/>
+    </property>
+    <property name="licencia" type="string">
+      <column length="2" name="LICENCIA"/>
+    </property>
+    <property name="area" type="string">
+      <column length="2" name="AREA"/>
+    </property>
+    <property name="depto" type="string">
+      <column length="5" name="DEPTO"/>
+    </property>
+    <property name="division" type="string">
+      <column length="3" name="DIVISION"/>
+    </property>
+    <property name="seccion" type="string">
+      <column length="2" name="SECCION"/>
+    </property>
+    <property name="puesto" type="string">
+      <column length="4" name="PUESTO"/>
+    </property>
+    <property name="sexo" type="string">
+      <column length="1" name="SEXO"/>
+    </property>
+    <property name="saldoIvaDol" type="big_decimal">
+      <column name="SALDO_IVA_DOL" precision="14" scale="6"/>
+    </property>
+    <property name="acumulaVacac" type="string">
+      <column length="1" name="ACUMULA_VACAC"/>
+    </property>
+    <property name="plazoVacac" type="java.lang.Short">
+      <column name="PLAZO_VACAC" precision="3" scale="0"/>
+    </property>
+    <property name="porcAdelanto" type="big_decimal">
+      <column name="PORC_ADELANTO" precision="5"/>
+    </property>
+    <property name="ultAcc" type="string">
+      <column length="8" name="ULT_ACC"/>
+    </property>
+    <property name="ganaExtras" type="string">
+      <column length="1" name="GANA_EXTRAS"/>
+    </property>
+    <property name="tipoSeguro" type="string">
+      <column length="1" name="TIPO_SEGURO"/>
+    </property>
+    <property name="observIns" type="string">
+      <column length="40" name="OBSERV_INS"/>
+    </property>
+    <property name="adeImpsal" type="big_decimal">
+      <column name="ADE_IMPSAL" precision="10"/>
+    </property>
+    <property name="etiqueta1" type="string">
+      <column length="50" name="ETIQUETA1"/>
+    </property>
+    <property name="valor1" type="string">
+      <column length="30" name="VALOR1"/>
+    </property>
+    <property name="etiqueta2" type="string">
+      <column length="50" name="ETIQUETA2"/>
+    </property>
+    <property name="valor2" type="string">
+      <column length="30" name="VALOR2"/>
+    </property>
+    <property name="usuarioBd" type="string">
+      <column length="20" name="USUARIO_BD"/>
+    </property>
+    <property name="salBaseRecibo" type="big_decimal">
+      <column name="SAL_BASE_RECIBO" precision="10"/>
+    </property>
+    <property name="rif" type="string">
+      <column length="15" name="RIF"/>
+    </property>
+    <property name="tipoPersona" type="string">
+      <column length="3" name="TIPO_PERSONA"/>
+    </property>
+    <property name="FIniVac" type="date">
+      <column length="7" name="F_INI_VAC"/>
+    </property>
+    <property name="FFinVac" type="date">
+      <column length="7" name="F_FIN_VAC"/>
+    </property>
+    <property name="nuevaFIngreso" type="date">
+      <column length="7" name="NUEVA_F_INGRESO"/>
+    </property>
+    <property name="diasDisfrute" type="big_decimal">
+      <column name="DIAS_DISFRUTE" precision="5"/>
+    </property>
+    <property name="diasAdic" type="big_decimal">
+      <column name="DIAS_ADIC" precision="5"/>
+    </property>
+    <property name="diasConvenio" type="big_decimal">
+      <column name="DIAS_CONVENIO" precision="5"/>
+    </property>
+    <property name="diasBono" type="big_decimal">
+      <column name="DIAS_BONO" precision="5"/>
+    </property>
+    <property name="diasAdicBono" type="big_decimal">
+      <column name="DIAS_ADIC_BONO" precision="5"/>
+    </property>
+    <property name="liquidado" type="string">
+      <column length="1" name="LIQUIDADO"/>
+    </property>
+    <property name="ubicGeo" type="string">
+      <column length="6" name="UBIC_GEO"/>
+    </property>
+    <property name="FUltCambSal" type="date">
+      <column length="7" name="F_ULT_CAMB_SAL"/>
+    </property>
+    <property name="perVacComp" type="java.lang.Byte">
+      <column name="PER_VAC_COMP" precision="2" scale="0"/>
+    </property>
+    <property name="phAnterior" type="big_decimal">
+      <column name="PH_ANTERIOR" precision="15"/>
+    </property>
+    <property name="deVacaciones" type="string">
+      <column length="1" name="DE_VACACIONES"/>
+    </property>
+  </class>
+</hibernate-mapping>

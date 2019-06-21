@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplpgd" optimistic-lock="version" schema="DESA46" table="ARPLPGD">
+    <id name="parametroId" type="string">
+      <column length="16" name="PARAMETRO_ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="grupoParametro" type="string">
+      <column length="10" name="GRUPO_PARAMETRO"/>
+    </property>
+    <property name="etiqueta" type="string">
+      <column length="40" name="ETIQUETA"/>
+    </property>
+    <property name="tipoDato" type="string">
+      <column length="1" name="TIPO_DATO"/>
+    </property>
+    <property name="datoCaracter" type="string">
+      <column length="30" name="DATO_CARACTER"/>
+    </property>
+    <property name="datoNumerico" type="big_decimal">
+      <column name="DATO_NUMERICO" precision="17" scale="4"/>
+    </property>
+    <property name="datoDate" type="date">
+      <column length="7" name="DATO_DATE"/>
+    </property>
+    <property name="formatMask" type="string">
+      <column length="20" name="FORMAT_MASK"/>
+    </property>
+    <property name="datoMinimo" type="string">
+      <column length="40" name="DATO_MINIMO"/>
+    </property>
+    <property name="datoMaximo" type="string">
+      <column length="20" name="DATO_MAXIMO"/>
+    </property>
+    <property name="requerido" type="string">
+      <column length="1" name="REQUERIDO"/>
+    </property>
+    <property name="modificable" type="string">
+      <column length="1" name="MODIFICABLE"/>
+    </property>
+    <property name="soloEtiqueta" type="string">
+      <column length="1" name="SOLO_ETIQUETA"/>
+    </property>
+    <property name="noLinea" type="java.lang.Short">
+      <column name="NO_LINEA" precision="3" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

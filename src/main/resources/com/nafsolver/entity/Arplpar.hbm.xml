@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplpar" optimistic-lock="version" schema="DESA46" table="ARPLPAR">
+    <id name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="maxTardia" type="java.lang.Integer">
+      <column name="MAX_TARDIA" precision="5" scale="0"/>
+    </property>
+    <property name="maxTardiaJefes" type="java.lang.Integer">
+      <column name="MAX_TARDIA_JEFES" precision="5" scale="0"/>
+    </property>
+    <property name="maxHExtras" type="java.lang.Short">
+      <column name="MAX_H_EXTRAS" precision="3" scale="0"/>
+    </property>
+    <property name="codHOrd" type="string">
+      <column length="3" name="COD_H_ORD"/>
+    </property>
+    <property name="codHExtras" type="string">
+      <column length="3" name="COD_H_EXTRAS"/>
+    </property>
+    <property name="codHNoct" type="string">
+      <column length="3" name="COD_H_NOCT"/>
+    </property>
+    <property name="codHDomFer" type="string">
+      <column length="3" name="COD_H_DOM_FER"/>
+    </property>
+    <property name="codHNolab" type="string">
+      <column length="3" name="COD_H_NOLAB"/>
+    </property>
+    <property name="codDiasNolab" type="string">
+      <column length="3" name="COD_DIAS_NOLAB"/>
+    </property>
+    <property name="codBprofesion" type="string">
+      <column length="3" name="COD_BPROFESION"/>
+    </property>
+    <property name="porcBprofesion" type="big_decimal">
+      <column name="PORC_BPROFESION" precision="5"/>
+    </property>
+    <property name="codBfuncional" type="string">
+      <column length="3" name="COD_BFUNCIONAL"/>
+    </property>
+    <property name="codProviVac" type="string">
+      <column length="3" name="COD_PROVI_VAC"/>
+    </property>
+    <property name="codInterinato" type="string">
+      <column length="3" name="COD_INTERINATO"/>
+    </property>
+    <property name="codRetroactivo" type="string">
+      <column length="3" name="COD_RETROACTIVO"/>
+    </property>
+    <property name="ctaRetroactivo" type="string">
+      <column length="15" name="CTA_RETROACTIVO"/>
+    </property>
+    <property name="codImpsal" type="string">
+      <column length="3" name="COD_IMPSAL"/>
+    </property>
+    <property name="codIngAde" type="string">
+      <column length="3" name="COD_ING_ADE"/>
+    </property>
+    <property name="porcAde" type="big_decimal">
+      <column name="PORC_ADE" precision="5"/>
+    </property>
+    <property name="codDedAde" type="string">
+      <column length="3" name="COD_DED_ADE"/>
+    </property>
+    <property name="codIngBonoescolar" type="string">
+      <column length="3" name="COD_ING_BONOESCOLAR"/>
+    </property>
+    <property name="codAdeImpsal" type="string">
+      <column length="3" name="COD_ADE_IMPSAL"/>
+    </property>
+    <property name="codBonoEscolar" type="string">
+      <column length="3" name="COD_BONO_ESCOLAR"/>
+    </property>
+    <property name="creditoxh" type="big_decimal">
+      <column name="CREDITOXH" precision="7"/>
+    </property>
+    <property name="creditoxc" type="big_decimal">
+      <column name="CREDITOXC" precision="7"/>
+    </property>
+    <property name="tipoSeguro" type="string">
+      <column length="2" name="TIPO_SEGURO"/>
+    </property>
+    <property name="digito" type="string">
+      <column length="1" name="DIGITO"/>
+    </property>
+    <property name="nomFirma1" type="string">
+      <column length="30" name="NOM_FIRMA1"/>
+    </property>
+    <property name="nomFirma2" type="string">
+      <column length="30" name="NOM_FIRMA2"/>
+    </property>
+    <property name="nomFirma3" type="string">
+      <column length="30" name="NOM_FIRMA3"/>
+    </property>
+    <property name="nomFirma4" type="string">
+      <column length="30" name="NOM_FIRMA4"/>
+    </property>
+    <property name="nomFirma5" type="string">
+      <column length="30" name="NOM_FIRMA5"/>
+    </property>
+    <property name="nomCargo1" type="string">
+      <column length="25" name="NOM_CARGO1"/>
+    </property>
+    <property name="nomCargo2" type="string">
+      <column length="25" name="NOM_CARGO2"/>
+    </property>
+    <property name="nomCargo3" type="string">
+      <column length="25" name="NOM_CARGO3"/>
+    </property>
+    <property name="nomCargo4" type="string">
+      <column length="25" name="NOM_CARGO4"/>
+    </property>
+    <property name="nomCargo5" type="string">
+      <column length="25" name="NOM_CARGO5"/>
+    </property>
+    <property name="imprimeCheques" type="string">
+      <column length="1" name="IMPRIME_CHEQUES"/>
+    </property>
+    <property name="codIngAjuRedondeo" type="string">
+      <column length="3" name="COD_ING_AJU_REDONDEO"/>
+    </property>
+    <property name="redondeoSalEfectivo" type="big_decimal">
+      <column name="REDONDEO_SAL_EFECTIVO" precision="7"/>
+    </property>
+    <property name="redondeoSalTransfer" type="big_decimal">
+      <column name="REDONDEO_SAL_TRANSFER" precision="7"/>
+    </property>
+    <property name="redondeoSalCheques" type="big_decimal">
+      <column name="REDONDEO_SAL_CHEQUES" precision="7"/>
+    </property>
+    <property name="codIngFerlab" type="string">
+      <column length="3" name="COD_ING_FERLAB"/>
+    </property>
+    <property name="codSaldofavor" type="string">
+      <column length="3" name="COD_SALDOFAVOR"/>
+    </property>
+    <property name="letraRif" type="string">
+      <column length="1" name="LETRA_RIF"/>
+    </property>
+    <property name="numeroRif" type="string">
+      <column length="9" name="NUMERO_RIF"/>
+    </property>
+    <property name="codHabitOb" type="string">
+      <column length="3" name="COD_HABIT_OB"/>
+    </property>
+    <property name="codHabitPat" type="string">
+      <column length="3" name="COD_HABIT_PAT"/>
+    </property>
+    <property name="codSso" type="string">
+      <column length="3" name="COD_SSO"/>
+    </property>
+    <property name="codSsoLiq" type="string">
+      <column length="3" name="COD_SSO_LIQ"/>
+    </property>
+    <property name="codSsoPat" type="string">
+      <column length="3" name="COD_SSO_PAT"/>
+    </property>
+    <property name="codCancSso" type="string">
+      <column length="3" name="COD_CANC_SSO"/>
+    </property>
+    <property name="codSsoPatLiq" type="string">
+      <column length="3" name="COD_SSO_PAT_LIQ"/>
+    </property>
+    <property name="noProveSso" type="string">
+      <column length="15" name="NO_PROVE_SSO"/>
+    </property>
+    <property name="ctaAjusteSso" type="string">
+      <column length="15" name="CTA_AJUSTE_SSO"/>
+    </property>
+    <property name="cc1Sso" type="string">
+      <column length="3" name="CC1_SSO"/>
+    </property>
+    <property name="cc2Sso" type="string">
+      <column length="3" name="CC2_SSO"/>
+    </property>
+    <property name="cc3Sso" type="string">
+      <column length="3" name="CC3_SSO"/>
+    </property>
+    <property name="codParoPat" type="string">
+      <column length="3" name="COD_PARO_PAT"/>
+    </property>
+    <property name="codParoPatLiq" type="string">
+      <column length="3" name="COD_PARO_PAT_LIQ"/>
+    </property>
+    <property name="codParo" type="string">
+      <column length="3" name="COD_PARO"/>
+    </property>
+    <property name="codParoLiq" type="string">
+      <column length="3" name="COD_PARO_LIQ"/>
+    </property>
+    <property name="codDiaDescanso" type="string">
+      <column length="3" name="COD_DIA_DESCANSO"/>
+    </property>
+    <property name="codIngAnticipo" type="string">
+      <column length="3" name="COD_ING_ANTICIPO"/>
+    </property>
+    <property name="codAnticipoComision" type="string">
+      <column length="3" name="COD_ANTICIPO_COMISION"/>
+    </property>
+    <property name="codForzoso" type="string">
+      <column length="3" name="COD_FORZOSO"/>
+    </property>
+    <property name="codForzosoPat" type="string">
+      <column length="3" name="COD_FORZOSO_PAT"/>
+    </property>
+    <property name="codDomAdicional" type="string">
+      <column length="3" name="COD_DOM_ADICIONAL"/>
+    </property>
+  </class>
+</hibernate-mapping>

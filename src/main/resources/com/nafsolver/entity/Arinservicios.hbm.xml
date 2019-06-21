@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinservicios" optimistic-lock="version" schema="DESA46" table="ARINSERVICIOS">
+    <composite-id class="com.nafsolver.entity.ArinserviciosId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codServi" type="string">
+        <column length="30" name="COD_SERVI"/>
+      </key-property>
+    </composite-id>
+    <property name="nombre" type="string">
+      <column length="500" name="NOMBRE"/>
+    </property>
+    <property name="ccDebito" type="string">
+      <column length="9" name="CC_DEBITO"/>
+    </property>
+    <property name="debito" type="string">
+      <column length="15" name="DEBITO"/>
+    </property>
+    <property name="ccCredito" type="string">
+      <column length="9" name="CC_CREDITO"/>
+    </property>
+    <property name="credito" type="string">
+      <column length="15" name="CREDITO"/>
+    </property>
+  </class>
+</hibernate-mapping>

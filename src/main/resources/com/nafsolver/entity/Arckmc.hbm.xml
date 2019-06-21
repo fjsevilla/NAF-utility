@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckmc" optimistic-lock="version" schema="DESA46" table="ARCKMC">
+    <comment>Maestro de Cuentas Bancarias</comment>
+    <composite-id class="com.nafsolver.entity.ArckmcId" name="id">
+      <key-property name="noCta" type="string">
+        <column length="15" name="NO_CTA"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="banco" type="string">
+      <column length="2" name="BANCO"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="anoProc" type="java.lang.Short">
+      <column name="ANO_PROC" precision="4" scale="0"/>
+    </property>
+    <property name="mesProc" type="java.lang.Byte">
+      <column name="MES_PROC" precision="2" scale="0"/>
+    </property>
+    <property name="conciliada" type="string">
+      <column length="1" name="CONCILIADA"/>
+    </property>
+    <property name="ultAnoConcil" type="java.lang.Short">
+      <column name="ULT_ANO_CONCIL" precision="4" scale="0"/>
+    </property>
+    <property name="ultMesConcil" type="java.lang.Byte">
+      <column name="ULT_MES_CONCIL" precision="2" scale="0"/>
+    </property>
+    <property name="anoIni" type="java.lang.Short">
+      <column name="ANO_INI" precision="4" scale="0"/>
+    </property>
+    <property name="mesIni" type="java.lang.Byte">
+      <column name="MES_INI" precision="2" scale="0"/>
+    </property>
+    <property name="salCiaIni" type="big_decimal">
+      <column name="SAL_CIA_INI" precision="17"/>
+    </property>
+    <property name="salMesAnt" type="big_decimal">
+      <column name="SAL_MES_ANT" precision="17"/>
+    </property>
+    <property name="salMesAntB" type="big_decimal">
+      <column name="SAL_MES_ANT_B" precision="17"/>
+    </property>
+    <property name="salDiaAnt" type="big_decimal">
+      <column name="SAL_DIA_ANT" precision="17"/>
+    </property>
+    <property name="cheMes" type="big_decimal">
+      <column name="CHE_MES" precision="17"/>
+    </property>
+    <property name="cheMesB" type="big_decimal">
+      <column name="CHE_MES_B" precision="17"/>
+    </property>
+    <property name="cheDia" type="big_decimal">
+      <column name="CHE_DIA" precision="17"/>
+    </property>
+    <property name="cheAnulmesant" type="big_decimal">
+      <column name="CHE_ANULMESANT" precision="17"/>
+    </property>
+    <property name="depMes" type="big_decimal">
+      <column name="DEP_MES" precision="17"/>
+    </property>
+    <property name="depMesB" type="big_decimal">
+      <column name="DEP_MES_B" precision="17"/>
+    </property>
+    <property name="depDia" type="big_decimal">
+      <column name="DEP_DIA" precision="17"/>
+    </property>
+    <property name="debMes" type="big_decimal">
+      <column name="DEB_MES" precision="17"/>
+    </property>
+    <property name="debMesB" type="big_decimal">
+      <column name="DEB_MES_B" precision="17"/>
+    </property>
+    <property name="debDia" type="big_decimal">
+      <column name="DEB_DIA" precision="17"/>
+    </property>
+    <property name="creMes" type="big_decimal">
+      <column name="CRE_MES" precision="17"/>
+    </property>
+    <property name="creMesB" type="big_decimal">
+      <column name="CRE_MES_B" precision="17"/>
+    </property>
+    <property name="creDia" type="big_decimal">
+      <column name="CRE_DIA" precision="17"/>
+    </property>
+    <property name="noCuenta" type="string">
+      <column length="15" name="NO_CUENTA"/>
+    </property>
+    <property name="cuentaComision" type="string">
+      <column length="15" name="CUENTA_COMISION"/>
+    </property>
+    <property name="observ" type="string">
+      <column length="240" name="OBSERV"/>
+    </property>
+    <property name="codDiariom" type="string">
+      <column length="5" name="COD_DIARIOM"/>
+    </property>
+    <property name="saldoNominal" type="big_decimal">
+      <column name="SALDO_NOMINAL" precision="17"/>
+    </property>
+    <property name="diaCierre" type="date">
+      <column length="7" name="DIA_CIERRE"/>
+    </property>
+    <property name="formulario" type="string">
+      <column length="10" name="FORMULARIO"/>
+    </property>
+    <property name="formularioTr" type="string">
+      <column length="10" name="FORMULARIO_TR"/>
+    </property>
+    <property name="salCiaIniRes" type="big_decimal">
+      <column name="SAL_CIA_INI_RES" precision="30"/>
+    </property>
+    <property name="salMesAntRes" type="big_decimal">
+      <column name="SAL_MES_ANT_RES" precision="30"/>
+    </property>
+    <property name="salMesAntBRes" type="big_decimal">
+      <column name="SAL_MES_ANT_B_RES" precision="30"/>
+    </property>
+    <property name="salDiaAntRes" type="big_decimal">
+      <column name="SAL_DIA_ANT_RES" precision="30"/>
+    </property>
+    <property name="cheMesRes" type="big_decimal">
+      <column name="CHE_MES_RES" precision="30"/>
+    </property>
+    <property name="cheMesBRes" type="big_decimal">
+      <column name="CHE_MES_B_RES" precision="30"/>
+    </property>
+    <property name="cheDiaRes" type="big_decimal">
+      <column name="CHE_DIA_RES" precision="30"/>
+    </property>
+    <property name="cheAnulmesantRes" type="big_decimal">
+      <column name="CHE_ANULMESANT_RES" precision="30"/>
+    </property>
+    <property name="depMesRes" type="big_decimal">
+      <column name="DEP_MES_RES" precision="30"/>
+    </property>
+    <property name="depMesBRes" type="big_decimal">
+      <column name="DEP_MES_B_RES" precision="30"/>
+    </property>
+    <property name="depDiaRes" type="big_decimal">
+      <column name="DEP_DIA_RES" precision="30"/>
+    </property>
+    <property name="debMesRes" type="big_decimal">
+      <column name="DEB_MES_RES" precision="30"/>
+    </property>
+    <property name="debMesBRes" type="big_decimal">
+      <column name="DEB_MES_B_RES" precision="30"/>
+    </property>
+    <property name="debDiaRes" type="big_decimal">
+      <column name="DEB_DIA_RES" precision="30"/>
+    </property>
+    <property name="creMesRes" type="big_decimal">
+      <column name="CRE_MES_RES" precision="30"/>
+    </property>
+    <property name="creMesBRes" type="big_decimal">
+      <column name="CRE_MES_B_RES" precision="30"/>
+    </property>
+    <property name="creDiaRes" type="big_decimal">
+      <column name="CRE_DIA_RES" precision="30"/>
+    </property>
+    <property name="saldoNominalRes" type="big_decimal">
+      <column name="SALDO_NOMINAL_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.DetTransporte" optimistic-lock="version" schema="DESA46" table="DET_TRANSPORTE">
+    <composite-id class="com.nafsolver.entity.DetTransporteId" name="id">
+      <key-property name="numero" type="long">
+        <column name="NUMERO" precision="17" scale="0"/>
+      </key-property>
+      <key-property name="linea" type="long">
+        <column name="LINEA" precision="17" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE"/>
+    </property>
+    <property name="pares" type="java.lang.Long">
+      <column name="PARES" precision="17" scale="0"/>
+    </property>
+    <property name="bulto" type="java.lang.Long">
+      <column name="BULTO" precision="17" scale="0"/>
+    </property>
+    <property name="noDocu" type="string">
+      <column length="12" name="NO_DOCU"/>
+    </property>
+    <property name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+    </property>
+    <property name="estatus" type="string">
+      <column length="3" name="ESTATUS"/>
+    </property>
+    <property name="observaciones" type="string">
+      <column length="500" name="OBSERVACIONES"/>
+    </property>
+    <property name="noVendedor" type="string">
+      <column length="4" name="NO_VENDEDOR"/>
+    </property>
+    <property name="devuelto" type="java.lang.Long">
+      <column name="DEVUELTO" precision="18" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

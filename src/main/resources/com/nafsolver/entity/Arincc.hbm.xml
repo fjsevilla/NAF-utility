@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arincc" optimistic-lock="version" schema="DESA46" table="ARINCC">
+    <composite-id class="com.nafsolver.entity.ArinccId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="6" name="GRUPO"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="15" name="TIPO_DOC"/>
+      </key-property>
+    </composite-id>
+    <property name="ccDebito" type="string">
+      <column length="15" name="CC_DEBITO"/>
+    </property>
+    <property name="debito" type="string">
+      <column length="15" name="DEBITO"/>
+    </property>
+    <property name="origDebito" type="string">
+      <column length="50" name="ORIG_DEBITO"/>
+    </property>
+    <property name="ccCredito" type="string">
+      <column length="15" name="CC_CREDITO"/>
+    </property>
+    <property name="credito" type="string">
+      <column length="15" name="CREDITO"/>
+    </property>
+    <property name="origCredito" type="string">
+      <column length="50" name="ORIG_CREDITO"/>
+    </property>
+    <property name="interface_" type="string">
+      <column length="2" name="INTERFACE"/>
+    </property>
+  </class>
+</hibernate-mapping>

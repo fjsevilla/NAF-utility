@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplmi" optimistic-lock="version" schema="DESA46" table="ARPLMI">
+    <composite-id class="com.nafsolver.entity.ArplmiId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noIngre" type="string">
+        <column length="3" name="NO_INGRE"/>
+      </key-property>
+    </composite-id>
+    <property name="usoInterno" type="string">
+      <column length="1" name="USO_INTERNO"/>
+    </property>
+    <property name="descri" type="string">
+      <column length="25" name="DESCRI"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="1" name="TIPO"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="tipoIng" type="string">
+      <column length="2" name="TIPO_ING"/>
+    </property>
+    <property name="tasaMult" type="big_decimal">
+      <column name="TASA_MULT" precision="12" scale="4"/>
+    </property>
+    <property name="abrev" type="string">
+      <column length="5" name="ABREV"/>
+    </property>
+    <property name="depSalHora" type="string">
+      <column length="2" name="DEP_SAL_HORA"/>
+    </property>
+    <property name="otrosIngresos" type="string">
+      <column length="3" name="OTROS_INGRESOS"/>
+    </property>
+    <property name="apartirDe" type="string">
+      <column length="3" name="APARTIR_DE"/>
+    </property>
+    <property name="grupoIng" type="string">
+      <column length="2" name="GRUPO_ING"/>
+    </property>
+    <property name="prioridad" type="java.lang.Short">
+      <column name="PRIORIDAD" precision="3" scale="0"/>
+    </property>
+    <property name="cuandoAplica" type="string">
+      <column length="1" name="CUANDO_APLICA"/>
+    </property>
+    <property name="aplicaA" type="string">
+      <column length="4" name="APLICA_A"/>
+    </property>
+    <property name="formulaId" type="string">
+      <column length="10" name="FORMULA_ID"/>
+    </property>
+    <property name="indCalculo" type="string">
+      <column length="1" name="IND_CALCULO"/>
+    </property>
+    <property name="cuentaContable" type="string">
+      <column length="15" name="CUENTA_CONTABLE"/>
+    </property>
+    <property name="comentario" type="string">
+      <column length="600" name="COMENTARIO"/>
+    </property>
+    <property name="indivi" type="string">
+      <column length="1" name="INDIVI"/>
+    </property>
+    <property name="esExtra" type="string">
+      <column length="1" name="ES_EXTRA"/>
+    </property>
+    <property name="variable" type="string">
+      <column length="1" name="VARIABLE"/>
+    </property>
+  </class>
+</hibernate-mapping>

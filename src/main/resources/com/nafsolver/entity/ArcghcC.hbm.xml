@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArcghcC" optimistic-lock="version" schema="DESA46" table="ARCGHC_C">
+    <comment>Histórico de saldos por cuenta contable y centro de costo</comment>
+    <composite-id class="com.nafsolver.entity.ArcghcCId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="mes" type="byte">
+        <column name="MES" precision="2" scale="0"/>
+      </key-property>
+      <key-property name="cuenta" type="string">
+        <column length="15" name="CUENTA"/>
+      </key-property>
+      <key-property name="cc1" type="string">
+        <column length="3" name="CC_1"/>
+      </key-property>
+      <key-property name="cc2" type="string">
+        <column length="3" name="CC_2"/>
+      </key-property>
+      <key-property name="cc3" type="string">
+        <column length="3" name="CC_3"/>
+      </key-property>
+    </composite-id>
+    <property name="periodo" type="java.lang.Integer">
+      <column name="PERIODO" precision="6" scale="0"/>
+    </property>
+    <property name="presuIni" type="big_decimal">
+      <column name="PRESU_INI" precision="17"/>
+    </property>
+    <property name="presu" type="big_decimal">
+      <column name="PRESU" precision="17"/>
+    </property>
+    <property name="presAc" type="big_decimal">
+      <column name="PRES_AC" precision="17"/>
+    </property>
+    <property name="movimiento" type="big_decimal">
+      <column name="MOVIMIENTO" precision="17"/>
+    </property>
+    <property name="movDb" type="big_decimal">
+      <column name="MOV_DB" precision="17"/>
+    </property>
+    <property name="movCr" type="big_decimal">
+      <column name="MOV_CR" precision="17"/>
+    </property>
+    <property name="saldo" type="big_decimal">
+      <column name="SALDO" precision="17"/>
+    </property>
+    <property name="movDbDol" type="big_decimal">
+      <column name="MOV_DB_DOL" precision="17"/>
+    </property>
+    <property name="movCrDol" type="big_decimal">
+      <column name="MOV_CR_DOL" precision="17"/>
+    </property>
+    <property name="saldoDol" type="big_decimal">
+      <column name="SALDO_DOL" precision="17"/>
+    </property>
+    <property name="saldoConv" type="big_decimal">
+      <column name="SALDO_CONV" precision="17"/>
+    </property>
+    <property name="movimientoRes" type="big_decimal">
+      <column name="MOVIMIENTO_RES" precision="30"/>
+    </property>
+    <property name="movDbRes" type="big_decimal">
+      <column name="MOV_DB_RES" precision="30"/>
+    </property>
+    <property name="movCrRes" type="big_decimal">
+      <column name="MOV_CR_RES" precision="30"/>
+    </property>
+    <property name="saldoRes" type="big_decimal">
+      <column name="SALDO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

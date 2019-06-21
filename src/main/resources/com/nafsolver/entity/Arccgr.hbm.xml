@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccgr" optimistic-lock="version" schema="DESA46" table="ARCCGR">
+    <composite-id class="com.nafsolver.entity.ArccgrId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+    </composite-id>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="25" name="DESCRIPCION"/>
+    </property>
+    <property name="ctaCliente" type="string">
+      <column length="15" name="CTA_CLIENTE"/>
+    </property>
+    <property name="ctaDpp" type="string">
+      <column length="15" name="CTA_DPP"/>
+    </property>
+  </class>
+</hibernate-mapping>

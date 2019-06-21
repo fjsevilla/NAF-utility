@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinec" optimistic-lock="version" schema="DESA46" table="ARINEC">
+    <composite-id class="com.nafsolver.entity.ArinecId" name="id">
+      <key-property name="codCurva" type="string">
+        <column length="4" name="COD_CURVA"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="unidades" type="big_decimal">
+      <column name="UNIDADES" precision="12"/>
+    </property>
+  </class>
+</hibernate-mapping>

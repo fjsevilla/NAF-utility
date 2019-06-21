@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfaflch" optimistic-lock="version" schema="DESA46" table="ARFAFLCH">
+    <comment>Historico de Lineas de los Pedidos</comment>
+    <composite-id class="com.nafsolver.entity.ArfaflchId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noFactu" type="string">
+        <column length="19" name="NO_FACTU"/>
+      </key-property>
+      <key-property name="noLinea" type="java.lang.Integer">
+        <column name="NO_LINEA" precision="5" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="centrod" type="string">
+      <column length="2" name="CENTROD"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="bodega" type="string">
+      <column length="4" name="BODEGA"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="3" name="CLASE"/>
+    </property>
+    <property name="categoria" type="string">
+      <column length="3" name="CATEGORIA"/>
+    </property>
+    <property name="noArti" type="string">
+      <column length="30" name="NO_ARTI"/>
+    </property>
+    <property name="pedido" type="big_decimal">
+      <column name="PEDIDO" precision="8"/>
+    </property>
+    <property name="porcDesc" type="big_decimal">
+      <column name="PORC_DESC" precision="6"/>
+    </property>
+    <property name="precio" type="big_decimal">
+      <column name="PRECIO" precision="12"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="total" type="big_decimal">
+      <column name="TOTAL" precision="17"/>
+    </property>
+    <property name="IVen" type="string">
+      <column length="1" name="I_VEN"/>
+    </property>
+    <property name="IVenN" type="big_decimal">
+      <column name="I_VEN_N" precision="17"/>
+    </property>
+    <property name="tipoPrecio" type="string">
+      <column length="2" name="TIPO_PRECIO"/>
+    </property>
+    <property name="unDevol" type="big_decimal">
+      <column name="UN_DEVOL" precision="8"/>
+    </property>
+    <property name="tipoOferta" type="string">
+      <column length="1" name="TIPO_OFERTA"/>
+    </property>
+    <property name="artiOfe" type="string">
+      <column length="9" name="ARTI_OFE"/>
+    </property>
+    <property name="cantOfe" type="big_decimal">
+      <column name="CANT_OFE" precision="8"/>
+    </property>
+    <property name="protOfe" type="string">
+      <column length="1" name="PROT_OFE"/>
+    </property>
+    <property name="cantAprobada" type="big_decimal">
+      <column name="CANT_APROBADA" precision="8"/>
+    </property>
+    <property name="cantFacturada" type="big_decimal">
+      <column name="CANT_FACTURADA" precision="8"/>
+    </property>
+    <property name="ofeEntregada" type="big_decimal">
+      <column name="OFE_ENTREGADA" precision="8"/>
+    </property>
+    <property name="impIncluido" type="big_decimal">
+      <column name="IMP_INCLUIDO" precision="17"/>
+    </property>
+    <property name="impEspecial" type="big_decimal">
+      <column name="IMP_ESPECIAL" precision="17"/>
+    </property>
+    <property name="curva" type="string">
+      <column length="4" name="CURVA"/>
+    </property>
+    <property name="cantidadBultos" type="java.lang.Integer">
+      <column name="CANTIDAD_BULTOS" precision="6" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

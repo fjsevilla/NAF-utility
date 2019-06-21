@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcktb" optimistic-lock="version" schema="DESA46" table="ARCKTB">
+    <id name="banco" type="string">
+      <column length="2" name="BANCO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="descrip" type="string">
+      <column length="60" name="DESCRIP"/>
+    </property>
+    <property name="ctaD" type="java.lang.Short">
+      <column name="CTA_D" precision="3" scale="0"/>
+    </property>
+    <property name="ctaH" type="java.lang.Short">
+      <column name="CTA_H" precision="3" scale="0"/>
+    </property>
+    <property name="tipD" type="java.lang.Short">
+      <column name="TIP_D" precision="3" scale="0"/>
+    </property>
+    <property name="tipH" type="java.lang.Short">
+      <column name="TIP_H" precision="3" scale="0"/>
+    </property>
+    <property name="numD" type="java.lang.Short">
+      <column name="NUM_D" precision="3" scale="0"/>
+    </property>
+    <property name="numH" type="java.lang.Short">
+      <column name="NUM_H" precision="3" scale="0"/>
+    </property>
+    <property name="monD" type="java.lang.Short">
+      <column name="MON_D" precision="3" scale="0"/>
+    </property>
+    <property name="monH" type="java.lang.Short">
+      <column name="MON_H" precision="3" scale="0"/>
+    </property>
+    <property name="fecD" type="java.lang.Short">
+      <column name="FEC_D" precision="3" scale="0"/>
+    </property>
+    <property name="fecH" type="java.lang.Short">
+      <column name="FEC_H" precision="3" scale="0"/>
+    </property>
+    <property name="forF" type="string">
+      <column length="20" name="FOR_F"/>
+    </property>
+    <property name="salto" type="java.lang.Byte">
+      <column name="SALTO" precision="2" scale="0"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="serD" type="java.lang.Short">
+      <column name="SER_D" precision="3" scale="0"/>
+    </property>
+    <property name="serH" type="java.lang.Short">
+      <column name="SER_H" precision="3" scale="0"/>
+    </property>
+    <property name="digitosConciliar" type="java.lang.Byte">
+      <column name="DIGITOS_CONCILIAR" precision="2" scale="0"/>
+    </property>
+    <property name="tipoCarga" type="string">
+      <column length="1" name="TIPO_CARGA"/>
+    </property>
+    <property name="delimitador" type="string">
+      <column length="1" name="DELIMITADOR"/>
+    </property>
+    <property name="saltoFin" type="java.lang.Byte">
+      <column name="SALTO_FIN" precision="2" scale="0"/>
+    </property>
+    <property name="mon2D" type="java.lang.Short">
+      <column name="MON2_D" precision="3" scale="0"/>
+    </property>
+    <property name="mon2H" type="java.lang.Short">
+      <column name="MON2_H" precision="3" scale="0"/>
+    </property>
+    <property name="montos" type="java.lang.Boolean">
+      <column name="MONTOS" precision="1" scale="0"/>
+    </property>
+    <property name="comD" type="java.lang.Short">
+      <column name="COM_D" precision="3" scale="0"/>
+    </property>
+    <property name="rgAu" type="java.lang.Short">
+      <column name="RG_AU" precision="3" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

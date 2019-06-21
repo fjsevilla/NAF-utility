@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcptd" optimistic-lock="version" schema="DESA46" table="ARCPTD">
+    <comment>Tipos de documentos</comment>
+    <composite-id class="com.nafsolver.entity.ArcptdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="2" name="TIPO_DOC"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="30" name="DESCRIPCION"/>
+    </property>
+    <property name="tipoMov" type="string">
+      <column length="1" name="TIPO_MOV"/>
+    </property>
+    <property name="documento" type="string">
+      <column length="1" name="DOCUMENTO"/>
+    </property>
+    <property name="afectaLibro" type="string">
+      <column length="1" name="AFECTA_LIBRO"/>
+    </property>
+    <property name="aceptaImpuestos" type="string">
+      <column length="1" name="ACEPTA_IMPUESTOS"/>
+    </property>
+    <property name="aceptaRetenciones" type="string">
+      <column length="1" name="ACEPTA_RETENCIONES"/>
+    </property>
+    <property name="formularioCtrl" type="string">
+      <column length="10" name="FORMULARIO_CTRL"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="comportamientoImp" type="string">
+      <column length="1" name="COMPORTAMIENTO_IMP"/>
+    </property>
+    <property name="tipoRetIva" type="string">
+      <column length="2" name="TIPO_RET_IVA"/>
+    </property>
+    <property name="modulo" type="string">
+      <column length="10" name="MODULO"/>
+    </property>
+  </class>
+</hibernate-mapping>

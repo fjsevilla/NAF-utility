@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplcal" optimistic-lock="version" schema="DESA46" table="ARPLCAL">
+    <composite-id class="com.nafsolver.entity.ArplcalId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codCal" type="string">
+        <column length="10" name="COD_CAL"/>
+      </key-property>
+    </composite-id>
+    <property name="descripCal" type="string">
+      <column length="150" name="DESCRIP_CAL">
+        <comment>DESCRIPCION DE CALENDARIO</comment>
+      </column>
+    </property>
+    <property name="fechaLimite" type="string">
+      <column length="100" name="FECHA_LIMITE">
+        <comment>FECHA LIMITE PARA CALENDARIO</comment>
+      </column>
+    </property>
+    <property name="status" type="string">
+      <column length="2" name="STATUS">
+        <comment>STATUS DE CALENDARIO</comment>
+      </column>
+    </property>
+    <property name="anoIni" type="string">
+      <column length="5" name="ANO_INI">
+        <comment>ANO DE INICIO DE DIAS DE CALENDARIO</comment>
+      </column>
+    </property>
+    <property name="anoFin" type="string">
+      <column length="5" name="ANO_FIN">
+        <comment>ANO DE FIN DE DIAS DE CALENDARIO</comment>
+      </column>
+    </property>
+    <property name="abrev" type="string">
+      <column length="5" name="ABREV"/>
+    </property>
+  </class>
+</hibernate-mapping>

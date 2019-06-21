@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckce" optimistic-lock="version" schema="DESA46" table="ARCKCE">
+    <comment>Encabezado de cheques y transferencias</comment>
+    <composite-id class="com.nafsolver.entity.ArckceId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoDocu" type="string">
+        <column length="2" name="TIPO_DOCU"/>
+      </key-property>
+      <key-property name="noSecuencia" type="int">
+        <column name="NO_SECUENCIA" precision="8" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="noCta" type="string">
+      <column length="15" name="NO_CTA"/>
+    </property>
+    <property name="cheque" type="java.lang.Integer">
+      <column name="CHEQUE" precision="8" scale="0"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="22"/>
+    </property>
+    <property name="beneficiario" type="string">
+      <column length="60" name="BENEFICIARIO"/>
+    </property>
+    <property name="indAct" type="string">
+      <column length="1" name="IND_ACT"/>
+    </property>
+    <property name="com" type="string">
+      <column length="240" name="COM"/>
+    </property>
+    <property name="indCon" type="string">
+      <column length="1" name="IND_CON"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="anulado" type="string">
+      <column length="1" name="ANULADO"/>
+    </property>
+    <property name="fechaAnulado" type="date">
+      <column length="7" name="FECHA_ANULADO"/>
+    </property>
+    <property name="emitido" type="string">
+      <column length="1" name="EMITIDO"/>
+    </property>
+    <property name="totRef" type="big_decimal">
+      <column name="TOT_REF" precision="22"/>
+    </property>
+    <property name="totDifeCam" type="big_decimal">
+      <column name="TOT_DIFE_CAM" precision="22"/>
+    </property>
+    <property name="totDb" type="big_decimal">
+      <column name="TOT_DB" precision="22"/>
+    </property>
+    <property name="totCr" type="big_decimal">
+      <column name="TOT_CR" precision="22"/>
+    </property>
+    <property name="saldo" type="big_decimal">
+      <column name="SALDO" precision="22"/>
+    </property>
+    <property name="monedaCta" type="string">
+      <column length="1" name="MONEDA_CTA"/>
+    </property>
+    <property name="monedaPago" type="string">
+      <column length="1" name="MONEDA_PAGO"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="montoNominal" type="big_decimal">
+      <column name="MONTO_NOMINAL" precision="22"/>
+    </property>
+    <property name="saldoNominal" type="big_decimal">
+      <column name="SALDO_NOMINAL" precision="22"/>
+    </property>
+    <property name="autoriza" type="string">
+      <column length="1" name="AUTORIZA"/>
+    </property>
+    <property name="origen" type="string">
+      <column length="2" name="ORIGEN"/>
+    </property>
+    <property name="TCambCV" type="string">
+      <column length="2" name="T_CAMB_C_V"/>
+    </property>
+    <property name="noAsiento" type="string">
+      <column length="12" name="NO_ASIENTO"/>
+    </property>
+    <property name="ubicacion" type="string">
+      <column length="1" name="UBICACION"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="totDpp" type="big_decimal">
+      <column name="TOT_DPP" precision="22"/>
+    </property>
+    <property name="numeroCtrl" type="java.lang.Long">
+      <column name="NUMERO_CTRL" precision="10" scale="0"/>
+    </property>
+    <property name="tipoTransfe" type="string">
+      <column length="1" name="TIPO_TRANSFE"/>
+    </property>
+    <property name="bancoTransfe" type="string">
+      <column length="2" name="BANCO_TRANSFE"/>
+    </property>
+    <property name="ctaBcoTransfe" type="string">
+      <column length="20" name="CTA_BCO_TRANSFE"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="totRefRes" type="big_decimal">
+      <column name="TOT_REF_RES" precision="30"/>
+    </property>
+    <property name="totDbRes" type="big_decimal">
+      <column name="TOT_DB_RES" precision="30"/>
+    </property>
+    <property name="totCrRes" type="big_decimal">
+      <column name="TOT_CR_RES" precision="30"/>
+    </property>
+    <property name="saldoRes" type="big_decimal">
+      <column name="SALDO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

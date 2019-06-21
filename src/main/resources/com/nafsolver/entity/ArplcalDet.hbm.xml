@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArplcalDet" optimistic-lock="version" schema="DESA46" table="ARPLCAL_DET">
+    <composite-id class="com.nafsolver.entity.ArplcalDetId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codCal" type="string">
+        <column length="10" name="COD_CAL"/>
+      </key-property>
+      <key-property name="fecha" type="date">
+        <column length="7" name="FECHA"/>
+      </key-property>
+      <key-property name="dia" type="string">
+        <column length="20" name="DIA"/>
+      </key-property>
+    </composite-id>
+  </class>
+</hibernate-mapping>

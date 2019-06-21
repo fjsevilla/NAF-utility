@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgceco" optimistic-lock="version" schema="DESA46" table="ARCGCECO">
+    <comment>Catalogo de Centros de costo</comment>
+    <composite-id class="com.nafsolver.entity.ArcgcecoId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="cc1" type="string">
+        <column length="3" name="CC_1"/>
+      </key-property>
+      <key-property name="cc2" type="string">
+        <column length="3" name="CC_2"/>
+      </key-property>
+      <key-property name="cc3" type="string">
+        <column length="3" name="CC_3"/>
+      </key-property>
+    </composite-id>
+    <property name="descripCc" type="string">
+      <column length="40" name="DESCRIP_CC"/>
+    </property>
+    <property name="encargadoCc" type="string">
+      <column length="30" name="ENCARGADO_CC"/>
+    </property>
+    <property name="centro" type="string">
+      <column length="9" name="CENTRO"/>
+    </property>
+    <property name="ultimoNivel" type="string">
+      <column length="1" name="ULTIMO_NIVEL"/>
+    </property>
+  </class>
+</hibernate-mapping>

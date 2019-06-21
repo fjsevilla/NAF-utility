@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinhp" optimistic-lock="version" schema="DESA46" table="ARINHP">
+    <composite-id class="com.nafsolver.entity.ArinhpId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="centro" type="string">
+        <column length="2" name="CENTRO"/>
+      </key-property>
+      <key-property name="periodo" type="string">
+        <column length="4" name="PERIODO"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+    </composite-id>
+    <property name="unidades" type="big_decimal">
+      <column name="UNIDADES" precision="12"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

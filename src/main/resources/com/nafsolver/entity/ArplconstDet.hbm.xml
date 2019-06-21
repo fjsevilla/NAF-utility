@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArplconstDet" optimistic-lock="version" schema="DESA46" table="ARPLCONST_DET">
+    <composite-id class="com.nafsolver.entity.ArplconstDetId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noConst" type="string">
+        <column length="10" name="NO_CONST"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="5" name="NO_EMPLE"/>
+      </key-property>
+    </composite-id>
+    <property name="valor" type="big_decimal">
+      <column name="VALOR" precision="12">
+        <comment>VALOR DE CONSTANTE</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

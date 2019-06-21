@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Paises" optimistic-lock="version" schema="DESA46" table="PAISES">
+    <id name="pais" type="string">
+      <column length="3" name="PAIS"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE" not-null="true"/>
+    </property>
+    <property name="idMoneda" type="string">
+      <column length="3" name="ID_MONEDA"/>
+    </property>
+  </class>
+</hibernate-mapping>

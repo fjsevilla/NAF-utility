@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfamc" optimistic-lock="version" schema="DESA46" table="ARFAMC">
+    <comment>Parametros de Compania para los sistemas de ventas</comment>
+    <id name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE"/>
+    </property>
+    <property name="dir1" type="string">
+      <column length="37" name="DIR1"/>
+    </property>
+    <property name="dir2" type="string">
+      <column length="37" name="DIR2"/>
+    </property>
+    <property name="impuesto" type="big_decimal">
+      <column name="IMPUESTO" precision="6"/>
+    </property>
+    <property name="porcDesc" type="big_decimal">
+      <column name="PORC_DESC" precision="6"/>
+    </property>
+    <property name="manejoLote" type="string">
+      <column length="1" name="MANEJO_LOTE"/>
+    </property>
+    <property name="indOferta" type="string">
+      <column length="1" name="IND_OFERTA"/>
+    </property>
+    <property name="indLiquida" type="string">
+      <column length="1" name="IND_LIQUIDA"/>
+    </property>
+    <property name="tipoPrecioPres" type="string">
+      <column length="2" name="TIPO_PRECIO_PRES"/>
+    </property>
+    <property name="indSeguridad" type="string">
+      <column length="1" name="IND_SEGURIDAD"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="codDiarioInv" type="string">
+      <column length="5" name="COD_DIARIO_INV"/>
+    </property>
+    <property name="docDebitoCxc" type="string">
+      <column length="2" name="DOC_DEBITO_CXC"/>
+    </property>
+    <property name="docCreditoCxc" type="string">
+      <column length="2" name="DOC_CREDITO_CXC"/>
+    </property>
+    <property name="conceptoCkPos" type="string">
+      <column length="2" name="CONCEPTO_CK_POS"/>
+    </property>
+    <property name="tipoDocComi" type="string">
+      <column length="2" name="TIPO_DOC_COMI"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="indArtAutomatico" type="string">
+      <column length="1" name="IND_ART_AUTOMATICO"/>
+    </property>
+    <property name="formularioArt" type="string">
+      <column length="10" name="FORMULARIO_ART"/>
+    </property>
+  </class>
+</hibernate-mapping>

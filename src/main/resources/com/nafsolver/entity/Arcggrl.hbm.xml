@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcggrl" optimistic-lock="version" schema="DESA46" table="ARCGGRL">
+    <comment>Lineas de reportes del usuario</comment>
+    <composite-id class="com.nafsolver.entity.ArcggrlId" name="id">
+      <key-property name="rep" type="short">
+        <column name="REP" precision="3" scale="0"/>
+      </key-property>
+      <key-property name="linea" type="short">
+        <column name="LINEA" precision="4" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="colMonto" type="java.lang.Boolean">
+      <column name="COL_MONTO" precision="1" scale="0"/>
+    </property>
+    <property name="descrip" type="string">
+      <column length="30" name="DESCRIP"/>
+    </property>
+    <property name="total" type="string">
+      <column length="3" name="TOTAL"/>
+    </property>
+    <property name="campo" type="string">
+      <column length="3" name="CAMPO"/>
+    </property>
+    <property name="signo" type="string">
+      <column length="1" name="SIGNO"/>
+    </property>
+    <property name="vn" type="string">
+      <column length="1" name="VN"/>
+    </property>
+    <property name="m1" type="big_decimal">
+      <column name="M1" precision="17"/>
+    </property>
+    <property name="m2" type="big_decimal">
+      <column name="M2" precision="17"/>
+    </property>
+    <property name="m3" type="big_decimal">
+      <column name="M3" precision="17"/>
+    </property>
+    <property name="m4" type="big_decimal">
+      <column name="M4" precision="17"/>
+    </property>
+    <property name="m5" type="big_decimal">
+      <column name="M5" precision="17"/>
+    </property>
+    <property name="m6" type="big_decimal">
+      <column name="M6" precision="17"/>
+    </property>
+    <property name="m7" type="big_decimal">
+      <column name="M7" precision="17"/>
+    </property>
+    <property name="m8" type="big_decimal">
+      <column name="M8" precision="17"/>
+    </property>
+    <property name="m9" type="big_decimal">
+      <column name="M9" precision="17"/>
+    </property>
+    <property name="m10" type="big_decimal">
+      <column name="M10" precision="17"/>
+    </property>
+    <property name="m11" type="big_decimal">
+      <column name="M11" precision="17"/>
+    </property>
+    <property name="m12" type="big_decimal">
+      <column name="M12" precision="17"/>
+    </property>
+    <property name="m1Res" type="big_decimal">
+      <column name="M1_RES" precision="30"/>
+    </property>
+    <property name="m2Res" type="big_decimal">
+      <column name="M2_RES" precision="30"/>
+    </property>
+    <property name="m3Res" type="big_decimal">
+      <column name="M3_RES" precision="30"/>
+    </property>
+    <property name="m4Res" type="big_decimal">
+      <column name="M4_RES" precision="30"/>
+    </property>
+    <property name="m5Res" type="big_decimal">
+      <column name="M5_RES" precision="30"/>
+    </property>
+    <property name="m6Res" type="big_decimal">
+      <column name="M6_RES" precision="30"/>
+    </property>
+    <property name="m7Res" type="big_decimal">
+      <column name="M7_RES" precision="30"/>
+    </property>
+    <property name="m8Res" type="big_decimal">
+      <column name="M8_RES" precision="30"/>
+    </property>
+    <property name="m9Res" type="big_decimal">
+      <column name="M9_RES" precision="30"/>
+    </property>
+    <property name="m10Res" type="big_decimal">
+      <column name="M10_RES" precision="30"/>
+    </property>
+    <property name="m11Res" type="big_decimal">
+      <column name="M11_RES" precision="30"/>
+    </property>
+    <property name="m12Res" type="big_decimal">
+      <column name="M12_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

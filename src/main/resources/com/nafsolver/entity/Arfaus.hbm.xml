@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfaus" optimistic-lock="version" schema="DESA46" table="ARFAUS">
+    <comment>Funciones permitidas por Usuario</comment>
+    <composite-id class="com.nafsolver.entity.ArfausId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="usuario" type="string">
+        <column length="30" name="USUARIO"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="centrof" type="string">
+      <column length="4" name="CENTROF"/>
+    </property>
+    <property name="digFecha" type="string">
+      <column length="1" name="DIG_FECHA"/>
+    </property>
+    <property name="tipoPrecio" type="string">
+      <column length="2" name="TIPO_PRECIO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="variarTd" type="string">
+      <column length="1" name="VARIAR_TD"/>
+    </property>
+    <property name="variarTp" type="string">
+      <column length="1" name="VARIAR_TP"/>
+    </property>
+    <property name="variarPr" type="string">
+      <column length="1" name="VARIAR_PR"/>
+    </property>
+    <property name="variarPd" type="string">
+      <column length="1" name="VARIAR_PD"/>
+    </property>
+    <property name="variarPp" type="string">
+      <column length="1" name="VARIAR_PP"/>
+    </property>
+    <property name="variarFe" type="string">
+      <column length="1" name="VARIAR_FE"/>
+    </property>
+    <property name="variarVe" type="string">
+      <column length="1" name="VARIAR_VE"/>
+    </property>
+    <property name="variarBo" type="string">
+      <column length="1" name="VARIAR_BO"/>
+    </property>
+    <property name="variarCo" type="string">
+      <column length="1" name="VARIAR_CO"/>
+    </property>
+    <property name="bodega" type="string">
+      <column length="4" name="BODEGA"/>
+    </property>
+    <property name="vendedor" type="string">
+      <column length="4" name="VENDEDOR"/>
+    </property>
+    <property name="variarCentrof" type="string">
+      <column length="1" name="VARIAR_CENTROF"/>
+    </property>
+    <property name="factSino" type="string">
+      <column length="1" name="FACT_SINO"/>
+    </property>
+    <property name="regDevo" type="string">
+      <column length="1" name="REG_DEVO"/>
+    </property>
+  </class>
+</hibernate-mapping>

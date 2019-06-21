@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Meses" optimistic-lock="version" schema="DESA46" table="MESES">
+    <comment>Meses</comment>
+    <id name="noMes" type="byte">
+      <column name="NO_MES" precision="2" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nomMes" type="string">
+      <column length="10" name="NOM_MES"/>
+    </property>
+    <property name="codCaj" type="string">
+      <column length="1" name="COD_CAJ"/>
+    </property>
+  </class>
+</hibernate-mapping>

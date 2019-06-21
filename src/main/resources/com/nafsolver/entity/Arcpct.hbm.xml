@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcpct" optimistic-lock="version" schema="DESA46" table="ARCPCT">
+    <comment>Maestro de compañías</comment>
+    <id name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="descrip" type="string">
+      <column length="30" name="DESCRIP"/>
+    </property>
+    <property name="anoProc" type="java.lang.Short">
+      <column name="ANO_PROC" precision="4" scale="0"/>
+    </property>
+    <property name="mesProc" type="java.lang.Byte">
+      <column name="MES_PROC" precision="2" scale="0"/>
+    </property>
+    <property name="claseCambio" type="string">
+      <column length="3" name="CLASE_CAMBIO"/>
+    </property>
+    <property name="distribucion" type="string">
+      <column length="1" name="DISTRIBUCION"/>
+    </property>
+  </class>
+</hibernate-mapping>

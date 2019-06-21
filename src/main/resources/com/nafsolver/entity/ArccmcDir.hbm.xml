@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArccmcDir" optimistic-lock="version" schema="DESA46" table="ARCCMC_DIR">
+    <comment>Direcciones Despacho Clientes</comment>
+    <composite-id class="com.nafsolver.entity.ArccmcDirId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+      <key-property name="noCliente" type="string">
+        <column length="15" name="NO_CLIENTE"/>
+      </key-property>
+      <key-property name="codDesp" type="long">
+        <column name="COD_DESP" precision="15" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="direccion" type="string">
+      <column length="1000" name="DIRECCION"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="12" name="TELEFONO"/>
+    </property>
+    <property name="telefono2" type="string">
+      <column length="12" name="TELEFONO2"/>
+    </property>
+    <property name="telefono3" type="string">
+      <column length="12" name="TELEFONO3"/>
+    </property>
+    <property name="fax" type="string">
+      <column length="12" name="FAX"/>
+    </property>
+    <property name="email1" type="string">
+      <column length="40" name="EMAIL1"/>
+    </property>
+    <property name="email2" type="string">
+      <column length="40" name="EMAIL2"/>
+    </property>
+    <property name="zona" type="string">
+      <column length="5" name="ZONA"/>
+    </property>
+    <property name="pais" type="string">
+      <column length="6" name="PAIS"/>
+    </property>
+    <property name="provincia" type="string">
+      <column length="6" name="PROVINCIA"/>
+    </property>
+    <property name="canton" type="string">
+      <column length="6" name="CANTON"/>
+    </property>
+    <property name="distrito" type="string">
+      <column length="2" name="DISTRITO"/>
+    </property>
+    <property name="barrio" type="string">
+      <column length="2" name="BARRIO"/>
+    </property>
+  </class>
+</hibernate-mapping>

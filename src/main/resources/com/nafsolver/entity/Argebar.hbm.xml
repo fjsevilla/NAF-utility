@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Argebar" optimistic-lock="version" schema="DESA46" table="ARGEBAR">
+    <comment>Barrios</comment>
+    <composite-id class="com.nafsolver.entity.ArgebarId" name="id">
+      <key-property name="pais" type="string">
+        <column length="6" name="PAIS"/>
+      </key-property>
+      <key-property name="provincia" type="string">
+        <column length="6" name="PROVINCIA"/>
+      </key-property>
+      <key-property name="canton" type="string">
+        <column length="6" name="CANTON"/>
+      </key-property>
+      <key-property name="distrito" type="string">
+        <column length="2" name="DISTRITO"/>
+      </key-property>
+      <key-property name="barrio" type="string">
+        <column length="2" name="BARRIO"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="25" name="DESCRIPCION"/>
+    </property>
+  </class>
+</hibernate-mapping>

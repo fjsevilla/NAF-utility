@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArinhaTa" optimistic-lock="version" schema="DESA46" table="ARINHA_TA">
+    <composite-id class="com.nafsolver.entity.ArinhaTaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="centro" type="string">
+        <column length="2" name="CENTRO"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="semana" type="byte">
+        <column name="SEMANA" precision="2" scale="0"/>
+      </key-property>
+      <key-property name="indSem" type="string">
+        <column length="1" name="IND_SEM"/>
+      </key-property>
+      <key-property name="bodega" type="string">
+        <column length="4" name="BODEGA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="ultCosto" type="big_decimal">
+      <column name="ULT_COSTO" precision="22" scale="6"/>
+    </property>
+    <property name="saldoUn" type="big_decimal">
+      <column name="SALDO_UN" precision="17"/>
+    </property>
+    <property name="saldoMo" type="big_decimal">
+      <column name="SALDO_MO" precision="22"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22" scale="6"/>
+    </property>
+    <property name="ajuIniReproceso" type="big_decimal">
+      <column name="AJU_INI_REPROCESO" precision="22"/>
+    </property>
+    <property name="ultCostoRes" type="big_decimal">
+      <column name="ULT_COSTO_RES" precision="30" scale="6"/>
+    </property>
+    <property name="saldoMoRes" type="big_decimal">
+      <column name="SALDO_MO_RES" precision="30"/>
+    </property>
+    <property name="costoUniRes" type="big_decimal">
+      <column name="COSTO_UNI_RES" precision="30" scale="6"/>
+    </property>
+  </class>
+</hibernate-mapping>

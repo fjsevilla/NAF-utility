@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinlo" optimistic-lock="version" schema="DESA46" table="ARINLO">
+    <composite-id class="com.nafsolver.entity.ArinloId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="bodega" type="string">
+        <column length="4" name="BODEGA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+      <key-property name="noLote" type="string">
+        <column length="30" name="NO_LOTE"/>
+      </key-property>
+      <key-property name="ubicacion" type="string">
+        <column length="10" name="UBICACION"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="saldoUnidad" type="big_decimal">
+      <column name="SALDO_UNIDAD" precision="17"/>
+    </property>
+    <property name="saldoContable" type="big_decimal">
+      <column name="SALDO_CONTABLE" precision="17"/>
+    </property>
+    <property name="saldoMonto" type="big_decimal">
+      <column name="SALDO_MONTO" precision="22"/>
+    </property>
+    <property name="salidaPend" type="big_decimal">
+      <column name="SALIDA_PEND" precision="17"/>
+    </property>
+    <property name="costoLote" type="big_decimal">
+      <column name="COSTO_LOTE" precision="22"/>
+    </property>
+    <property name="procesoToma" type="string">
+      <column length="1" name="PROCESO_TOMA"/>
+    </property>
+    <property name="existPrep" type="big_decimal">
+      <column name="EXIST_PREP" precision="22"/>
+    </property>
+    <property name="costoPrep" type="big_decimal">
+      <column name="COSTO_PREP" precision="25" scale="6"/>
+    </property>
+    <property name="tomFisic" type="big_decimal">
+      <column name="TOM_FISIC" precision="15"/>
+    </property>
+    <property name="fechaEntrada" type="date">
+      <column length="7" name="FECHA_ENTRADA"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="fechaFinCuarentena" type="date">
+      <column length="7" name="FECHA_FIN_CUARENTENA"/>
+    </property>
+    <property name="noConteo" type="java.lang.Long">
+      <column name="NO_CONTEO" precision="12" scale="0"/>
+    </property>
+    <property name="costoInd" type="big_decimal">
+      <column name="COSTO_IND" precision="22"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22"/>
+    </property>
+    <property name="saldoMontoRes" type="big_decimal">
+      <column name="SALDO_MONTO_RES" precision="30"/>
+    </property>
+    <property name="costoLoteRes" type="big_decimal">
+      <column name="COSTO_LOTE_RES" precision="30"/>
+    </property>
+    <property name="costoIndRes" type="big_decimal">
+      <column name="COSTO_IND_RES" precision="30"/>
+    </property>
+    <property name="costoUniRes" type="big_decimal">
+      <column name="COSTO_UNI_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

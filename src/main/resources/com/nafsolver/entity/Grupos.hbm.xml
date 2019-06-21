@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Grupos" optimistic-lock="version" schema="DESA46" table="GRUPOS">
+    <composite-id class="com.nafsolver.entity.GruposId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="6" name="GRUPO"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="30" name="DESCRIPCION"/>
+    </property>
+    <property name="metodoCosto" type="string">
+      <column length="1" name="METODO_COSTO"/>
+    </property>
+    <property name="indProdServ" type="string">
+      <column length="1" name="IND_PROD_SERV"/>
+    </property>
+  </class>
+</hibernate-mapping>

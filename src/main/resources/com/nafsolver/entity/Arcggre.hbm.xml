@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcggre" optimistic-lock="version" schema="DESA46" table="ARCGGRE">
+    <comment>Encabezado de reportes del usuario</comment>
+    <id name="rep" type="short">
+      <column name="REP" precision="3" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="tituloBase" type="string">
+      <column length="30" name="TITULO_BASE"/>
+    </property>
+    <property name="titulo" type="string">
+      <column length="30" name="TITULO"/>
+    </property>
+    <property name="titulo2" type="string">
+      <column length="30" name="TITULO2"/>
+    </property>
+    <property name="destino" type="string">
+      <column length="15" name="DESTINO"/>
+    </property>
+    <property name="ano" type="java.lang.Short">
+      <column name="ANO" precision="4" scale="0"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="opcion" type="string">
+      <column length="1" name="OPCION"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="2" name="MONEDA"/>
+    </property>
+    <property name="col1" type="string">
+      <column length="2" name="COL1"/>
+    </property>
+    <property name="col2" type="string">
+      <column length="2" name="COL2"/>
+    </property>
+    <property name="col3" type="string">
+      <column length="2" name="COL3"/>
+    </property>
+    <property name="col4" type="string">
+      <column length="2" name="COL4"/>
+    </property>
+    <property name="col5" type="string">
+      <column length="2" name="COL5"/>
+    </property>
+    <property name="col6" type="string">
+      <column length="2" name="COL6"/>
+    </property>
+    <property name="col7" type="string">
+      <column length="2" name="COL7"/>
+    </property>
+    <property name="col8" type="string">
+      <column length="2" name="COL8"/>
+    </property>
+    <property name="col9" type="string">
+      <column length="2" name="COL9"/>
+    </property>
+    <property name="col10" type="string">
+      <column length="2" name="COL10"/>
+    </property>
+    <property name="tit1" type="string">
+      <column length="15" name="TIT1"/>
+    </property>
+    <property name="tit2" type="string">
+      <column length="15" name="TIT2"/>
+    </property>
+    <property name="tit3" type="string">
+      <column length="15" name="TIT3"/>
+    </property>
+    <property name="tit4" type="string">
+      <column length="15" name="TIT4"/>
+    </property>
+    <property name="tit5" type="string">
+      <column length="15" name="TIT5"/>
+    </property>
+    <property name="tit6" type="string">
+      <column length="15" name="TIT6"/>
+    </property>
+    <property name="tit7" type="string">
+      <column length="15" name="TIT7"/>
+    </property>
+    <property name="tit8" type="string">
+      <column length="15" name="TIT8"/>
+    </property>
+    <property name="tit9" type="string">
+      <column length="15" name="TIT9"/>
+    </property>
+    <property name="tit10" type="string">
+      <column length="15" name="TIT10"/>
+    </property>
+    <property name="tit11" type="string">
+      <column length="15" name="TIT11"/>
+    </property>
+    <property name="tit12" type="string">
+      <column length="15" name="TIT12"/>
+    </property>
+    <property name="subtit1" type="string">
+      <column length="15" name="SUBTIT1"/>
+    </property>
+    <property name="subtit2" type="string">
+      <column length="15" name="SUBTIT2"/>
+    </property>
+    <property name="subtit3" type="string">
+      <column length="15" name="SUBTIT3"/>
+    </property>
+    <property name="subtit4" type="string">
+      <column length="15" name="SUBTIT4"/>
+    </property>
+    <property name="subtit5" type="string">
+      <column length="15" name="SUBTIT5"/>
+    </property>
+    <property name="subtit6" type="string">
+      <column length="15" name="SUBTIT6"/>
+    </property>
+    <property name="subtit7" type="string">
+      <column length="15" name="SUBTIT7"/>
+    </property>
+    <property name="subtit8" type="string">
+      <column length="15" name="SUBTIT8"/>
+    </property>
+    <property name="subtit9" type="string">
+      <column length="15" name="SUBTIT9"/>
+    </property>
+    <property name="subtit10" type="string">
+      <column length="15" name="SUBTIT10"/>
+    </property>
+    <property name="piePag" type="string">
+      <column length="300" name="PIE_PAG"/>
+    </property>
+    <property name="c1df1" type="java.lang.Boolean">
+      <column name="C1DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c1df2" type="java.lang.Boolean">
+      <column name="C1DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c2df1" type="java.lang.Boolean">
+      <column name="C2DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c2df2" type="java.lang.Boolean">
+      <column name="C2DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c3df1" type="java.lang.Boolean">
+      <column name="C3DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c3df2" type="java.lang.Boolean">
+      <column name="C3DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c4df1" type="java.lang.Boolean">
+      <column name="C4DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c4df2" type="java.lang.Boolean">
+      <column name="C4DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c5df1" type="java.lang.Boolean">
+      <column name="C5DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c5df2" type="java.lang.Boolean">
+      <column name="C5DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c6df1" type="java.lang.Boolean">
+      <column name="C6DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c6df2" type="java.lang.Boolean">
+      <column name="C6DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c7df1" type="java.lang.Boolean">
+      <column name="C7DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c7df2" type="java.lang.Boolean">
+      <column name="C7DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c8df1" type="java.lang.Boolean">
+      <column name="C8DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c8df2" type="java.lang.Boolean">
+      <column name="C8DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c9df1" type="java.lang.Boolean">
+      <column name="C9DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c9df2" type="java.lang.Boolean">
+      <column name="C9DF2" precision="1" scale="0"/>
+    </property>
+    <property name="c10df1" type="java.lang.Boolean">
+      <column name="C10DF1" precision="1" scale="0"/>
+    </property>
+    <property name="c10df2" type="java.lang.Boolean">
+      <column name="C10DF2" precision="1" scale="0"/>
+    </property>
+    <property name="linea" type="java.lang.Short">
+      <column name="LINEA" precision="4" scale="0"/>
+    </property>
+    <property name="usuarioProceso" type="string">
+      <column length="50" name="USUARIO_PROCESO"/>
+    </property>
+  </class>
+</hibernate-mapping>

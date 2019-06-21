@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcpmd" optimistic-lock="version" schema="DESA46" table="ARCPMD">
+    <comment>Maestro de documentos</comment>
+    <composite-id class="com.nafsolver.entity.ArcpmdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="8" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="indAct" type="string">
+      <column length="1" name="IND_ACT"/>
+    </property>
+    <property name="noFisico" type="string">
+      <column length="30" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="50" name="SERIE_FISICO"/>
+    </property>
+    <property name="indOtromov" type="string">
+      <column length="1" name="IND_OTROMOV"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="subtotal" type="big_decimal">
+      <column name="SUBTOTAL" precision="17"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="saldo" type="big_decimal">
+      <column name="SALDO" precision="17"/>
+    </property>
+    <property name="gravado" type="big_decimal">
+      <column name="GRAVADO" precision="17"/>
+    </property>
+    <property name="excentos" type="big_decimal">
+      <column name="EXCENTOS" precision="17"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="totRefer" type="big_decimal">
+      <column name="TOT_REFER" precision="17"/>
+    </property>
+    <property name="totDb" type="big_decimal">
+      <column name="TOT_DB" precision="17"/>
+    </property>
+    <property name="totCr" type="big_decimal">
+      <column name="TOT_CR" precision="17"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="descC" type="big_decimal">
+      <column name="DESC_C" precision="5"/>
+    </property>
+    <property name="noOrden" type="string">
+      <column length="8" name="NO_ORDEN"/>
+    </property>
+    <property name="descP" type="big_decimal">
+      <column name="DESC_P" precision="5"/>
+    </property>
+    <property name="plazoC" type="java.lang.Short">
+      <column name="PLAZO_C" precision="3" scale="0"/>
+    </property>
+    <property name="plazoP" type="java.lang.Short">
+      <column name="PLAZO_P" precision="3" scale="0"/>
+    </property>
+    <property name="bloqueado" type="string">
+      <column length="1" name="BLOQUEADO"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="30" name="MOTIVO"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="tipoHist" type="big_decimal">
+      <column name="TIPO_HIST" precision="7"/>
+    </property>
+    <property name="montoNominal" type="big_decimal">
+      <column name="MONTO_NOMINAL" precision="17"/>
+    </property>
+    <property name="saldoNominal" type="big_decimal">
+      <column name="SALDO_NOMINAL" precision="17"/>
+    </property>
+    <property name="noCta" type="string">
+      <column length="15" name="NO_CTA"/>
+    </property>
+    <property name="noSecuencia" type="string">
+      <column length="8" name="NO_SECUENCIA"/>
+    </property>
+    <property name="TCambCV" type="string">
+      <column length="1" name="T_CAMB_C_V"/>
+    </property>
+    <property name="detalle" type="string">
+      <column length="100" name="DETALLE"/>
+    </property>
+    <property name="indOtrosMeses" type="string">
+      <column length="1" name="IND_OTROS_MESES"/>
+    </property>
+    <property name="fechaDocumento" type="date">
+      <column length="7" name="FECHA_DOCUMENTO"/>
+    </property>
+    <property name="fechaVenceOriginal" type="date">
+      <column length="7" name="FECHA_VENCE_ORIGINAL"/>
+    </property>
+    <property name="cantProrrogas" type="java.lang.Byte">
+      <column name="CANT_PRORROGAS" precision="2" scale="0"/>
+    </property>
+    <property name="origen" type="string">
+      <column length="2" name="ORIGEN"/>
+    </property>
+    <property name="numeroCtrl" type="java.lang.Long">
+      <column name="NUMERO_CTRL" precision="10" scale="0"/>
+    </property>
+    <property name="anulado" type="string">
+      <column length="1" name="ANULADO"/>
+    </property>
+    <property name="usuarioAnula" type="string">
+      <column length="30" name="USUARIO_ANULA"/>
+    </property>
+    <property name="motivoAnula" type="string">
+      <column length="80" name="MOTIVO_ANULA"/>
+    </property>
+    <property name="codEstado" type="string">
+      <column length="2" name="COD_ESTADO"/>
+    </property>
+    <property name="indEstadoVencido" type="string">
+      <column length="1" name="IND_ESTADO_VENCIDO"/>
+    </property>
+    <property name="anoAnulado" type="java.lang.Short">
+      <column name="ANO_ANULADO" precision="4" scale="0"/>
+    </property>
+    <property name="mesAnulado" type="java.lang.Byte">
+      <column name="MES_ANULADO" precision="2" scale="0"/>
+    </property>
+    <property name="totDpp" type="big_decimal">
+      <column name="TOT_DPP" precision="17"/>
+    </property>
+    <property name="monedaFisico" type="string">
+      <column length="1" name="MONEDA_FISICO"/>
+    </property>
+    <property name="montoFisico" type="big_decimal">
+      <column name="MONTO_FISICO" precision="17"/>
+    </property>
+    <property name="totImp" type="big_decimal">
+      <column name="TOT_IMP" precision="17"/>
+    </property>
+    <property name="totRet" type="big_decimal">
+      <column name="TOT_RET" precision="17"/>
+    </property>
+    <property name="totImpEspecial" type="big_decimal">
+      <column name="TOT_IMP_ESPECIAL" precision="17"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="porctImp" type="big_decimal">
+      <column name="PORCT_IMP" precision="17"/>
+    </property>
+    <property name="compRetIva" type="string">
+      <column length="15" name="COMP_RET_IVA"/>
+    </property>
+    <property name="numRetIva" type="string">
+      <column length="15" name="NUM_RET_IVA"/>
+    </property>
+    <property name="mesRet" type="string">
+      <column length="3" name="MES_RET"/>
+    </property>
+    <property name="anoRet" type="string">
+      <column length="5" name="ANO_RET"/>
+    </property>
+    <property name="porcRetIva" type="big_decimal">
+      <column name="PORC_RET_IVA" precision="17"/>
+    </property>
+    <property name="montRetIva" type="big_decimal">
+      <column name="MONT_RET_IVA" precision="17"/>
+    </property>
+    <property name="stRetIva" type="string">
+      <column length="1" name="ST_RET_IVA"/>
+    </property>
+    <property name="fechaRi" type="date">
+      <column length="7" name="FECHA_RI"/>
+    </property>
+    <property name="fechaTc" type="date">
+      <column length="7" name="FECHA_TC"/>
+    </property>
+    <property name="stRetDecl" type="string">
+      <column length="1" name="ST_RET_DECL"/>
+    </property>
+    <property name="tempSald" type="big_decimal">
+      <column name="TEMP_SALD" precision="17"/>
+    </property>
+    <property name="nro" type="java.lang.Long">
+      <column name="NRO" precision="17" scale="0"/>
+    </property>
+    <property name="subtotalRes" type="big_decimal">
+      <column name="SUBTOTAL_RES" precision="30"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="saldoRes" type="big_decimal">
+      <column name="SALDO_RES" precision="30"/>
+    </property>
+    <property name="gravadoRes" type="big_decimal">
+      <column name="GRAVADO_RES" precision="30"/>
+    </property>
+    <property name="excentosRes" type="big_decimal">
+      <column name="EXCENTOS_RES" precision="30"/>
+    </property>
+    <property name="descuentoRes" type="big_decimal">
+      <column name="DESCUENTO_RES" precision="30"/>
+    </property>
+    <property name="totReferRes" type="big_decimal">
+      <column name="TOT_REFER_RES" precision="30"/>
+    </property>
+    <property name="totDbRes" type="big_decimal">
+      <column name="TOT_DB_RES" precision="30"/>
+    </property>
+    <property name="totCrRes" type="big_decimal">
+      <column name="TOT_CR_RES" precision="30"/>
+    </property>
+    <property name="montoFisicoRes" type="big_decimal">
+      <column name="MONTO_FISICO_RES" precision="30"/>
+    </property>
+    <property name="totImpRes" type="big_decimal">
+      <column name="TOT_IMP_RES" precision="30"/>
+    </property>
+    <property name="totRetRes" type="big_decimal">
+      <column name="TOT_RET_RES" precision="30"/>
+    </property>
+    <property name="montRetIvaRes" type="big_decimal">
+      <column name="MONT_RET_IVA_RES" precision="30"/>
+    </property>
+    <property name="tempSaldRes" type="big_decimal">
+      <column name="TEMP_SALD_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

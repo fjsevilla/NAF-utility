@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArinmaTa" optimistic-lock="version" schema="DESA46" table="ARINMA_TA">
+    <composite-id class="com.nafsolver.entity.ArinmaTaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="bodega" type="string">
+        <column length="4" name="BODEGA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="salAntUn" type="big_decimal">
+      <column name="SAL_ANT_UN" precision="12"/>
+    </property>
+    <property name="compUn" type="big_decimal">
+      <column name="COMP_UN" precision="12"/>
+    </property>
+    <property name="otrsUn" type="big_decimal">
+      <column name="OTRS_UN" precision="12"/>
+    </property>
+    <property name="ventUn" type="big_decimal">
+      <column name="VENT_UN" precision="12"/>
+    </property>
+    <property name="consUn" type="big_decimal">
+      <column name="CONS_UN" precision="12"/>
+    </property>
+    <property name="salPendUn" type="big_decimal">
+      <column name="SAL_PEND_UN" precision="12"/>
+    </property>
+    <property name="entPendUn" type="big_decimal">
+      <column name="ENT_PEND_UN" precision="12"/>
+    </property>
+    <property name="pedidosPend" type="big_decimal">
+      <column name="PEDIDOS_PEND" precision="12"/>
+    </property>
+    <property name="salAntMo" type="big_decimal">
+      <column name="SAL_ANT_MO" precision="22"/>
+    </property>
+    <property name="compMon" type="big_decimal">
+      <column name="COMP_MON" precision="22"/>
+    </property>
+    <property name="otrsMon" type="big_decimal">
+      <column name="OTRS_MON" precision="22"/>
+    </property>
+    <property name="ventMon" type="big_decimal">
+      <column name="VENT_MON" precision="22"/>
+    </property>
+    <property name="consMon" type="big_decimal">
+      <column name="CONS_MON" precision="22"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22" scale="6"/>
+    </property>
+    <property name="ultCosto" type="big_decimal">
+      <column name="ULT_COSTO" precision="22" scale="6"/>
+    </property>
+    <property name="tomFisic" type="big_decimal">
+      <column name="TOM_FISIC" precision="12"/>
+    </property>
+    <property name="existPrep" type="big_decimal">
+      <column name="EXIST_PREP" precision="12"/>
+    </property>
+  </class>
+</hibernate-mapping>

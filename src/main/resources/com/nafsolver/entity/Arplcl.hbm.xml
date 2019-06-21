@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplcl" optimistic-lock="version" schema="DESA46" table="ARPLCL">
+    <id name="claseEmp" type="string">
+      <column length="4" name="CLASE_EMP"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="descripcion" type="string">
+      <column length="35" name="DESCRIPCION"/>
+    </property>
+    <property name="grupoClase" type="string">
+      <column length="6" name="GRUPO_CLASE"/>
+    </property>
+    <property name="valor" type="big_decimal">
+      <column name="VALOR" precision="17" scale="4"/>
+    </property>
+    <property name="codExcluyente" type="string">
+      <column length="3" name="COD_EXCLUYENTE"/>
+    </property>
+  </class>
+</hibernate-mapping>

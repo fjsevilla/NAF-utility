@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckcrh" optimistic-lock="version" schema="DESA46" table="ARCKCRH">
+    <composite-id class="com.nafsolver.entity.ArckcrhId" name="id">
+      <key-property name="noCta" type="string">
+        <column length="15" name="NO_CTA"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="mes" type="byte">
+        <column name="MES" precision="2" scale="0"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="actCia" type="big_decimal">
+      <column name="ACT_CIA" precision="17"/>
+    </property>
+    <property name="actBco" type="big_decimal">
+      <column name="ACT_BCO" precision="17"/>
+    </property>
+    <property name="cheTr" type="big_decimal">
+      <column name="CHE_TR" precision="17"/>
+    </property>
+    <property name="depTr" type="big_decimal">
+      <column name="DEP_TR" precision="17"/>
+    </property>
+    <property name="salBanco" type="big_decimal">
+      <column name="SAL_BANCO" precision="17"/>
+    </property>
+    <property name="creTr" type="big_decimal">
+      <column name="CRE_TR" precision="17"/>
+    </property>
+    <property name="debTr" type="big_decimal">
+      <column name="DEB_TR" precision="17"/>
+    </property>
+    <property name="crePr" type="big_decimal">
+      <column name="CRE_PR" precision="17"/>
+    </property>
+    <property name="debPr" type="big_decimal">
+      <column name="DEB_PR" precision="17"/>
+    </property>
+    <property name="chePr" type="big_decimal">
+      <column name="CHE_PR" precision="17"/>
+    </property>
+    <property name="depPr" type="big_decimal">
+      <column name="DEP_PR" precision="17"/>
+    </property>
+    <property name="adeb" type="big_decimal">
+      <column name="ADEB" precision="17"/>
+    </property>
+    <property name="acre" type="big_decimal">
+      <column name="ACRE" precision="17"/>
+    </property>
+    <property name="dife" type="big_decimal">
+      <column name="DIFE" precision="17"/>
+    </property>
+    <property name="salCia" type="big_decimal">
+      <column name="SAL_CIA" precision="17"/>
+    </property>
+    <property name="actCiaRes" type="big_decimal">
+      <column name="ACT_CIA_RES" precision="30"/>
+    </property>
+    <property name="actBcoRes" type="big_decimal">
+      <column name="ACT_BCO_RES" precision="30"/>
+    </property>
+    <property name="cheTrRes" type="big_decimal">
+      <column name="CHE_TR_RES" precision="30"/>
+    </property>
+    <property name="depTrRes" type="big_decimal">
+      <column name="DEP_TR_RES" precision="30"/>
+    </property>
+    <property name="salBancoRes" type="big_decimal">
+      <column name="SAL_BANCO_RES" precision="30"/>
+    </property>
+    <property name="creTrRes" type="big_decimal">
+      <column name="CRE_TR_RES" precision="30"/>
+    </property>
+    <property name="debTrRes" type="big_decimal">
+      <column name="DEB_TR_RES" precision="30"/>
+    </property>
+    <property name="crePrRes" type="big_decimal">
+      <column name="CRE_PR_RES" precision="30"/>
+    </property>
+    <property name="debPrRes" type="big_decimal">
+      <column name="DEB_PR_RES" precision="30"/>
+    </property>
+    <property name="chePrRes" type="big_decimal">
+      <column name="CHE_PR_RES" precision="30"/>
+    </property>
+    <property name="depPrRes" type="big_decimal">
+      <column name="DEP_PR_RES" precision="30"/>
+    </property>
+    <property name="adebRes" type="big_decimal">
+      <column name="ADEB_RES" precision="30"/>
+    </property>
+    <property name="acreRes" type="big_decimal">
+      <column name="ACRE_RES" precision="30"/>
+    </property>
+    <property name="difeRes" type="big_decimal">
+      <column name="DIFE_RES" precision="30"/>
+    </property>
+    <property name="salCiaRes" type="big_decimal">
+      <column name="SAL_CIA_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

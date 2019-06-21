@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgaeh" optimistic-lock="version" schema="DESA46" table="ARCGAEH">
+    <comment>Histórico de asientos (encabezado)</comment>
+    <composite-id class="com.nafsolver.entity.ArcgaehId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noAsiento" type="string">
+        <column length="12" name="NO_ASIENTO"/>
+      </key-property>
+    </composite-id>
+    <property name="ano" type="java.lang.Short">
+      <column name="ANO" precision="4" scale="0"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="impreso" type="string">
+      <column length="1" name="IMPRESO"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="descri1" type="string">
+      <column length="240" name="DESCRI1"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="autorizado" type="string">
+      <column length="1" name="AUTORIZADO"/>
+    </property>
+    <property name="origen" type="string">
+      <column length="2" name="ORIGEN"/>
+    </property>
+    <property name="TDebitos" type="big_decimal">
+      <column name="T_DEBITOS" precision="17"/>
+    </property>
+    <property name="TCreditos" type="big_decimal">
+      <column name="T_CREDITOS" precision="17"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="TCambCV" type="string">
+      <column length="1" name="T_CAMB_C_V"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="tipoComprobante" type="string">
+      <column length="1" name="TIPO_COMPROBANTE"/>
+    </property>
+    <property name="noComprobante" type="string">
+      <column length="12" name="NO_COMPROBANTE"/>
+    </property>
+    <property name="anulado" type="string">
+      <column length="1" name="ANULADO"/>
+    </property>
+    <property name="centrod" type="string">
+      <column length="2" name="CENTROD"/>
+    </property>
+    <property name="centrof" type="string">
+      <column length="4" name="CENTROF"/>
+    </property>
+    <property name="corporativo" type="string">
+      <column length="1" name="CORPORATIVO"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="TDebitosRes" type="big_decimal">
+      <column name="T_DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="TCreditosRes" type="big_decimal">
+      <column name="T_CREDITOS_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

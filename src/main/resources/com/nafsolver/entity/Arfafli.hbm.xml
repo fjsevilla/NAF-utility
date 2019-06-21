@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfafli" optimistic-lock="version" schema="DESA46" table="ARFAFLI">
+    <composite-id class="com.nafsolver.entity.ArfafliId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noFactu" type="string">
+        <column length="12" name="NO_FACTU"/>
+      </key-property>
+      <key-property name="noLinea" type="int">
+        <column name="NO_LINEA" precision="5" scale="0"/>
+      </key-property>
+      <key-property name="clave" type="string">
+        <column length="2" name="CLAVE"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="porcImp" type="big_decimal">
+      <column name="PORC_IMP" precision="4"/>
+    </property>
+    <property name="montoImp" type="big_decimal">
+      <column name="MONTO_IMP" precision="17"/>
+    </property>
+    <property name="columna" type="string">
+      <column length="1" name="COLUMNA"/>
+    </property>
+    <property name="base" type="big_decimal">
+      <column name="BASE" precision="17"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="comportamiento" type="string">
+      <column length="1" name="COMPORTAMIENTO"/>
+    </property>
+    <property name="aplicaCredFiscal" type="string">
+      <column length="1" name="APLICA_CRED_FISCAL"/>
+    </property>
+    <property name="idSec" type="string">
+      <column length="5" name="ID_SEC"/>
+    </property>
+    <property name="claveImpRed" type="string">
+      <column length="2" name="CLAVE_IMP_RED"/>
+    </property>
+    <property name="porcImpRed" type="big_decimal">
+      <column name="PORC_IMP_RED" precision="4"/>
+    </property>
+    <property name="montoImpRed" type="big_decimal">
+      <column name="MONTO_IMP_RED" precision="17"/>
+    </property>
+    <property name="montoImpOrg" type="big_decimal">
+      <column name="MONTO_IMP_ORG" precision="17"/>
+    </property>
+    <property name="porcImpOrg" type="big_decimal">
+      <column name="PORC_IMP_ORG" precision="4"/>
+    </property>
+    <property name="montoImpRes" type="big_decimal">
+      <column name="MONTO_IMP_RES" precision="30"/>
+    </property>
+    <property name="baseRes" type="big_decimal">
+      <column name="BASE_RES" precision="30"/>
+    </property>
+    <property name="montoImpRedRes" type="big_decimal">
+      <column name="MONTO_IMP_RED_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

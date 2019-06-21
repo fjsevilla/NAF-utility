@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArplelnomDet" optimistic-lock="version" schema="DESA46" table="ARPLELNOM_DET">
+    <composite-id class="com.nafsolver.entity.ArplelnomDetId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noElnom" type="string">
+        <column length="10" name="NO_ELNOM"/>
+      </key-property>
+      <key-property name="codpla" type="string">
+        <column length="2" name="CODPLA"/>
+      </key-property>
+      <key-property name="tipoEmp" type="string">
+        <column length="2" name="TIPO_EMP"/>
+      </key-property>
+      <key-property name="noEmple" type="string">
+        <column length="10" name="NO_EMPLE"/>
+      </key-property>
+      <key-property name="noCpto" type="string">
+        <column length="10" name="NO_CPTO"/>
+      </key-property>
+    </composite-id>
+    <property name="totHoras" type="string">
+      <column length="10" name="TOT_HORAS">
+        <comment>HORAS REGISTRADAS POR CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="dias" type="string">
+      <column length="10" name="DIAS">
+        <comment>DIAS REGISTRADOS EN CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="12">
+        <comment>MONTO REGISTRADO EN CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="totAsig" type="big_decimal">
+      <column name="TOT_ASIG" precision="12">
+        <comment>SALDO TOTAL DE ASIGNACIONES EN CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="totDed" type="big_decimal">
+      <column name="TOT_DED" precision="12">
+        <comment>SALDO TOTAL DE DEDUCCIONES EN CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="totNeto" type="big_decimal">
+      <column name="TOT_NETO" precision="12">
+        <comment>SALDO NETO RESULTADO DE CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="fechReg" type="date">
+      <column length="7" name="FECH_REG">
+        <comment>FECHA DE REGISTRO DE MODIFICACIONES EN CONCEPTO</comment>
+      </column>
+    </property>
+    <property name="userReg" type="string">
+      <column length="30" name="USER_REG">
+        <comment>USUARIO DE REGISTROS DE MODIFICACIONES EN CONCEPTO</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfaev" optimistic-lock="version" schema="DESA46" table="ARFAEV">
+    <composite-id class="com.nafsolver.entity.ArfaevId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="centro" type="string">
+        <column length="2" name="CENTRO"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="articulo" type="string">
+        <column length="30" name="ARTICULO"/>
+      </key-property>
+      <key-property name="grupo" type="string">
+        <column length="2" name="GRUPO"/>
+      </key-property>
+      <key-property name="noCliente" type="string">
+        <column length="15" name="NO_CLIENTE"/>
+      </key-property>
+      <key-property name="vendedor" type="string">
+        <column length="4" name="VENDEDOR"/>
+      </key-property>
+      <key-property name="ruta" type="string">
+        <column length="4" name="RUTA"/>
+      </key-property>
+      <key-property name="semana" type="string">
+        <column length="2" name="SEMANA"/>
+      </key-property>
+      <key-property name="indSem" type="string">
+        <column length="1" name="IND_SEM"/>
+      </key-property>
+      <key-property name="ano" type="string">
+        <column length="4" name="ANO"/>
+      </key-property>
+    </composite-id>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="ventaUnidades" type="big_decimal">
+      <column name="VENTA_UNIDADES" precision="17"/>
+    </property>
+    <property name="devolUnidades" type="big_decimal">
+      <column name="DEVOL_UNIDADES" precision="17"/>
+    </property>
+    <property name="promoUnidades" type="big_decimal">
+      <column name="PROMO_UNIDADES" precision="17"/>
+    </property>
+    <property name="costoVenta" type="big_decimal">
+      <column name="COSTO_VENTA" precision="17"/>
+    </property>
+    <property name="ventaDinero" type="big_decimal">
+      <column name="VENTA_DINERO" precision="17"/>
+    </property>
+    <property name="costoDevol" type="big_decimal">
+      <column name="COSTO_DEVOL" precision="17"/>
+    </property>
+    <property name="devolDinero" type="big_decimal">
+      <column name="DEVOL_DINERO" precision="17"/>
+    </property>
+    <property name="costoPromo" type="big_decimal">
+      <column name="COSTO_PROMO" precision="17"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="impuesto" type="big_decimal">
+      <column name="IMPUESTO" precision="17"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="costoVentaDol" type="big_decimal">
+      <column name="COSTO_VENTA_DOL" precision="17"/>
+    </property>
+    <property name="ventaDineroDol" type="big_decimal">
+      <column name="VENTA_DINERO_DOL" precision="17"/>
+    </property>
+    <property name="costoDevolDol" type="big_decimal">
+      <column name="COSTO_DEVOL_DOL" precision="17"/>
+    </property>
+    <property name="devolDineroDol" type="big_decimal">
+      <column name="DEVOL_DINERO_DOL" precision="17"/>
+    </property>
+    <property name="costoPromoDol" type="big_decimal">
+      <column name="COSTO_PROMO_DOL" precision="17"/>
+    </property>
+    <property name="descuentoDol" type="big_decimal">
+      <column name="DESCUENTO_DOL" precision="17"/>
+    </property>
+    <property name="impuestoDol" type="big_decimal">
+      <column name="IMPUESTO_DOL" precision="17"/>
+    </property>
+    <property name="costoVentaRes" type="big_decimal">
+      <column name="COSTO_VENTA_RES" precision="30"/>
+    </property>
+    <property name="ventaDineroRes" type="big_decimal">
+      <column name="VENTA_DINERO_RES" precision="30"/>
+    </property>
+    <property name="costoDevolRes" type="big_decimal">
+      <column name="COSTO_DEVOL_RES" precision="30"/>
+    </property>
+    <property name="devolDineroRes" type="big_decimal">
+      <column name="DEVOL_DINERO_RES" precision="30"/>
+    </property>
+    <property name="impuestoRes" type="big_decimal">
+      <column name="IMPUESTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

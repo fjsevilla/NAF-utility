@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplgr" optimistic-lock="version" schema="DESA46" table="ARPLGR">
+    <composite-id class="com.nafsolver.entity.ArplgrId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noAcumgr" type="string">
+        <column length="10" name="NO_ACUMGR"/>
+      </key-property>
+    </composite-id>
+    <property name="desAcumgr" type="string">
+      <column length="100" name="DES_ACUMGR">
+        <comment>DESCRIPCION DE GRUPO DE ACUMULADOS</comment>
+      </column>
+    </property>
+    <property name="stAcumgr" type="string">
+      <column length="1" name="ST_ACUMGR">
+        <comment>STATUS DE GRUPO DE ACUMULADOS</comment>
+      </column>
+    </property>
+  </class>
+</hibernate-mapping>

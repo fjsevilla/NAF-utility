@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arckrd" optimistic-lock="version" schema="DESA46" table="ARCKRD">
+    <comment>Referencias de Cheques</comment>
+    <composite-id class="com.nafsolver.entity.ArckrdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noSecuencia" type="int">
+        <column name="NO_SECUENCIA" precision="8" scale="0"/>
+      </key-property>
+      <key-property name="noRefe" type="string">
+        <column length="8" name="NO_REFE"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoDocu" type="string">
+      <column length="2" name="TIPO_DOCU"/>
+    </property>
+    <property name="tipoRefe" type="string">
+      <column length="2" name="TIPO_REFE"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="descuentoPp" type="big_decimal">
+      <column name="DESCUENTO_PP" precision="17"/>
+    </property>
+    <property name="montoNominal" type="big_decimal">
+      <column name="MONTO_NOMINAL" precision="17"/>
+    </property>
+    <property name="status" type="string">
+      <column length="1" name="STATUS"/>
+    </property>
+    <property name="difCambiario" type="big_decimal">
+      <column name="DIF_CAMBIARIO" precision="17"/>
+    </property>
+    <property name="bcoProve" type="string">
+      <column length="2" name="BCO_PROVE"/>
+    </property>
+    <property name="ctaBcoProve" type="string">
+      <column length="20" name="CTA_BCO_PROVE"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+    <property name="descuentoPpRes" type="big_decimal">
+      <column name="DESCUENTO_PP_RES" precision="30"/>
+    </property>
+    <property name="montoNominalRes" type="big_decimal">
+      <column name="MONTO_NOMINAL_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccer" optimistic-lock="version" schema="DESA46" table="ARCCER">
+    <comment>Encabezado de relacion de cobranza</comment>
+    <composite-id class="com.nafsolver.entity.ArccerId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noRelacion" type="long">
+        <column name="NO_RELACION" precision="14" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoDeRelacion" type="string">
+      <column length="2" name="TIPO_DE_RELACION"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="hechoPor" type="string">
+      <column length="30" name="HECHO_POR"/>
+    </property>
+    <property name="cobrador" type="string">
+      <column length="4" name="COBRADOR"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="observacion" type="string">
+      <column length="250" name="OBSERVACION"/>
+    </property>
+  </class>
+</hibernate-mapping>

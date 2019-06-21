@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.MovEfe" optimistic-lock="version" schema="DESA46" table="MOV_EFE">
+    <composite-id class="com.nafsolver.entity.MovEfeId" name="id">
+      <key-property name="operacion" type="long">
+        <column name="OPERACION" precision="10" scale="0"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="fechaDoc" type="date">
+      <column length="7" name="FECHA_DOC"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="referencia" type="string">
+      <column length="20" name="REFERENCIA"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="50" name="DESCRIPCION"/>
+    </property>
+    <property name="tipoMov" type="string">
+      <column length="1" name="TIPO_MOV"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="status" type="string">
+      <column length="1" name="STATUS"/>
+    </property>
+    <property name="usuario" type="string">
+      <column length="20" name="USUARIO"/>
+    </property>
+    <property name="anoCurso" type="string">
+      <column length="4" name="ANO_CURSO"/>
+    </property>
+    <property name="mesCurso" type="string">
+      <column length="2" name="MES_CURSO"/>
+    </property>
+  </class>
+</hibernate-mapping>

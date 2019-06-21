@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccte" optimistic-lock="version" schema="DESA46" table="ARCCTE">
+    <composite-id class="com.nafsolver.entity.ArccteId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="2" name="TIPO_DOC"/>
+      </key-property>
+      <key-property name="codEstado" type="string">
+        <column length="2" name="COD_ESTADO"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="20" name="DESCRIPCION"/>
+    </property>
+    <property name="tipoEstado" type="string">
+      <column length="2" name="TIPO_ESTADO"/>
+    </property>
+  </class>
+</hibernate-mapping>

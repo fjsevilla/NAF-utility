@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinmt" optimistic-lock="version" schema="DESA46" table="ARINMT">
+    <composite-id class="com.nafsolver.entity.ArinmtId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="noLinea" type="short">
+        <column name="NO_LINEA" precision="3" scale="0"/>
+      </key-property>
+      <key-property name="ubicacion" type="string">
+        <column length="10" name="UBICACION"/>
+      </key-property>
+      <key-property name="noLote" type="string">
+        <column length="30" name="NO_LOTE"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="ano" type="string">
+      <column length="4" name="ANO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="bodega" type="string">
+      <column length="4" name="BODEGA"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="3" name="CLASE"/>
+    </property>
+    <property name="categoria" type="string">
+      <column length="3" name="CATEGORIA"/>
+    </property>
+    <property name="noArti" type="string">
+      <column length="30" name="NO_ARTI"/>
+    </property>
+    <property name="unidades" type="big_decimal">
+      <column name="UNIDADES" precision="17"/>
+    </property>
+    <property name="venta" type="big_decimal">
+      <column name="VENTA" precision="22"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="22"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22"/>
+    </property>
+    <property name="costoInd" type="big_decimal">
+      <column name="COSTO_IND" precision="22"/>
+    </property>
+  </class>
+</hibernate-mapping>

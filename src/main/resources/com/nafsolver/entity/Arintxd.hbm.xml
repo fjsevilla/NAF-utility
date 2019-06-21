@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arintxd" optimistic-lock="version" schema="DESA46" table="ARINTXD">
+    <composite-id class="com.nafsolver.entity.ArintxdId" name="id">
+      <key-property name="tipoClasif" type="string">
+        <column length="2" name="TIPO_CLASIF"/>
+      </key-property>
+      <key-property name="codClasif" type="string">
+        <column length="15" name="COD_CLASIF"/>
+      </key-property>
+      <key-property name="talla" type="big_decimal">
+        <column name="TALLA" precision="4" scale="1"/>
+      </key-property>
+    </composite-id>
+  </class>
+</hibernate-mapping>

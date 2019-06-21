@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcctd" optimistic-lock="version" schema="DESA46" table="ARCCTD">
+    <composite-id class="com.nafsolver.entity.ArcctdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipo" type="string">
+        <column length="2" name="TIPO"/>
+      </key-property>
+    </composite-id>
+    <property name="tipoMov" type="string">
+      <column length="1" name="TIPO_MOV"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="35" name="DESCRIPCION"/>
+    </property>
+    <property name="afectaSaldo" type="string">
+      <column length="1" name="AFECTA_SALDO"/>
+    </property>
+    <property name="cobroVendedor" type="string">
+      <column length="1" name="COBRO_VENDEDOR"/>
+    </property>
+    <property name="conjuntar" type="string">
+      <column length="1" name="CONJUNTAR"/>
+    </property>
+    <property name="cksDev" type="string">
+      <column length="1" name="CKS_DEV"/>
+    </property>
+    <property name="factura" type="string">
+      <column length="1" name="FACTURA"/>
+    </property>
+    <property name="ajuste" type="string">
+      <column length="1" name="AJUSTE"/>
+    </property>
+    <property name="ctaContrapartida" type="string">
+      <column length="15" name="CTA_CONTRAPARTIDA"/>
+    </property>
+    <property name="formulario" type="string">
+      <column length="10" name="FORMULARIO"/>
+    </property>
+    <property name="afectaLibro" type="string">
+      <column length="1" name="AFECTA_LIBRO"/>
+    </property>
+    <property name="formularioCtrl" type="string">
+      <column length="10" name="FORMULARIO_CTRL"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="comportamientoImp" type="string">
+      <column length="1" name="COMPORTAMIENTO_IMP"/>
+    </property>
+    <property name="cksPos" type="string">
+      <column length="1" name="CKS_POS"/>
+    </property>
+    <property name="claseDoc" type="string">
+      <column length="1" name="CLASE_DOC"/>
+    </property>
+    <property name="conceptoDefault" type="string">
+      <column length="2" name="CONCEPTO_DEFAULT"/>
+    </property>
+    <property name="disminuyeComision" type="string">
+      <column length="1" name="DISMINUYE_COMISION"/>
+    </property>
+    <property name="disminuyeComisionCob" type="string">
+      <column length="1" name="DISMINUYE_COMISION_COB"/>
+    </property>
+    <property name="giro" type="string">
+      <column length="1" name="GIRO"/>
+    </property>
+    <property name="descuentoPp" type="string">
+      <column length="1" name="DESCUENTO_PP"/>
+    </property>
+    <property name="ajusteVendedor" type="string">
+      <column length="1" name="AJUSTE_VENDEDOR"/>
+    </property>
+    <property name="factor" type="big_decimal">
+      <column name="FACTOR" precision="17"/>
+    </property>
+  </class>
+</hibernate-mapping>

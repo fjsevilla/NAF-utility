@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArcgmsC" optimistic-lock="version" schema="DESA46" table="ARCGMS_C">
+    <comment>Maestro de cuentas contables por centro de costo</comment>
+    <composite-id class="com.nafsolver.entity.ArcgmsCId" name="id">
+      <key-property name="cc1" type="string">
+        <column length="3" name="CC_1"/>
+      </key-property>
+      <key-property name="cc2" type="string">
+        <column length="3" name="CC_2"/>
+      </key-property>
+      <key-property name="cc3" type="string">
+        <column length="3" name="CC_3"/>
+      </key-property>
+      <key-property name="cuenta" type="string">
+        <column length="15" name="CUENTA"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="tipo" type="string">
+      <column length="2" name="TIPO"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="1" name="CLASE"/>
+    </property>
+    <property name="monetaria" type="string">
+      <column length="1" name="MONETARIA"/>
+    </property>
+    <property name="ajustable" type="string">
+      <column length="1" name="AJUSTABLE"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="saldoPerAnt" type="big_decimal">
+      <column name="SALDO_PER_ANT" precision="17"/>
+    </property>
+    <property name="saldoMesAnt" type="big_decimal">
+      <column name="SALDO_MES_ANT" precision="17"/>
+    </property>
+    <property name="debitos" type="big_decimal">
+      <column name="DEBITOS" precision="17"/>
+    </property>
+    <property name="creditos" type="big_decimal">
+      <column name="CREDITOS" precision="17"/>
+    </property>
+    <property name="saldoPerAntDol" type="big_decimal">
+      <column name="SALDO_PER_ANT_DOL" precision="17"/>
+    </property>
+    <property name="saldoMesAntDol" type="big_decimal">
+      <column name="SALDO_MES_ANT_DOL" precision="17"/>
+    </property>
+    <property name="debitosDol" type="big_decimal">
+      <column name="DEBITOS_DOL" precision="17"/>
+    </property>
+    <property name="creditosDol" type="big_decimal">
+      <column name="CREDITOS_DOL" precision="17"/>
+    </property>
+    <property name="nivel" type="java.lang.Boolean">
+      <column name="NIVEL" precision="1" scale="0"/>
+    </property>
+    <property name="debitosRes" type="big_decimal">
+      <column name="DEBITOS_RES" precision="30"/>
+    </property>
+    <property name="creditosRes" type="big_decimal">
+      <column name="CREDITOS_RES" precision="30"/>
+    </property>
+    <property name="saldoPerAntRes" type="big_decimal">
+      <column name="SALDO_PER_ANT_RES" precision="30"/>
+    </property>
+    <property name="saldoMesAntRes" type="big_decimal">
+      <column name="SALDO_MES_ANT_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

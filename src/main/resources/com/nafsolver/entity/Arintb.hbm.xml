@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arintb" optimistic-lock="version" schema="DESA46" table="ARINTB">
+    <comment>C¢digos de Ruta, Agentes y Vendedores</comment>
+    <composite-id class="com.nafsolver.entity.ArintbId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoCodigo" type="string">
+        <column length="1" name="TIPO_CODIGO"/>
+      </key-property>
+      <key-property name="codigo" type="string">
+        <column length="4" name="CODIGO"/>
+      </key-property>
+      <key-property name="periodo" type="string">
+        <column length="4" name="PERIODO"/>
+      </key-property>
+    </composite-id>
+    <property name="nombre" type="string">
+      <column length="25" name="NOMBRE"/>
+    </property>
+    <property name="comision" type="big_decimal">
+      <column name="COMISION" precision="7"/>
+    </property>
+    <property name="superior" type="string">
+      <column length="4" name="SUPERIOR"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO"/>
+    </property>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="codigoAnt" type="string">
+      <column length="5" name="CODIGO_ANT"/>
+    </property>
+    <property name="codCobr" type="string">
+      <column length="4" name="COD_COBR"/>
+    </property>
+    <property name="inactivo" type="string">
+      <column length="1" name="INACTIVO"/>
+    </property>
+    <property name="rutero" type="string">
+      <column length="1" name="RUTERO"/>
+    </property>
+    <property name="diasGracia" type="java.lang.Short">
+      <column name="DIAS_GRACIA" precision="4" scale="0"/>
+    </property>
+    <property name="cuentaComisiones" type="string">
+      <column length="15" name="CUENTA_COMISIONES"/>
+    </property>
+    <property name="publicidad" type="big_decimal">
+      <column name="PUBLICIDAD" precision="12"/>
+    </property>
+  </class>
+</hibernate-mapping>

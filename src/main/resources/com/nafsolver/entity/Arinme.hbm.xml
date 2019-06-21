@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinme" optimistic-lock="version" schema="DESA46" table="ARINME">
+    <composite-id class="com.nafsolver.entity.ArinmeId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="noFisico" type="string">
+      <column length="12" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="15" name="SERIE_FISICO"/>
+    </property>
+    <property name="conduce" type="string">
+      <column length="10" name="CONDUCE"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="tipoRefe" type="string">
+      <column length="2" name="TIPO_REFE"/>
+    </property>
+    <property name="noRefe" type="string">
+      <column length="12" name="NO_REFE"/>
+    </property>
+    <property name="serieRefe" type="string">
+      <column length="15" name="SERIE_REFE"/>
+    </property>
+    <property name="noDocuRefe" type="string">
+      <column length="12" name="NO_DOCU_REFE"/>
+    </property>
+    <property name="impVentas" type="big_decimal">
+      <column name="IMP_VENTAS" precision="22"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="22"/>
+    </property>
+    <property name="movTot" type="big_decimal">
+      <column name="MOV_TOT" precision="22"/>
+    </property>
+    <property name="totArtIv" type="big_decimal">
+      <column name="TOT_ART_IV" precision="22"/>
+    </property>
+    <property name="observ1" type="string">
+      <column length="250" name="OBSERV1"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="22" scale="4"/>
+    </property>
+    <property name="impEspecial" type="big_decimal">
+      <column name="IMP_ESPECIAL" precision="22"/>
+    </property>
+    <property name="impIncluido" type="big_decimal">
+      <column name="IMP_INCLUIDO" precision="22"/>
+    </property>
+    <property name="fechaAplicacion" type="date">
+      <column length="7" name="FECHA_APLICACION"/>
+    </property>
+    <property name="totalGid" type="big_decimal">
+      <column name="TOTAL_GID" precision="22"/>
+    </property>
+    <property name="tmovimi" type="string">
+      <column length="1" name="TMOVIMI"/>
+    </property>
+    <property name="stCxp" type="string">
+      <column length="1" name="ST_CXP"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="3" name="MONEDA"/>
+    </property>
+    <property name="fechaReg" type="date">
+      <column length="7" name="FECHA_REG"/>
+    </property>
+    <property name="fechaDoc" type="date">
+      <column length="7" name="FECHA_DOC"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="totalRet" type="big_decimal">
+      <column name="TOTAL_RET" precision="22"/>
+    </property>
+    <property name="tipoMoneda" type="string">
+      <column length="4" name="TIPO_MONEDA"/>
+    </property>
+    <property name="fechaTc" type="date">
+      <column length="7" name="FECHA_TC"/>
+    </property>
+    <property name="aprobacion" type="string">
+      <column length="1" name="APROBACION"/>
+    </property>
+    <property name="porcRet" type="big_decimal">
+      <column name="PORC_RET" precision="22"/>
+    </property>
+    <property name="ordenCompra" type="string">
+      <column length="12" name="ORDEN_COMPRA"/>
+    </property>
+    <property name="estadoRec" type="string">
+      <column length="1" name="ESTADO_REC"/>
+    </property>
+    <property name="noRefeDocu" type="string">
+      <column length="12" name="NO_REFE_DOCU"/>
+    </property>
+    <property name="noCiaDestino" type="string">
+      <column length="2" name="NO_CIA_DESTINO"/>
+    </property>
+    <property name="descC" type="big_decimal">
+      <column name="DESC_C" precision="10"/>
+    </property>
+    <property name="descP" type="big_decimal">
+      <column name="DESC_P" precision="10"/>
+    </property>
+    <property name="plazoC" type="java.lang.Integer">
+      <column name="PLAZO_C" precision="8" scale="0"/>
+    </property>
+    <property name="plazoP" type="java.lang.Integer">
+      <column name="PLAZO_P" precision="8" scale="0"/>
+    </property>
+    <property name="aprReqisicion" type="string">
+      <column length="1" name="APR_REQISICION"/>
+    </property>
+    <property name="usuarioReq" type="string">
+      <column length="50" name="USUARIO_REQ"/>
+    </property>
+    <property name="nomUsuario" type="string">
+      <column length="200" name="NOM_USUARIO"/>
+    </property>
+    <property name="noCp" type="string">
+      <column length="12" name="NO_CP"/>
+    </property>
+    <property name="noDevCom" type="string">
+      <column length="12" name="NO_DEV_COM"/>
+    </property>
+    <property name="marca" type="string">
+      <column length="1" name="MARCA"/>
+    </property>
+    <property name="column1" type="string">
+      <column length="20" name="COLUMN1"/>
+    </property>
+    <property name="column2" type="string">
+      <column length="20" name="COLUMN2"/>
+    </property>
+    <property name="impVentasRes" type="big_decimal">
+      <column name="IMP_VENTAS_RES" precision="30"/>
+    </property>
+    <property name="descuentoRes" type="big_decimal">
+      <column name="DESCUENTO_RES" precision="30"/>
+    </property>
+    <property name="movTotRes" type="big_decimal">
+      <column name="MOV_TOT_RES" precision="30"/>
+    </property>
+    <property name="totArtIvRes" type="big_decimal">
+      <column name="TOT_ART_IV_RES" precision="30"/>
+    </property>
+    <property name="impEspecialRes" type="big_decimal">
+      <column name="IMP_ESPECIAL_RES" precision="30"/>
+    </property>
+    <property name="impIncluidoRes" type="big_decimal">
+      <column name="IMP_INCLUIDO_RES" precision="30"/>
+    </property>
+    <property name="totalGidRes" type="big_decimal">
+      <column name="TOTAL_GID_RES" precision="30"/>
+    </property>
+    <property name="totalRetRes" type="big_decimal">
+      <column name="TOTAL_RET_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

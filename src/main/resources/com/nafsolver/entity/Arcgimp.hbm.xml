@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgimp" optimistic-lock="version" schema="DESA46" table="ARCGIMP">
+    <comment>Tabla de impuestos</comment>
+    <composite-id class="com.nafsolver.entity.ArcgimpId" name="id">
+      <key-property name="clave" type="string">
+        <column length="2" name="CLAVE"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="grupo" type="string">
+      <column length="5" name="GRUPO"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="20" name="DESCRIPCION"/>
+    </property>
+    <property name="sectorizable" type="string">
+      <column length="1" name="SECTORIZABLE"/>
+    </property>
+    <property name="columna" type="java.lang.Boolean">
+      <column name="COLUMNA" precision="1" scale="0"/>
+    </property>
+    <property name="indRetencion" type="string">
+      <column length="1" name="IND_RETENCION"/>
+    </property>
+    <property name="certificado" type="string">
+      <column length="1" name="CERTIFICADO"/>
+    </property>
+    <property name="diasCredFiscal" type="java.lang.Short">
+      <column name="DIAS_CRED_FISCAL" precision="4" scale="0"/>
+    </property>
+    <property name="afecta" type="string">
+      <column length="1" name="AFECTA"/>
+    </property>
+    <property name="baseMinima" type="big_decimal">
+      <column name="BASE_MINIMA"/>
+    </property>
+    <property name="porcentaje" type="big_decimal">
+      <column name="PORCENTAJE" precision="7" scale="4"/>
+    </property>
+    <property name="cuenta" type="string">
+      <column length="15" name="CUENTA"/>
+    </property>
+    <property name="incluido" type="string">
+      <column length="1" name="INCLUIDO"/>
+    </property>
+    <property name="especial" type="string">
+      <column length="1" name="ESPECIAL"/>
+    </property>
+    <property name="cuentaPuente" type="string">
+      <column length="15" name="CUENTA_PUENTE"/>
+    </property>
+    <property name="prioridad" type="java.lang.Short">
+      <column name="PRIORIDAD" precision="3" scale="0"/>
+    </property>
+    <property name="noRet" type="string">
+      <column length="4" name="NO_RET"/>
+    </property>
+    <property name="descripcionLarga" type="string">
+      <column length="500" name="DESCRIPCION_LARGA"/>
+    </property>
+    <property name="centroCosto" type="string">
+      <column length="9" name="CENTRO_COSTO"/>
+    </property>
+  </class>
+</hibernate-mapping>

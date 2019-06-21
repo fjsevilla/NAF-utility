@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgied" optimistic-lock="version" schema="DESA46" table="ARCGIED">
+    <comment>Detalle de indices económicos</comment>
+    <composite-id class="com.nafsolver.entity.ArcgiedId" name="id">
+      <key-property name="codigo" type="string">
+        <column length="3" name="CODIGO"/>
+      </key-property>
+      <key-property name="fecha" type="date">
+        <column length="7" name="FECHA"/>
+      </key-property>
+    </composite-id>
+    <property name="valor" type="big_decimal">
+      <column name="VALOR" precision="17" scale="4"/>
+    </property>
+    <property name="modificable" type="string">
+      <column length="1" name="MODIFICABLE"/>
+    </property>
+    <property name="procesadoConta" type="string">
+      <column length="1" name="PROCESADO_CONTA"/>
+    </property>
+    <property name="procesadoActivos" type="string">
+      <column length="1" name="PROCESADO_ACTIVOS"/>
+    </property>
+  </class>
+</hibernate-mapping>

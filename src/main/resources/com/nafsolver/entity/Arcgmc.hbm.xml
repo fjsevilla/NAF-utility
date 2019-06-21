@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgmc" optimistic-lock="version" schema="DESA46" table="ARCGMC">
+    <comment>Maestro de compañías</comment>
+    <id name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE"/>
+    </property>
+    <property name="anoProce" type="java.lang.Short">
+      <column name="ANO_PROCE" precision="4" scale="0"/>
+    </property>
+    <property name="mesProce" type="java.lang.Byte">
+      <column name="MES_PROCE" precision="2" scale="0"/>
+    </property>
+    <property name="mesCierre" type="java.lang.Byte">
+      <column name="MES_CIERRE" precision="2" scale="0"/>
+    </property>
+    <property name="aceptaTasasCamb" type="string">
+      <column length="1" name="ACEPTA_TASAS_CAMB"/>
+    </property>
+    <property name="bandaTasasCamb" type="big_decimal">
+      <column name="BANDA_TASAS_CAMB" precision="9"/>
+    </property>
+    <property name="monedaFunc" type="string">
+      <column length="1" name="MONEDA_FUNC"/>
+    </property>
+    <property name="monRegCont" type="string">
+      <column length="3" name="MON_REG_CONT"/>
+    </property>
+    <property name="promedio" type="string">
+      <column length="1" name="PROMEDIO"/>
+    </property>
+    <property name="repre" type="string">
+      <column length="30" name="REPRE"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="200" name="DIRECCION"/>
+    </property>
+    <property name="aceptaTercero" type="string">
+      <column length="1" name="ACEPTA_TERCERO"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="tipoIdTributario" type="string">
+      <column length="1" name="TIPO_ID_TRIBUTARIO"/>
+    </property>
+    <property name="idTributario" type="string">
+      <column length="15" name="ID_TRIBUTARIO"/>
+    </property>
+    <property name="condicionTributaria" type="string">
+      <column length="3" name="CONDICION_TRIBUTARIA"/>
+    </property>
+    <property name="claseCambio" type="string">
+      <column length="3" name="CLASE_CAMBIO"/>
+    </property>
+    <property name="usaCtasAux" type="string">
+      <column length="1" name="USA_CTAS_AUX"/>
+    </property>
+    <property name="ccCualquierNivel" type="string">
+      <column length="1" name="CC_CUALQUIER_NIVEL"/>
+    </property>
+    <property name="formatoCta" type="string">
+      <column length="30" name="FORMATO_CTA"/>
+    </property>
+    <property name="ctaUnd" type="string">
+      <column length="15" name="CTA_UND"/>
+    </property>
+    <property name="ctaPerdidas" type="string">
+      <column length="15" name="CTA_PERDIDAS"/>
+    </property>
+    <property name="ctaUndAjuste" type="string">
+      <column length="15" name="CTA_UND_AJUSTE"/>
+    </property>
+    <property name="ctaPerdidasAjuste" type="string">
+      <column length="15" name="CTA_PERDIDAS_AJUSTE"/>
+    </property>
+    <property name="ctaAjusteNom" type="string">
+      <column length="15" name="CTA_AJUSTE_NOM"/>
+    </property>
+    <property name="ctaAjusteDol" type="string">
+      <column length="15" name="CTA_AJUSTE_DOL"/>
+    </property>
+    <property name="ctaUCHist" type="string">
+      <column length="15" name="CTA_U_C_HIST"/>
+    </property>
+    <property name="ctaPCHist" type="string">
+      <column length="15" name="CTA_P_C_HIST"/>
+    </property>
+    <property name="ctaUCCte" type="string">
+      <column length="15" name="CTA_U_C_CTE"/>
+    </property>
+    <property name="ctaPCCte" type="string">
+      <column length="15" name="CTA_P_C_CTE"/>
+    </property>
+    <property name="codDiarioDifcam" type="string">
+      <column length="5" name="COD_DIARIO_DIFCAM"/>
+    </property>
+    <property name="FUDifcambio" type="date">
+      <column length="7" name="F_U_DIFCAMBIO"/>
+    </property>
+    <property name="noAsientoDifcam" type="string">
+      <column length="12" name="NO_ASIENTO_DIFCAM"/>
+    </property>
+    <property name="ctaUd" type="string">
+      <column length="15" name="CTA_UD"/>
+    </property>
+    <property name="ctaPd" type="string">
+      <column length="15" name="CTA_PD"/>
+    </property>
+    <property name="firma1" type="string">
+      <column length="15" name="FIRMA_1"/>
+    </property>
+    <property name="firma2" type="string">
+      <column length="15" name="FIRMA_2"/>
+    </property>
+    <property name="formIngreso" type="string">
+      <column length="10" name="FORM_INGRESO"/>
+    </property>
+    <property name="formEgreso" type="string">
+      <column length="10" name="FORM_EGRESO"/>
+    </property>
+    <property name="formTraspaso" type="string">
+      <column length="10" name="FORM_TRASPASO"/>
+    </property>
+    <property name="indicadorUtilidad" type="string">
+      <column length="1" name="INDICADOR_UTILIDAD"/>
+    </property>
+    <property name="indicadorCierrep" type="string">
+      <column length="1" name="INDICADOR_CIERREP"/>
+    </property>
+    <property name="indicadorDifCam" type="string">
+      <column length="1" name="INDICADOR_DIF_CAM"/>
+    </property>
+    <property name="indicadorCcDistbs" type="string">
+      <column length="1" name="INDICADOR_CC_DISTBS"/>
+    </property>
+    <property name="cierreFiscal" type="string">
+      <column length="1" name="CIERRE_FISCAL"/>
+    </property>
+    <property name="fechaLc" type="date">
+      <column length="7" name="FECHA_LC"/>
+    </property>
+    <property name="fechaLv" type="date">
+      <column length="7" name="FECHA_LV"/>
+    </property>
+    <property name="fechaLd" type="date">
+      <column length="7" name="FECHA_LD"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="ciaConsolidada" type="string">
+      <column length="1" name="CIA_CONSOLIDADA"/>
+    </property>
+    <property name="nombreLargo" type="string">
+      <column length="300" name="NOMBRE_LARGO"/>
+    </property>
+    <property name="ccoUnd" type="string">
+      <column length="9" name="CCO_UND"/>
+    </property>
+    <property name="ccoPerdidas" type="string">
+      <column length="9" name="CCO_PERDIDAS"/>
+    </property>
+    <property name="ccoUndAjuste" type="string">
+      <column length="9" name="CCO_UND_AJUSTE"/>
+    </property>
+    <property name="ccoPerdidasAjuste" type="string">
+      <column length="9" name="CCO_PERDIDAS_AJUSTE"/>
+    </property>
+    <property name="ccoAjusteNom" type="string">
+      <column length="9" name="CCO_AJUSTE_NOM"/>
+    </property>
+    <property name="ccoAjusteDol" type="string">
+      <column length="9" name="CCO_AJUSTE_DOL"/>
+    </property>
+    <property name="ccoUCHist" type="string">
+      <column length="9" name="CCO_U_C_HIST"/>
+    </property>
+    <property name="ccoPCHist" type="string">
+      <column length="9" name="CCO_P_C_HIST"/>
+    </property>
+    <property name="ccoUCCte" type="string">
+      <column length="9" name="CCO_U_C_CTE"/>
+    </property>
+    <property name="ccoPCCte" type="string">
+      <column length="9" name="CCO_P_C_CTE"/>
+    </property>
+    <property name="ccoUd" type="string">
+      <column length="9" name="CCO_UD"/>
+    </property>
+    <property name="ccoPd" type="string">
+      <column length="9" name="CCO_PD"/>
+    </property>
+    <property name="dirDespacho" type="string">
+      <column length="1000" name="DIR_DESPACHO"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="100" name="TELEFONO"/>
+    </property>
+    <property name="correoCompras" type="string">
+      <column length="500" name="CORREO_COMPRAS"/>
+    </property>
+  </class>
+</hibernate-mapping>

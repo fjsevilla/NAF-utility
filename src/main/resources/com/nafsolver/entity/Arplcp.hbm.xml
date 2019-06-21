@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arplcp" optimistic-lock="version" schema="DESA46" table="ARPLCP">
+    <composite-id class="com.nafsolver.entity.ArplcpId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codpla" type="string">
+        <column length="10" name="CODPLA"/>
+      </key-property>
+    </composite-id>
+    <property name="tipla" type="string">
+      <column length="2" name="TIPLA"/>
+    </property>
+    <property name="salarial" type="string">
+      <column length="1" name="SALARIAL"/>
+    </property>
+    <property name="descri" type="string">
+      <column length="30" name="DESCRI"/>
+    </property>
+    <property name="anoProce" type="java.lang.Short">
+      <column name="ANO_PROCE" precision="4" scale="0"/>
+    </property>
+    <property name="mesProce" type="java.lang.Byte">
+      <column name="MES_PROCE" precision="2" scale="0"/>
+    </property>
+    <property name="noPlani" type="java.lang.Byte">
+      <column name="NO_PLANI" precision="2" scale="0"/>
+    </property>
+    <property name="FDesde" type="date">
+      <column length="7" name="F_DESDE"/>
+    </property>
+    <property name="FHasta" type="date">
+      <column length="7" name="F_HASTA"/>
+    </property>
+    <property name="FTarjDesde" type="date">
+      <column length="7" name="F_TARJ_DESDE"/>
+    </property>
+    <property name="FTarjHasta" type="date">
+      <column length="7" name="F_TARJ_HASTA"/>
+    </property>
+    <property name="FCalculo" type="date">
+      <column length="7" name="F_CALCULO"/>
+    </property>
+    <property name="tipoEmp" type="string">
+      <column length="2" name="TIPO_EMP"/>
+    </property>
+    <property name="cuentaPxp" type="string">
+      <column length="15" name="CUENTA_PXP"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="indCkAct" type="string">
+      <column length="1" name="IND_CK_ACT"/>
+    </property>
+    <property name="redondeo" type="big_decimal">
+      <column name="REDONDEO" precision="7"/>
+    </property>
+    <property name="tcCalculo" type="big_decimal">
+      <column name="TC_CALCULO" precision="7"/>
+    </property>
+    <property name="noAsiento" type="string">
+      <column length="6" name="NO_ASIENTO"/>
+    </property>
+    <property name="diasHabiles" type="java.lang.Short">
+      <column name="DIAS_HABILES" precision="3" scale="0"/>
+    </property>
+    <property name="ultimaPlanilla" type="string">
+      <column length="1" name="ULTIMA_PLANILLA" not-null="true"/>
+    </property>
+    <property name="indIngModif" type="string">
+      <column length="1" name="IND_ING_MODIF" not-null="true"/>
+    </property>
+    <property name="ctaBcoReintegros" type="string">
+      <column length="15" name="CTA_BCO_REINTEGROS"/>
+    </property>
+    <property name="codProviUtil" type="string">
+      <column length="3" name="COD_PROVI_UTIL"/>
+    </property>
+    <property name="codProviVac" type="string">
+      <column length="3" name="COD_PROVI_VAC"/>
+    </property>
+    <property name="ctaAjusteSso" type="string">
+      <column length="15" name="CTA_AJUSTE_SSO"/>
+    </property>
+    <property name="cc1Sso" type="string">
+      <column length="3" name="CC1_SSO"/>
+    </property>
+    <property name="cc2Sso" type="string">
+      <column length="3" name="CC2_SSO"/>
+    </property>
+    <property name="cc3Sso" type="string">
+      <column length="3" name="CC3_SSO"/>
+    </property>
+    <property name="totalCheque" type="big_decimal">
+      <column name="TOTAL_CHEQUE" precision="15"/>
+    </property>
+    <property name="totalTransferencia" type="big_decimal">
+      <column name="TOTAL_TRANSFERENCIA" precision="15"/>
+    </property>
+    <property name="manejaComisiones" type="string">
+      <column length="1" name="MANEJA_COMISIONES"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccmd" optimistic-lock="version" schema="DESA46" table="ARCCMD">
+    <comment>Maestro de Documentos</comment>
+    <composite-id class="com.nafsolver.entity.ArccmdId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO" not-null="true"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC" not-null="true"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO" not-null="true"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA" not-null="true"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO" not-null="true"/>
+    </property>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE" not-null="true"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="fechaVence" type="date">
+      <column length="7" name="FECHA_VENCE"/>
+    </property>
+    <property name="fechaVenceOriginal" type="date">
+      <column length="7" name="FECHA_VENCE_ORIGINAL"/>
+    </property>
+    <property name="fechaDigitacion" type="date">
+      <column length="7" name="FECHA_DIGITACION"/>
+    </property>
+    <property name="cantProrrogas" type="java.lang.Byte">
+      <column name="CANT_PRORROGAS" precision="2" scale="0"/>
+    </property>
+    <property name="noAgente" type="string">
+      <column length="4" name="NO_AGENTE"/>
+    </property>
+    <property name="cobrador" type="string">
+      <column length="4" name="COBRADOR"/>
+    </property>
+    <property name="subtotal" type="big_decimal">
+      <column name="SUBTOTAL" precision="17"/>
+    </property>
+    <property name="exento" type="big_decimal">
+      <column name="EXENTO" precision="17"/>
+    </property>
+    <property name="MOriginal" type="big_decimal">
+      <column name="M_ORIGINAL" precision="17"/>
+    </property>
+    <property name="saldo" type="big_decimal">
+      <column name="SALDO" precision="17"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="totalRef" type="big_decimal">
+      <column name="TOTAL_REF" precision="17"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO" not-null="true"/>
+    </property>
+    <property name="totalDb" type="big_decimal">
+      <column name="TOTAL_DB" precision="17"/>
+    </property>
+    <property name="totalCr" type="big_decimal">
+      <column name="TOTAL_CR" precision="17"/>
+    </property>
+    <property name="intereses" type="big_decimal">
+      <column name="INTERESES" precision="17"/>
+    </property>
+    <property name="concepto" type="string">
+      <column length="2" name="CONCEPTO"/>
+    </property>
+    <property name="periLiq" type="string">
+      <column length="4" name="PERI_LIQ"/>
+    </property>
+    <property name="noLiq" type="string">
+      <column length="6" name="NO_LIQ"/>
+    </property>
+    <property name="origen" type="string">
+      <column length="2" name="ORIGEN"/>
+    </property>
+    <property name="ano" type="java.lang.Short">
+      <column name="ANO" precision="4" scale="0"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="semana" type="java.lang.Byte">
+      <column name="SEMANA" precision="2" scale="0"/>
+    </property>
+    <property name="noFisico" type="string">
+      <column length="12" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="15" name="SERIE_FISICO"/>
+    </property>
+    <property name="codEstado" type="string">
+      <column length="2" name="COD_ESTADO"/>
+    </property>
+    <property name="codEstadoNue" type="string">
+      <column length="2" name="COD_ESTADO_NUE"/>
+    </property>
+    <property name="indEstadoVencido" type="string">
+      <column length="1" name="IND_ESTADO_VENCIDO"/>
+    </property>
+    <property name="noDocuRefe" type="string">
+      <column length="12" name="NO_DOCU_REFE"/>
+    </property>
+    <property name="fechaDocumento" type="date">
+      <column length="7" name="FECHA_DOCUMENTO"/>
+    </property>
+    <property name="anulado" type="string">
+      <column length="1" name="ANULADO"/>
+    </property>
+    <property name="usuarioAnula" type="string">
+      <column length="30" name="USUARIO_ANULA"/>
+    </property>
+    <property name="motivoAnula" type="string">
+      <column length="500" name="MOTIVO_ANULA"/>
+    </property>
+    <property name="gravado" type="big_decimal">
+      <column name="GRAVADO" precision="17"/>
+    </property>
+    <property name="numeroCtrl" type="java.lang.Long">
+      <column name="NUMERO_CTRL" precision="10" scale="0"/>
+    </property>
+    <property name="totImp" type="big_decimal">
+      <column name="TOT_IMP" precision="17"/>
+    </property>
+    <property name="totImpEspecial" type="big_decimal">
+      <column name="TOT_IMP_ESPECIAL" precision="17"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="fechaGenCkDev" type="date">
+      <column length="7" name="FECHA_GEN_CK_DEV"/>
+    </property>
+    <property name="totRet" type="big_decimal">
+      <column name="TOT_RET" precision="17"/>
+    </property>
+    <property name="totOtrosCargos" type="big_decimal">
+      <column name="TOT_OTROS_CARGOS" precision="17"/>
+    </property>
+    <property name="fechaCobrado" type="date">
+      <column length="7" name="FECHA_COBRADO"/>
+    </property>
+    <property name="banco" type="string">
+      <column length="2" name="BANCO"/>
+    </property>
+    <property name="tipoFactura" type="string">
+      <column length="1" name="TIPO_FACTURA"/>
+    </property>
+    <property name="pagoComision" type="string">
+      <column length="1" name="PAGO_COMISION"/>
+    </property>
+    <property name="creditosAplicablesVta" type="big_decimal">
+      <column name="CREDITOS_APLICABLES_VTA" precision="17"/>
+    </property>
+    <property name="creditosAplicablesCob" type="big_decimal">
+      <column name="CREDITOS_APLICABLES_COB" precision="17"/>
+    </property>
+    <property name="ivaFinal" type="big_decimal">
+      <column name="IVA_FINAL" precision="12"/>
+    </property>
+    <property name="fechaCancelacion" type="date">
+      <column length="7" name="FECHA_CANCELACION"/>
+    </property>
+    <property name="diasCancelacion" type="java.lang.Short">
+      <column name="DIAS_CANCELACION" precision="4" scale="0"/>
+    </property>
+    <property name="gracia" type="java.lang.Short">
+      <column name="GRACIA" precision="4" scale="0"/>
+    </property>
+    <property name="comisionTotalVta" type="big_decimal">
+      <column name="COMISION_TOTAL_VTA" precision="15"/>
+    </property>
+    <property name="comisionPagadaVta" type="big_decimal">
+      <column name="COMISION_PAGADA_VTA" precision="15"/>
+    </property>
+    <property name="comisionPagarVta" type="big_decimal">
+      <column name="COMISION_PAGAR_VTA" precision="15"/>
+    </property>
+    <property name="comisionTotalCobranza" type="big_decimal">
+      <column name="COMISION_TOTAL_COBRANZA" precision="15"/>
+    </property>
+    <property name="comisionPagadaCobranza" type="big_decimal">
+      <column name="COMISION_PAGADA_COBRANZA" precision="15"/>
+    </property>
+    <property name="comisionPagarCobranza" type="big_decimal">
+      <column name="COMISION_PAGAR_COBRANZA" precision="15"/>
+    </property>
+    <property name="comisionXAcuerdo" type="string">
+      <column length="1" name="COMISION_X_ACUERDO"/>
+    </property>
+    <property name="pagarComision" type="string">
+      <column length="1" name="PAGAR_COMISION"/>
+    </property>
+    <property name="comisionVenta" type="big_decimal">
+      <column name="COMISION_VENTA" precision="15"/>
+    </property>
+    <property name="comisionCobranza" type="big_decimal">
+      <column name="COMISION_COBRANZA" precision="15"/>
+    </property>
+    <property name="usuarioReg" type="string">
+      <column length="40" name="USUARIO_REG"/>
+    </property>
+    <property name="control" type="string">
+      <column length="20" name="CONTROL"/>
+    </property>
+    <property name="baseRet" type="big_decimal">
+      <column name="BASE_RET" precision="17"/>
+    </property>
+    <property name="porcRet" type="big_decimal">
+      <column name="PORC_RET" precision="17"/>
+    </property>
+    <property name="fchRet" type="date">
+      <column length="7" name="FCH_RET"/>
+    </property>
+    <property name="noComprobante" type="string">
+      <column length="30" name="NO_COMPROBANTE"/>
+    </property>
+    <property name="emision" type="big_decimal">
+      <column name="EMISION" precision="17"/>
+    </property>
+    <property name="emisionFisico" type="big_decimal">
+      <column name="EMISION_FISICO" precision="17"/>
+    </property>
+    <property name="noRelacioncobro" type="string">
+      <column length="30" name="NO_RELACIONCOBRO"/>
+    </property>
+    <property name="comisionPagada" type="big_decimal">
+      <column name="COMISION_PAGADA" precision="17"/>
+    </property>
+    <property name="libCkd" type="string">
+      <column length="1" name="LIB_CKD"/>
+    </property>
+    <property name="libDiv" type="string">
+      <column length="1" name="LIB_DIV"/>
+    </property>
+    <property name="libSa" type="string">
+      <column length="1" name="LIB_SA"/>
+    </property>
+    <property name="periodoComc" type="java.lang.Integer">
+      <column name="PERIODO_COMC" precision="6" scale="0"/>
+    </property>
+    <property name="anoComc" type="java.lang.Short">
+      <column name="ANO_COMC" precision="4" scale="0"/>
+    </property>
+    <property name="mesComc" type="java.lang.Byte">
+      <column name="MES_COMC" precision="2" scale="0"/>
+    </property>
+    <property name="tempSald" type="big_decimal">
+      <column name="TEMP_SALD" precision="17"/>
+    </property>
+    <property name="nro" type="java.lang.Long">
+      <column name="NRO" precision="17" scale="0"/>
+    </property>
+    <property name="claveImpRed" type="string">
+      <column length="2" name="CLAVE_IMP_RED"/>
+    </property>
+    <property name="porcImpRed" type="big_decimal">
+      <column name="PORC_IMP_RED" precision="4"/>
+    </property>
+    <property name="montoImpRed" type="big_decimal">
+      <column name="MONTO_IMP_RED" precision="17"/>
+    </property>
+    <property name="montoImpOrg" type="big_decimal">
+      <column name="MONTO_IMP_ORG" precision="17"/>
+    </property>
+    <property name="porcImpOrg" type="big_decimal">
+      <column name="PORC_IMP_ORG" precision="4"/>
+    </property>
+    <property name="mesAnula" type="java.lang.Byte">
+      <column name="MES_ANULA" precision="2" scale="0"/>
+    </property>
+    <property name="anoAnula" type="java.lang.Short">
+      <column name="ANO_ANULA" precision="4" scale="0"/>
+    </property>
+    <property name="fechaAnula" type="date">
+      <column length="7" name="FECHA_ANULA"/>
+    </property>
+    <property name="anuCom" type="string">
+      <column length="1" name="ANU_COM"/>
+    </property>
+    <property name="subtotalRes" type="big_decimal">
+      <column name="SUBTOTAL_RES" precision="30"/>
+    </property>
+    <property name="exentoRes" type="big_decimal">
+      <column name="EXENTO_RES" precision="30"/>
+    </property>
+    <property name="MOriginalRes" type="big_decimal">
+      <column name="M_ORIGINAL_RES" precision="30"/>
+    </property>
+    <property name="saldoRes" type="big_decimal">
+      <column name="SALDO_RES" precision="30"/>
+    </property>
+    <property name="descuentoRes" type="big_decimal">
+      <column name="DESCUENTO_RES" precision="30"/>
+    </property>
+    <property name="totalRefRes" type="big_decimal">
+      <column name="TOTAL_REF_RES" precision="30"/>
+    </property>
+    <property name="totalDbRes" type="big_decimal">
+      <column name="TOTAL_DB_RES" precision="30"/>
+    </property>
+    <property name="totalCrRes" type="big_decimal">
+      <column name="TOTAL_CR_RES" precision="30"/>
+    </property>
+    <property name="interesesRes" type="big_decimal">
+      <column name="INTERESES_RES" precision="30"/>
+    </property>
+    <property name="gravadoRes" type="big_decimal">
+      <column name="GRAVADO_RES" precision="30"/>
+    </property>
+    <property name="totImpRes" type="big_decimal">
+      <column name="TOT_IMP_RES" precision="30"/>
+    </property>
+    <property name="totImpEspecialRes" type="big_decimal">
+      <column name="TOT_IMP_ESPECIAL_RES" precision="30"/>
+    </property>
+    <property name="totRetRes" type="big_decimal">
+      <column name="TOT_RET_RES" precision="30"/>
+    </property>
+    <property name="totOtrosCargosRes" type="big_decimal">
+      <column name="TOT_OTROS_CARGOS_RES" precision="30"/>
+    </property>
+    <property name="creditosAplicablesVtaRes" type="big_decimal">
+      <column name="CREDITOS_APLICABLES_VTA_RES" precision="30"/>
+    </property>
+    <property name="creditosAplicablesCobRes" type="big_decimal">
+      <column name="CREDITOS_APLICABLES_COB_RES" precision="30"/>
+    </property>
+    <property name="ivaFinalRes" type="big_decimal">
+      <column name="IVA_FINAL_RES" precision="30"/>
+    </property>
+    <property name="comisionTotalVtaRes" type="big_decimal">
+      <column name="COMISION_TOTAL_VTA_RES" precision="15"/>
+    </property>
+    <property name="comisionPagadaVtaRes" type="big_decimal">
+      <column name="COMISION_PAGADA_VTA_RES" precision="15"/>
+    </property>
+    <property name="comisionPagarVtaRes" type="big_decimal">
+      <column name="COMISION_PAGAR_VTA_RES" precision="15"/>
+    </property>
+    <property name="comisionTotalCobranzaRes" type="big_decimal">
+      <column name="COMISION_TOTAL_COBRANZA_RES" precision="15"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinda" optimistic-lock="version" schema="DESA46" table="ARINDA">
+    <composite-id class="com.nafsolver.entity.ArindaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="200" name="DESCRIPCION"/>
+    </property>
+    <property name="unidad" type="string">
+      <column length="2" name="UNIDAD"/>
+    </property>
+    <property name="peso" type="big_decimal">
+      <column name="PESO" precision="8"/>
+    </property>
+    <property name="tiempoRep" type="java.lang.Short">
+      <column name="TIEMPO_REP" precision="3" scale="0"/>
+    </property>
+    <property name="codigo" type="string">
+      <column length="21" name="CODIGO"/>
+    </property>
+    <property name="transito" type="big_decimal">
+      <column name="TRANSITO" precision="12"/>
+    </property>
+    <property name="upc" type="string">
+      <column length="40" name="UPC"/>
+    </property>
+    <property name="marca" type="string">
+      <column length="6" name="MARCA"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="6" name="GRUPO"/>
+    </property>
+    <property name="maximo" type="big_decimal">
+      <column name="MAXIMO" precision="12"/>
+    </property>
+    <property name="minimo" type="big_decimal">
+      <column name="MINIMO" precision="12"/>
+    </property>
+    <property name="reorden" type="big_decimal">
+      <column name="REORDEN" precision="12"/>
+    </property>
+    <property name="monedaPreciobase" type="string">
+      <column length="1" name="MONEDA_PRECIOBASE"/>
+    </property>
+    <property name="preciobase" type="big_decimal">
+      <column name="PRECIOBASE" precision="21" scale="6"/>
+    </property>
+    <property name="precionuevo" type="big_decimal">
+      <column name="PRECIONUEVO" precision="21" scale="6"/>
+    </property>
+    <property name="monedaPrecionuevo" type="string">
+      <column length="1" name="MONEDA_PRECIONUEVO"/>
+    </property>
+    <property name="impVen" type="string">
+      <column length="1" name="IMP_VEN"/>
+    </property>
+    <property name="fabricacion" type="string">
+      <column length="1" name="FABRICACION"/>
+    </property>
+    <property name="promoapp" type="string">
+      <column length="1" name="PROMOAPP"/>
+    </property>
+    <property name="discExc" type="string">
+      <column length="1" name="DISC_EXC"/>
+    </property>
+    <property name="conttype" type="string">
+      <column length="1" name="CONTTYPE"/>
+    </property>
+    <property name="indLote" type="string">
+      <column length="1" name="IND_LOTE"/>
+    </property>
+    <property name="indActivo" type="string">
+      <column length="1" name="IND_ACTIVO"/>
+    </property>
+    <property name="graciaVencer" type="java.lang.Short">
+      <column name="GRACIA_VENCER" precision="3" scale="0"/>
+    </property>
+    <property name="costoNuevo" type="big_decimal">
+      <column name="COSTO_NUEVO" precision="22" scale="6"/>
+    </property>
+    <property name="costoEstandar" type="big_decimal">
+      <column name="COSTO_ESTANDAR" precision="22" scale="6"/>
+    </property>
+    <property name="aplicaImpuesto" type="string">
+      <column length="1" name="APLICA_IMPUESTO"/>
+    </property>
+    <property name="descripcionAlterna" type="string">
+      <column length="50" name="DESCRIPCION_ALTERNA"/>
+    </property>
+    <property name="masterPack" type="string">
+      <column length="2" name="MASTER_PACK"/>
+    </property>
+    <property name="innerPack" type="string">
+      <column length="2" name="INNER_PACK"/>
+    </property>
+    <property name="precioCd" type="big_decimal">
+      <column name="PRECIO_CD" precision="21" scale="6"/>
+    </property>
+    <property name="pagCatalogo" type="java.lang.Integer">
+      <column name="PAG_CATALOGO" precision="5" scale="0"/>
+    </property>
+    <property name="controlaPermisos" type="string">
+      <column length="1" name="CONTROLA_PERMISOS"/>
+    </property>
+    <property name="permisoAprobado" type="string">
+      <column length="1" name="PERMISO_APROBADO"/>
+    </property>
+    <property name="statusCd" type="string">
+      <column length="1" name="STATUS_CD"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="indImprimeGarantia" type="string">
+      <column length="1" name="IND_IMPRIME_GARANTIA"/>
+    </property>
+    <property name="indRequiereSerie" type="string">
+      <column length="1" name="IND_REQUIERE_SERIE"/>
+    </property>
+    <property name="indEsParaOferta" type="string">
+      <column length="1" name="IND_ES_PARA_OFERTA"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="garantia" type="java.lang.Short">
+      <column name="GARANTIA" precision="3" scale="0"/>
+    </property>
+    <property name="curvaDefault" type="string">
+      <column length="4" name="CURVA_DEFAULT"/>
+    </property>
+    <property name="ccolor" type="string">
+      <column length="5" name="CCOLOR"/>
+    </property>
+    <property name="cmodelo" type="string">
+      <column length="25" name="CMODELO"/>
+    </property>
+    <property name="catalogo" type="string">
+      <column length="30" name="CATALOGO"/>
+    </property>
+    <property name="itunesbusiness" type="string">
+      <column length="1" name="ITUNESBUSINESS"/>
+    </property>
+    <property name="tipoM" type="string">
+      <column length="30" name="TIPO_M"/>
+    </property>
+    <property name="correlativoTipo" type="java.lang.Long">
+      <column name="CORRELATIVO_TIPO" precision="17" scale="0"/>
+    </property>
+    <property name="preciobaseRes" type="big_decimal">
+      <column name="PRECIOBASE_RES" precision="21" scale="6"/>
+    </property>
+    <property name="precionuevoRes" type="big_decimal">
+      <column name="PRECIONUEVO_RES" precision="21" scale="6"/>
+    </property>
+    <property name="costoNuevoRes" type="big_decimal">
+      <column name="COSTO_NUEVO_RES" precision="30" scale="6"/>
+    </property>
+    <property name="costoEstandarRes" type="big_decimal">
+      <column name="COSTO_ESTANDAR_RES" precision="30" scale="6"/>
+    </property>
+  </class>
+</hibernate-mapping>

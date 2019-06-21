@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcgmm" optimistic-lock="version" schema="DESA46" table="ARCGMM">
+    <comment>Histórico de lineas de asientos</comment>
+    <composite-id class="com.nafsolver.entity.ArcgmmId" name="id">
+      <key-property name="cuenta" type="string">
+        <column length="15" name="CUENTA"/>
+      </key-property>
+      <key-property name="noAsiento" type="string">
+        <column length="12" name="NO_ASIENTO"/>
+      </key-property>
+      <key-property name="ano" type="short">
+        <column name="ANO" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="mes" type="byte">
+        <column name="MES" precision="2" scale="0"/>
+      </key-property>
+      <key-property name="noLinea" type="short">
+        <column name="NO_LINEA" precision="4" scale="0"/>
+      </key-property>
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+    </composite-id>
+    <property name="periodo" type="java.lang.Integer">
+      <column name="PERIODO" precision="6" scale="0"/>
+    </property>
+    <property name="cc1" type="string">
+      <column length="3" name="CC_1"/>
+    </property>
+    <property name="cc2" type="string">
+      <column length="3" name="CC_2"/>
+    </property>
+    <property name="cc3" type="string">
+      <column length="3" name="CC_3"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="noDocu" type="string">
+      <column length="12" name="NO_DOCU"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="montoDol" type="big_decimal">
+      <column name="MONTO_DOL" precision="17"/>
+    </property>
+    <property name="tipo" type="string">
+      <column length="1" name="TIPO"/>
+    </property>
+    <property name="descri" type="string">
+      <column length="30" name="DESCRI"/>
+    </property>
+    <property name="codDiario" type="string">
+      <column length="5" name="COD_DIARIO"/>
+    </property>
+    <property name="tipoComprobante" type="string">
+      <column length="1" name="TIPO_COMPROBANTE"/>
+    </property>
+    <property name="noComprobante" type="string">
+      <column length="12" name="NO_COMPROBANTE"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="lineaAjustePrecision" type="string">
+      <column length="1" name="LINEA_AJUSTE_PRECISION"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

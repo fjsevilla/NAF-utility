@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArinmlOc" optimistic-lock="version" schema="DESA46" table="ARINML_OC">
+    <composite-id class="com.nafsolver.entity.ArinmlOcId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+      <key-property name="linea" type="short">
+        <column name="LINEA" precision="3" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="lineaExt" type="java.lang.Short">
+      <column name="LINEA_EXT" precision="3" scale="0"/>
+    </property>
+    <property name="bodega" type="string">
+      <column length="4" name="BODEGA"/>
+    </property>
+    <property name="clase" type="string">
+      <column length="3" name="CLASE"/>
+    </property>
+    <property name="categoria" type="string">
+      <column length="3" name="CATEGORIA"/>
+    </property>
+    <property name="noArti" type="string">
+      <column length="30" name="NO_ARTI"/>
+    </property>
+    <property name="indIv" type="string">
+      <column length="1" name="IND_IV"/>
+    </property>
+    <property name="unidades" type="big_decimal">
+      <column name="UNIDADES" precision="12"/>
+    </property>
+    <property name="monto" type="big_decimal">
+      <column name="MONTO" precision="17"/>
+    </property>
+    <property name="descuentoL" type="big_decimal">
+      <column name="DESCUENTO_L" precision="17"/>
+    </property>
+    <property name="impuestoL" type="big_decimal">
+      <column name="IMPUESTO_L" precision="17"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="montoDol" type="big_decimal">
+      <column name="MONTO_DOL" precision="17"/>
+    </property>
+    <property name="indOferta" type="string">
+      <column length="1" name="IND_OFERTA"/>
+    </property>
+    <property name="noOrden" type="string">
+      <column length="8" name="NO_ORDEN"/>
+    </property>
+    <property name="lineaOrden" type="java.lang.Byte">
+      <column name="LINEA_ORDEN" precision="2" scale="0"/>
+    </property>
+    <property name="centroCosto" type="string">
+      <column length="9" name="CENTRO_COSTO"/>
+    </property>
+    <property name="impuestoLIncluido" type="big_decimal">
+      <column name="IMPUESTO_L_INCLUIDO" precision="17"/>
+    </property>
+    <property name="unidadEmpaque" type="string">
+      <column length="2" name="UNIDAD_EMPAQUE"/>
+    </property>
+    <property name="cantidadEmpaque" type="big_decimal">
+      <column name="CANTIDAD_EMPAQUE" precision="12"/>
+    </property>
+    <property name="codigoAlterno" type="string">
+      <column length="30" name="CODIGO_ALTERNO"/>
+    </property>
+    <property name="codCurva" type="string">
+      <column length="4" name="COD_CURVA"/>
+    </property>
+    <property name="montoRc" type="big_decimal">
+      <column name="MONTO_RC" precision="17"/>
+    </property>
+    <property name="descRc" type="big_decimal">
+      <column name="DESC_RC" precision="17"/>
+    </property>
+    <property name="codUbicacion" type="string">
+      <column length="10" name="COD_UBICACION"/>
+    </property>
+    <property name="bodegaDestino" type="string">
+      <column length="4" name="BODEGA_DESTINO"/>
+    </property>
+    <property name="unidadesRecep" type="big_decimal">
+      <column name="UNIDADES_RECEP" precision="12"/>
+    </property>
+    <property name="noRefeDocu" type="string">
+      <column length="12" name="NO_REFE_DOCU"/>
+    </property>
+    <property name="noCiaDestino" type="string">
+      <column length="2" name="NO_CIA_DESTINO"/>
+    </property>
+    <property name="undTemp" type="big_decimal">
+      <column name="UND_TEMP" precision="17"/>
+    </property>
+    <property name="bultos" type="big_decimal">
+      <column name="BULTOS" precision="17"/>
+    </property>
+    <property name="cantidadCurva" type="big_decimal">
+      <column name="CANTIDAD_CURVA" precision="17"/>
+    </property>
+    <property name="montoAntRc" type="big_decimal">
+      <column name="MONTO_ANT_RC" precision="17"/>
+    </property>
+    <property name="centroReq" type="string">
+      <column length="9" name="CENTRO_REQ"/>
+    </property>
+    <property name="unidadesDev" type="big_decimal">
+      <column name="UNIDADES_DEV" precision="12"/>
+    </property>
+    <property name="montoDev" type="big_decimal">
+      <column name="MONTO_DEV" precision="17"/>
+    </property>
+    <property name="lote" type="string">
+      <column length="30" name="LOTE"/>
+    </property>
+    <property name="bultosRec" type="big_decimal">
+      <column name="BULTOS_REC" precision="17"/>
+    </property>
+    <property name="montoRes" type="big_decimal">
+      <column name="MONTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

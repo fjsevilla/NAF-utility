@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinbo" optimistic-lock="version" schema="DESA46" table="ARINBO">
+    <composite-id class="com.nafsolver.entity.ArinboId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="codigo" type="string">
+        <column length="4" name="CODIGO"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="100" name="DESCRIPCION"/>
+    </property>
+    <property name="tipobodega" type="string">
+      <column length="1" name="TIPOBODEGA"/>
+    </property>
+    <property name="centro" type="string">
+      <column length="2" name="CENTRO"/>
+    </property>
+    <property name="vendedor" type="string">
+      <column length="4" name="VENDEDOR"/>
+    </property>
+    <property name="codigoEstado" type="string">
+      <column length="4" name="CODIGO_ESTADO"/>
+    </property>
+    <property name="esTienda" type="string">
+      <column length="1" name="ES_TIENDA"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+  </class>
+</hibernate-mapping>

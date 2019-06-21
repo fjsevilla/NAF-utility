@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.EncTransporte" optimistic-lock="version" schema="DESA46" table="ENC_TRANSPORTE">
+    <id name="numero" type="long">
+      <column name="NUMERO" precision="17" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="chofer" type="string">
+      <column length="10" name="CHOFER"/>
+    </property>
+    <property name="ayudante1" type="string">
+      <column length="10" name="AYUDANTE1"/>
+    </property>
+    <property name="ayudante2" type="string">
+      <column length="10" name="AYUDANTE2"/>
+    </property>
+    <property name="vehiculo" type="string">
+      <column length="10" name="VEHICULO"/>
+    </property>
+    <property name="guia" type="java.lang.Long">
+      <column name="GUIA" precision="17" scale="0"/>
+    </property>
+    <property name="zonas" type="string">
+      <column length="10" name="ZONAS"/>
+    </property>
+    <property name="observacion" type="string">
+      <column length="500" name="OBSERVACION"/>
+    </property>
+    <property name="status" type="string">
+      <column length="1" name="STATUS"/>
+    </property>
+    <property name="noCia" type="string">
+      <column length="2" name="NO_CIA"/>
+    </property>
+    <property name="ciaTransporte" type="string">
+      <column length="10" name="CIA_TRANSPORTE"/>
+    </property>
+    <property name="almacenes" type="string">
+      <column length="10" name="ALMACENES"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arccgd" optimistic-lock="version" schema="DESA46" table="ARCCGD">
+    <id name="cdescuento" type="string">
+      <column length="3" name="CDESCUENTO"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="plazoN" type="java.lang.Short">
+      <column name="PLAZO_N" precision="3" scale="0"/>
+    </property>
+    <property name="descProntoPagoN1" type="big_decimal">
+      <column name="DESC_PRONTO_PAGO_N1" precision="4"/>
+    </property>
+    <property name="descProntoPagoN2" type="big_decimal">
+      <column name="DESC_PRONTO_PAGO_N2" precision="4"/>
+    </property>
+    <property name="plazoF" type="java.lang.Short">
+      <column name="PLAZO_F" precision="3" scale="0"/>
+    </property>
+    <property name="descProntoPagoF1" type="big_decimal">
+      <column name="DESC_PRONTO_PAGO_F1" precision="4"/>
+    </property>
+    <property name="descProntoPagoF2" type="big_decimal">
+      <column name="DESC_PRONTO_PAGO_F2" precision="4"/>
+    </property>
+  </class>
+</hibernate-mapping>

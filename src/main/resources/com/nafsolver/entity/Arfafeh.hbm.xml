@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arfafeh" optimistic-lock="version" schema="DESA46" table="ARFAFEH">
+    <comment>encabezado de facturas historicas</comment>
+    <composite-id class="com.nafsolver.entity.ArfafehId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="noFactu" type="string">
+        <column length="19" name="NO_FACTU"/>
+      </key-property>
+    </composite-id>
+    <property name="centrod" type="string">
+      <column length="2" name="CENTROD"/>
+    </property>
+    <property name="tipoDoc" type="string">
+      <column length="2" name="TIPO_DOC"/>
+    </property>
+    <property name="periodo" type="string">
+      <column length="4" name="PERIODO"/>
+    </property>
+    <property name="ruta" type="string">
+      <column length="4" name="RUTA"/>
+    </property>
+    <property name="afectaSaldo" type="string">
+      <column length="1" name="AFECTA_SALDO"/>
+    </property>
+    <property name="grupo" type="string">
+      <column length="2" name="GRUPO"/>
+    </property>
+    <property name="noCliente" type="string">
+      <column length="15" name="NO_CLIENTE"/>
+    </property>
+    <property name="tipoCliente" type="string">
+      <column length="2" name="TIPO_CLIENTE"/>
+    </property>
+    <property name="nbrCliente" type="string">
+      <column length="80" name="NBR_CLIENTE"/>
+    </property>
+    <property name="direccion" type="string">
+      <column length="80" name="DIRECCION"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="17" scale="4"/>
+    </property>
+    <property name="noVendedor" type="string">
+      <column length="4" name="NO_VENDEDOR"/>
+    </property>
+    <property name="tipoDocD" type="string">
+      <column length="2" name="TIPO_DOC_D"/>
+    </property>
+    <property name="periodoD" type="string">
+      <column length="4" name="PERIODO_D"/>
+    </property>
+    <property name="rutaD" type="string">
+      <column length="4" name="RUTA_D"/>
+    </property>
+    <property name="NFactuD" type="string">
+      <column length="19" name="N_FACTU_D"/>
+    </property>
+    <property name="plazo" type="java.lang.Short">
+      <column name="PLAZO" precision="3" scale="0"/>
+    </property>
+    <property name="observ1" type="string">
+      <column length="60" name="OBSERV1"/>
+    </property>
+    <property name="observ2" type="string">
+      <column length="60" name="OBSERV2"/>
+    </property>
+    <property name="observ3" type="string">
+      <column length="60" name="OBSERV3"/>
+    </property>
+    <property name="totLin" type="big_decimal">
+      <column name="TOT_LIN" precision="17"/>
+    </property>
+    <property name="subTotal" type="big_decimal">
+      <column name="SUB_TOTAL" precision="17"/>
+    </property>
+    <property name="descuento" type="big_decimal">
+      <column name="DESCUENTO" precision="17"/>
+    </property>
+    <property name="impuesto" type="big_decimal">
+      <column name="IMPUESTO" precision="17"/>
+    </property>
+    <property name="total" type="big_decimal">
+      <column name="TOTAL" precision="17"/>
+    </property>
+    <property name="estado" type="string">
+      <column length="1" name="ESTADO"/>
+    </property>
+    <property name="indAnuDev" type="string">
+      <column length="1" name="IND_ANU_DEV"/>
+    </property>
+    <property name="impSino" type="string">
+      <column length="1" name="IMP_SINO"/>
+    </property>
+    <property name="tipoFactura" type="string">
+      <column length="1" name="TIPO_FACTURA"/>
+    </property>
+    <property name="periLiq" type="string">
+      <column length="4" name="PERI_LIQ"/>
+    </property>
+    <property name="noLiq" type="string">
+      <column length="6" name="NO_LIQ"/>
+    </property>
+    <property name="periPed" type="string">
+      <column length="4" name="PERI_PED"/>
+    </property>
+    <property name="noPedido" type="string">
+      <column length="15" name="NO_PEDIDO"/>
+    </property>
+    <property name="razon" type="string">
+      <column length="2" name="RAZON"/>
+    </property>
+    <property name="porcDesc" type="big_decimal">
+      <column name="PORC_DESC" precision="5"/>
+    </property>
+    <property name="noFisico" type="string">
+      <column length="15" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="15" name="SERIE_FISICO"/>
+    </property>
+    <property name="moneda" type="string">
+      <column length="1" name="MONEDA"/>
+    </property>
+    <property name="numeroCtrl" type="java.lang.Long">
+      <column name="NUMERO_CTRL" precision="10" scale="0"/>
+    </property>
+    <property name="origen" type="string">
+      <column length="2" name="ORIGEN"/>
+    </property>
+    <property name="indApartado" type="string">
+      <column length="1" name="IND_APARTADO"/>
+    </property>
+    <property name="indVentaExonerada" type="string">
+      <column length="1" name="IND_VENTA_EXONERADA"/>
+    </property>
+    <property name="tipoProducto" type="string">
+      <column length="3" name="TIPO_PRODUCTO"/>
+    </property>
+  </class>
+</hibernate-mapping>

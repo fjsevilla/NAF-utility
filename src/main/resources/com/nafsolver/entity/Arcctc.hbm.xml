@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcctc" optimistic-lock="version" schema="DESA46" table="ARCCTC">
+    <comment>Tipos de Cliente</comment>
+    <composite-id class="com.nafsolver.entity.ArcctcId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoCliente" type="string">
+        <column length="2" name="TIPO_CLIENTE"/>
+      </key-property>
+    </composite-id>
+    <property name="descripcion" type="string">
+      <column length="40" name="DESCRIPCION"/>
+    </property>
+    <property name="porcDesc" type="big_decimal">
+      <column name="PORC_DESC" precision="5"/>
+    </property>
+  </class>
+</hibernate-mapping>

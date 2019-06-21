@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arinma" optimistic-lock="version" schema="DESA46" table="ARINMA">
+    <composite-id class="com.nafsolver.entity.ArinmaId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="bodega" type="string">
+        <column length="4" name="BODEGA"/>
+      </key-property>
+      <key-property name="clase" type="string">
+        <column length="3" name="CLASE"/>
+      </key-property>
+      <key-property name="categoria" type="string">
+        <column length="3" name="CATEGORIA"/>
+      </key-property>
+      <key-property name="noArti" type="string">
+        <column length="30" name="NO_ARTI"/>
+      </key-property>
+    </composite-id>
+    <property name="ubicacion" type="string">
+      <column length="10" name="UBICACION"/>
+    </property>
+    <property name="salAntUn" type="big_decimal">
+      <column name="SAL_ANT_UN" precision="17"/>
+    </property>
+    <property name="compUn" type="big_decimal">
+      <column name="COMP_UN" precision="17"/>
+    </property>
+    <property name="otrsUn" type="big_decimal">
+      <column name="OTRS_UN" precision="17"/>
+    </property>
+    <property name="ventUn" type="big_decimal">
+      <column name="VENT_UN" precision="17"/>
+    </property>
+    <property name="consUn" type="big_decimal">
+      <column name="CONS_UN" precision="17"/>
+    </property>
+    <property name="salPendUn" type="big_decimal">
+      <column name="SAL_PEND_UN" precision="17"/>
+    </property>
+    <property name="entPendUn" type="big_decimal">
+      <column name="ENT_PEND_UN" precision="17"/>
+    </property>
+    <property name="pedidosPend" type="big_decimal">
+      <column name="PEDIDOS_PEND" precision="17"/>
+    </property>
+    <property name="manifiestopend" type="big_decimal">
+      <column name="MANIFIESTOPEND" precision="17"/>
+    </property>
+    <property name="salAntMo" type="big_decimal">
+      <column name="SAL_ANT_MO" precision="22"/>
+    </property>
+    <property name="compMon" type="big_decimal">
+      <column name="COMP_MON" precision="22"/>
+    </property>
+    <property name="otrsMon" type="big_decimal">
+      <column name="OTRS_MON" precision="22"/>
+    </property>
+    <property name="ventMon" type="big_decimal">
+      <column name="VENT_MON" precision="22"/>
+    </property>
+    <property name="consMon" type="big_decimal">
+      <column name="CONS_MON" precision="22"/>
+    </property>
+    <property name="costoUni" type="big_decimal">
+      <column name="COSTO_UNI" precision="22" scale="6"/>
+    </property>
+    <property name="tomFisic" type="big_decimal">
+      <column name="TOM_FISIC" precision="17"/>
+    </property>
+    <property name="procesoToma" type="string">
+      <column length="1" name="PROCESO_TOMA" not-null="true"/>
+    </property>
+    <property name="procesoSoli" type="string">
+      <column length="1" name="PROCESO_SOLI"/>
+    </property>
+    <property name="noSolic" type="string">
+      <column length="8" name="NO_SOLIC"/>
+    </property>
+    <property name="ultCosto" type="big_decimal">
+      <column name="ULT_COSTO" precision="22" scale="6"/>
+    </property>
+    <property name="existPrep" type="big_decimal">
+      <column name="EXIST_PREP" precision="17"/>
+    </property>
+    <property name="costoPrep" type="big_decimal">
+      <column name="COSTO_PREP" precision="22" scale="6"/>
+    </property>
+    <property name="afectaCosto" type="string">
+      <column length="1" name="AFECTA_COSTO"/>
+    </property>
+    <property name="fecUVen" type="date">
+      <column length="7" name="FEC_U_VEN"/>
+    </property>
+    <property name="noConteo" type="java.lang.Long">
+      <column name="NO_CONTEO" precision="15" scale="0"/>
+    </property>
+    <property name="costoUniDol" type="big_decimal">
+      <column name="COSTO_UNI_DOL" precision="22" scale="6"/>
+    </property>
+    <property name="tipoCambio" type="big_decimal">
+      <column name="TIPO_CAMBIO" precision="22" scale="4"/>
+    </property>
+    <property name="fecUEnt" type="date">
+      <column length="7" name="FEC_U_ENT"/>
+    </property>
+    <property name="fecUTom" type="date">
+      <column length="7" name="FEC_U_TOM"/>
+    </property>
+    <property name="tstamp" type="date">
+      <column length="7" name="TSTAMP"/>
+    </property>
+    <property name="column1" type="string">
+      <column length="20" name="COLUMN1"/>
+    </property>
+    <property name="column2" type="string">
+      <column length="20" name="COLUMN2"/>
+    </property>
+    <property name="column3" type="string">
+      <column length="20" name="COLUMN3"/>
+    </property>
+    <property name="column4" type="string">
+      <column length="20" name="COLUMN4"/>
+    </property>
+    <property name="column5" type="string">
+      <column length="20" name="COLUMN5"/>
+    </property>
+    <property name="column6" type="string">
+      <column length="20" name="COLUMN6"/>
+    </property>
+    <property name="column7" type="string">
+      <column length="20" name="COLUMN7"/>
+    </property>
+    <property name="column8" type="string">
+      <column length="20" name="COLUMN8"/>
+    </property>
+    <property name="column9" type="string">
+      <column length="20" name="COLUMN9"/>
+    </property>
+    <property name="column10" type="string">
+      <column length="20" name="COLUMN10"/>
+    </property>
+    <property name="column11" type="string">
+      <column length="20" name="COLUMN11"/>
+    </property>
+    <property name="salAntMoRes" type="big_decimal">
+      <column name="SAL_ANT_MO_RES" precision="30"/>
+    </property>
+    <property name="otrsMonRes" type="big_decimal">
+      <column name="OTRS_MON_RES" precision="30"/>
+    </property>
+    <property name="costoUniRes" type="big_decimal">
+      <column name="COSTO_UNI_RES" precision="30"/>
+    </property>
+    <property name="ultCostoRes" type="big_decimal">
+      <column name="ULT_COSTO_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

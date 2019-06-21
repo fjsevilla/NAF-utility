@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ConsecPeriodo" optimistic-lock="version" schema="DESA46" table="CONSEC_PERIODO">
+    <comment>Detalle de consecutivos por periodo (hija de formularios)</comment>
+    <composite-id class="com.nafsolver.entity.ConsecPeriodoId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="formulario" type="string">
+        <column length="10" name="FORMULARIO"/>
+      </key-property>
+      <key-property name="periodo" type="int">
+        <column name="PERIODO" precision="6" scale="0"/>
+      </key-property>
+    </composite-id>
+    <property name="siguiente" type="java.lang.Long">
+      <column name="SIGUIENTE" precision="10" scale="0"/>
+    </property>
+    <property name="numInicial" type="java.lang.Long">
+      <column name="NUM_INICIAL" precision="10" scale="0"/>
+    </property>
+    <property name="numFinal" type="java.lang.Long">
+      <column name="NUM_FINAL" precision="10" scale="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

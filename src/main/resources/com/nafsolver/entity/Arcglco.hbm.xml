@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.Arcglco" optimistic-lock="version" schema="DESA46" table="ARCGLCO">
+    <comment>Libro de compras</comment>
+    <composite-id class="com.nafsolver.entity.ArcglcoId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="tipoDoc" type="string">
+        <column length="2" name="TIPO_DOC"/>
+      </key-property>
+      <key-property name="noDocu" type="string">
+        <column length="12" name="NO_DOCU"/>
+      </key-property>
+    </composite-id>
+    <property name="noFisico" type="string">
+      <column length="30" name="NO_FISICO"/>
+    </property>
+    <property name="serieFisico" type="string">
+      <column length="50" name="SERIE_FISICO"/>
+    </property>
+    <property name="ano" type="java.lang.Short">
+      <column name="ANO" precision="4" scale="0"/>
+    </property>
+    <property name="mes" type="java.lang.Byte">
+      <column name="MES" precision="2" scale="0"/>
+    </property>
+    <property name="fecha" type="date">
+      <column length="7" name="FECHA"/>
+    </property>
+    <property name="noProve" type="string">
+      <column length="15" name="NO_PROVE"/>
+    </property>
+    <property name="nombre" type="string">
+      <column length="80" name="NOMBRE"/>
+    </property>
+    <property name="valorCif" type="big_decimal">
+      <column name="VALOR_CIF" precision="17"/>
+    </property>
+    <property name="valorGravado" type="big_decimal">
+      <column name="VALOR_GRAVADO" precision="17"/>
+    </property>
+    <property name="valorExento" type="big_decimal">
+      <column name="VALOR_EXENTO" precision="17"/>
+    </property>
+    <property name="valorImp1" type="big_decimal">
+      <column name="VALOR_IMP1" precision="17"/>
+    </property>
+    <property name="valorImp2" type="big_decimal">
+      <column name="VALOR_IMP2" precision="17"/>
+    </property>
+    <property name="valorImp3" type="big_decimal">
+      <column name="VALOR_IMP3" precision="17"/>
+    </property>
+    <property name="valorImp4" type="big_decimal">
+      <column name="VALOR_IMP4" precision="17"/>
+    </property>
+    <property name="valorImp5" type="big_decimal">
+      <column name="VALOR_IMP5" precision="17"/>
+    </property>
+    <property name="valorImp6" type="big_decimal">
+      <column name="VALOR_IMP6" precision="17"/>
+    </property>
+    <property name="total" type="big_decimal">
+      <column name="TOTAL" precision="17"/>
+    </property>
+    <property name="idTributario" type="string">
+      <column length="15" name="ID_TRIBUTARIO"/>
+    </property>
+    <property name="codigoTercero" type="string">
+      <column length="18" name="CODIGO_TERCERO"/>
+    </property>
+    <property name="valorCifRes" type="big_decimal">
+      <column name="VALOR_CIF_RES" precision="30"/>
+    </property>
+    <property name="valorGravadoRes" type="big_decimal">
+      <column name="VALOR_GRAVADO_RES" precision="30"/>
+    </property>
+    <property name="valorExentoRes" type="big_decimal">
+      <column name="VALOR_EXENTO_RES" precision="30"/>
+    </property>
+    <property name="valorImp1Res" type="big_decimal">
+      <column name="VALOR_IMP1_RES" precision="30"/>
+    </property>
+    <property name="valorImp2Res" type="big_decimal">
+      <column name="VALOR_IMP2_RES" precision="30"/>
+    </property>
+    <property name="valorImp3Res" type="big_decimal">
+      <column name="VALOR_IMP3_RES" precision="30"/>
+    </property>
+    <property name="valorImp4Res" type="big_decimal">
+      <column name="VALOR_IMP4_RES" precision="30"/>
+    </property>
+    <property name="valorImp5Res" type="big_decimal">
+      <column name="VALOR_IMP5_RES" precision="30"/>
+    </property>
+    <property name="valorImp6Res" type="big_decimal">
+      <column name="VALOR_IMP6_RES" precision="30"/>
+    </property>
+    <property name="totalRes" type="big_decimal">
+      <column name="TOTAL_RES" precision="30"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15/06/2019 08:00:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="com.nafsolver.entity.ArcgctC" optimistic-lock="version" schema="DESA46" table="ARCGCT_C">
+    <comment>Control de cierre por módulo</comment>
+    <composite-id class="com.nafsolver.entity.ArcgctCId" name="id">
+      <key-property name="noCia" type="string">
+        <column length="2" name="NO_CIA"/>
+      </key-property>
+      <key-property name="modulo" type="string">
+        <column length="20" name="MODULO"/>
+      </key-property>
+      <key-property name="subModulo" type="string">
+        <column length="15" name="SUB_MODULO"/>
+      </key-property>
+    </composite-id>
+    <property name="anoProce" type="java.lang.Short">
+      <column name="ANO_PROCE" precision="4" scale="0"/>
+    </property>
+    <property name="mesProce" type="java.lang.Byte">
+      <column name="MES_PROCE" precision="2" scale="0"/>
+    </property>
+    <property name="fecArranque" type="date">
+      <column length="7" name="FEC_ARRANQUE"/>
+    </property>
+  </class>
+</hibernate-mapping>
