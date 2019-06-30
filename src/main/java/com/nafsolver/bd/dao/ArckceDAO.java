@@ -18,16 +18,29 @@ import org.springframework.stereotype.Repository;
  * @author Admin
  */
 @Repository
-public interface ArckceDAO extends JpaRepository<Arckce, ArckceId>{
+public interface ArckceDAO extends JpaRepository<Arckce, ArckceId> {
+
+    @Query("FROM Arckce where no_cia = :no_cia and no_secuencia = :no_secuencia")
+    List<Arckce> findByNoSecuencia(@Param("no_cia") String noCia, @Param("no_secuencia") Integer noDocu);
     
-    @Query("select * from arckce where no_cia = :no_cia and no_secuencia = :no_secuencia")
-    List<Arckce> findByNoSecuencia(@Param("no_cia") String noCia, @Param("no_secuencia") String noDocu);
+    @Query("FROM Arckce where no_secuencia = :no_secuencia")
+    List<Arckce> findByNoSecuencia(@Param("no_secuencia") Integer noDocu);    
     
+    @Query("FROM Arckce where cheque = :cheque and no_secuencia = :no_secuencia")
+    List<Arckce> findByNoSecCheq(@Param("cheque") Integer cheque, @Param("no_secuencia") Integer noDocu);
     
-    @Query("select * from arckce where no_cia = :no_cia")
+    @Query("FROM Arckce where cheque = :cheque")
+    List<Arckce> findByNoCheque(@Param("cheque") Integer cheque);
+
+    @Query("FROM Arckce where no_cia = :no_cia")
     List<Arckce> findByNoCia(@Param("no_cia") String noCia);
+
+    @Query("FROM Arckce where no_cia = :no_cia and tipo_doc = :tipo_doc")
+    List<Arckce> findByTipoDoc(@Param("no_cia") String noCia, @Param("tipo_doc") String tipoDocu);
+
+    @Query("FROM Arckce where no_cia = :no_cia and no_cta = :no_cta")
+    List<Arckce> findByCta(@Param("no_cia") String noCia, @Param("no_cta") String noCta);
     
-    
-    @Query("select * from arckce where no_cia = :no_cia and tipo_doc = :tipo_doc")
-    List<Arckce> findByTipoDoc(@Param("no_cia") String noCia, @Param("tipo_doc") String noDocu);
+    @Query("FROM Arckce where no_cta = :no_cta")
+    List<Arckce> findByCta(@Param("no_cta") String noCta);
 }
