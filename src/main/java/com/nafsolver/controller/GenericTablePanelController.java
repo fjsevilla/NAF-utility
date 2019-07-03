@@ -13,9 +13,13 @@ import com.nafsolver.bd.dao.ArcktdDAO;
 import com.nafsolver.entity.Arckce;
 import com.nafsolver.entity.Arckct;
 import com.nafsolver.entity.Arckmc;
+import com.nafsolver.entity.Arcktb;
 import com.nafsolver.entity.Arcktd;
 import java.math.BigDecimal;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.UnaryOperator;
 import javafx.beans.property.SimpleStringProperty;
@@ -92,6 +96,10 @@ public class GenericTablePanelController implements Initializable {
     @FXML
     ComboBox cmbCta;
 
+    private String selectedCia = "";
+    private String selectedTipo = "";
+    private String selectedCta = "";
+
     String[] columnNames = {"NoCia", "NoSecuencia", "NoCta", "Fecha", "Monto", "Autoriza"};
 
     /**
@@ -120,7 +128,7 @@ public class GenericTablePanelController implements Initializable {
         beneficiario.setCellValueFactory(new PropertyValueFactory("beneficiario"));
         noCheque.setCellValueFactory(new PropertyValueFactory("cheque"));
         monto.setCellValueFactory(new PropertyValueFactory("monto"));
-        
+
         ObservableList<Arckct> ciaList = observableArrayList(companiDao.findAll());
         //cmbCia.setCellFactory(new PropertyValueFactory("descrip"));
         StringConverter<Arckct> converter = new StringConverter<Arckct>() {
@@ -135,44 +143,10 @@ public class GenericTablePanelController implements Initializable {
             }
         };
         cmbCia.setConverter(converter);
-        
+
         cmbCia.setItems(ciaList);
         
-        ObservableList<Arcktd> tipoList = observableArrayList(tipoDocDao.findAll());
-        //cmbCia.setCellFactory(new PropertyValueFactory("descrip"));
-        StringConverter<Arcktd> tipoConverter = new StringConverter<Arcktd>() {
-            @Override
-            public String toString(Arcktd object) {
-                return object.getTipoMov() + " - " + object.getDescrip();
-            }
-
-            @Override
-            public Arcktd fromString(String string) {
-                return null;
-            }
-        };
-        cmbTipo.setConverter(tipoConverter);
-        
-        cmbTipo.setItems(tipoList);
-        
-        ObservableList<Arckmc> ctaList = observableArrayList(tipoCtaDao.findAll());
-        //cmbCia.setCellFactory(new PropertyValueFactory("descrip"));
-        StringConverter<Arckmc> ctaConverter = new StringConverter<Arckmc>() {
-            @Override
-            public String toString(Arckmc object) {
-                return  tipoBcoDao.findById(object.getBanco()).get().getDescrip() + " - " + object.getNoCuenta();
-            }
-
-            @Override
-            public Arckmc fromString(String string) {
-                return null;
-            }
-        };
-        cmbTipo.setConverter(ctaConverter);
-        
-        cmbTipo.setItems(ctaList);
-        
-
+        fillCombos();
         formatNumerics();
         initTable();
     }
@@ -209,13 +183,65 @@ public class GenericTablePanelController implements Initializable {
     }
 
     @FXML
+    public void fillCombos() {
+        ObservableList<Arcktd> tipoList;
+        ObservableList<Arckmc> ctaList;
+        
+        if (!selectedCia.isEmpty()) {
+            tipoList = observableArrayList(tipoDocDao.findByNoCia(selectedCia));
+            ctaList = observableArrayList(tipoCtaDao.findByNoCia(selectedCia));
+        } else {
+            tipoList = observableArrayList(tipoDocDao.findAll());
+            ctaList = observableArrayList(tipoCtaDao.findAll());
+        }
+        //cmbCia.setCellFactory(new PropertyValueFactory("descrip"));
+        StringConverter<Arcktd> tipoConverter = new StringConverter<Arcktd>() {
+            @Override
+            public String toString(Arcktd object) {
+                return object.getTipoMov() + " - " + object.getDescrip();
+            }
+
+            @Override
+            public Arcktd fromString(String string) {
+                return null;
+            }
+        };
+        cmbTipo.setConverter(tipoConverter);
+
+        cmbTipo.getItems().clear();
+        cmbTipo.setItems(tipoList);
+
+        //cmbCia.setCellFactory(new PropertyValueFactory("descrip"));
+        StringConverter<Arckmc> ctaConverter = new StringConverter<Arckmc>() {
+            @Override
+            public String toString(Arckmc object) {
+                String bco = "";
+                Optional o = tipoBcoDao.findById(object.getBanco());
+                if (o.isPresent()) {
+                    bco = ((Arcktb) o.get()).getDescrip();
+                }
+                return bco + " - " + object.getId().getNoCta();
+            }
+
+            @Override
+            public Arckmc fromString(String string) {
+                return null;
+            }
+        };
+        cmbCta.setConverter(ctaConverter);
+
+        cmbCta.getItems().clear();
+        cmbCta.setItems(ctaList);
+    }
+
+    @FXML
     public void okAction(ActionEvent actionEvent) {
         ObservableList<Arckce> lista;
         Integer noSeq = 0;
         Integer noCheq = 0;
-        String selectedCia = ((Arckct)cmbCia.getValue()).getNoCia();
-        String selectedTipo = ((Arcktd)cmbTipo.getValue()).getId().getTipoDoc();
-        String selectedCta = ((Arckmc)cmbCta.getValue()).getNoCuenta();
+        selectedCia = cmbCia.getValue()!=null?((Arckct) cmbCia.getValue()).getNoCia():null;
+        selectedTipo = cmbTipo.getValue()!=null?((Arcktd) cmbTipo.getValue()).getId().getTipoDoc():null;
+        selectedCta = cmbCta.getValue()!=null?((Arckmc) cmbCta.getValue()).getId().getNoCta():null;
 
         if (!txtSeq.getText().trim().isEmpty()) {
             noSeq = Integer.valueOf(txtSeq.getText());
@@ -223,18 +249,12 @@ public class GenericTablePanelController implements Initializable {
         if (!txtCheq.getText().trim().isEmpty()) {
             noCheq = Integer.valueOf(txtCheq.getText());
         }
+        
 
-        if (noCheq > 0 && noSeq > 0) {
-            lista = observableArrayList(dao.findByNoSecCheq(noCheq, Integer.valueOf(noSeq)));
-        } else {
-            if (noSeq > 0) {
-                lista = observableArrayList(dao.findByNoSecuencia(Integer.valueOf(noSeq)));
-            } else if (noCheq > 0) {
-                lista = observableArrayList(dao.findByNoCheque(noCheq));
-            } else {
-                return;
-            }
-        }
+        lista = observableArrayList(dao.findByCriteria(selectedCia, noSeq, 
+            selectedCta, noCheq, selectedTipo));
+            
+            
         upperTable.getItems().clear();
         upperTable.setItems(lista);
     }
@@ -243,12 +263,19 @@ public class GenericTablePanelController implements Initializable {
     public void resetAction(ActionEvent actionEvent) {
         txtSeq.clear();
         txtCheq.clear();
+        selectedCia = "";
+        selectedTipo = "";
+        selectedCta = "";
+        
+        cmbCia.setValue(null);
+        fillCombos();
         initTable();
     }
-    
+
     @FXML
-    public void selectedCia(ActionEvent e){
-        String selectedCia = ((Arckct)cmbCia.getValue()).getNoCia();
+    public void selectedCia(ActionEvent e) {
+        selectedCia = ((Arckct) cmbCia.getValue()).getNoCia();
+        fillCombos();
     }
 
 }
